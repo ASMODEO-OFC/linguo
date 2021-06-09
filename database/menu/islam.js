@@ -1,5 +1,6 @@
 const islam = (prefix, ownerBot, botName) => {
         return `
+
 「 *${botName}* 」
 
 ◪ *INFO*
