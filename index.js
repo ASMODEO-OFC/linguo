@@ -1,5 +1,5 @@
 /*
-*  es una creación de shanduy
+*  es una creación de 
 * no tiene ningun fin de lucro
 * shanduy se reserva todosde autor
 * 021 s
@@ -378,19 +378,3 @@ async function starts() {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
-                              default:
-					if (isGroup && isSimi && budy != undefined) {
-						console.log(budy)
-						muehe = await simih(budy)
-						console.log(muehe)
-						reply(muehe)
-					} else {
-						console.log(color('[WARN]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
-					}
-                           }
-		} catch (e) {
-			console.log('Error : %s', color(e, 'red'))
-		}
-	})
-}
-starts()
