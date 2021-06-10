@@ -39,10 +39,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shanduy/ShanBot.git"
+    "url": "git+https://github.com/ASMODEO-OFC/linguo.git"
   },
   "bugs": {
-    "url": "https://github.com/shanduy/ShanBot.git"
+    "url": "https://github.com/ASMODEO-OFC/linguo.git"
   },
-  "homepage": "https://github.com/shanduy/ShanBot#readme"
+  "homepage": "https://github.com/ASMODEO-OFC/linguo#readme"
 }
