@@ -36,6 +36,7 @@ const help = (prefix) => {
 ➛ *${prefix}closegc* [Cerrar Grupo]
 ➛ *${prefix}opengc* [Abrir Grupo]
 ➛ *${prefix}linkgp* [Enlace del Grupo]
+➛ *${prefix}bienvenida* [1/0]
 
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
