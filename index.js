@@ -1,8 +1,8 @@
 /*
-* ShanBot es una creación de shanduy
-* ShanBot no tiene ningun fin de lucro
+*  es una creación de shanduy
+* no tiene ningun fin de lucro
 * shanduy se reserva todosde autor
-* © 2021 s
+* 021 s
 Cualquier copia que a dado de baja
 - Que hay de nuevo?
 * Nada
