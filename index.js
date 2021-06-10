@@ -240,3 +240,14 @@ async function starts() {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
+				wait: '❗Por favor no hagas spam👏❗\n\nProcesando... 🔁🛐',
+				success: '✔️ Listo ✔️',
+                                levelon: '❬ ✅ ❭ *Level activado*',
+				leveloff: ' ❬ ✅ ❭  *Level desactivado*',
+				levelnoton: '❬ ❎ ❭ *Level no esta activado*',
+				levelnol: '*Nivel* 0 ',
+				error: {
+					stick: '[❌] Falló, se produjo un error al convertir la imagen en sticker',
+					Iv: '❌ Link inválido ❌'
+				},
+				only: {
