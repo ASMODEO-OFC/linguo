@@ -21,6 +21,7 @@ const help = (prefix) => {
 
 ➛ *${prefix}sticker* [Convertir en Sticker]
 ➛ *${prefix}tsticker* [Texto]
+➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}tts es* [Su Texto]
 ➛ *${prefix}owner* [Info del Creador]
 
@@ -41,6 +42,7 @@ const help = (prefix) => {
 ➛ *${prefix}gay* [@]
 ➛ *${prefix}ytmp3* [URL]
 ➛ *${prefix}ytmp4* [URL]
+➛ *${prefix}tomp3* [Convierte videos a mp3]
 
 ➢ ✪🅞🅣🅡🅞🅢✪
 
@@ -61,6 +63,7 @@ const help = (prefix) => {
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
+➛ *${prefix}daftar* [Registro]
 ➛ *${prefix}ig*
 
 ➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐🅢✪
