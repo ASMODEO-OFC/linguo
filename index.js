@@ -162,3 +162,35 @@ const getLevelingId = (userId) => {
         }
 
 function kyun(seconds){
+  function pad(s){
+    return (s < 10 ? '0' : '') + s;
+  }
+  var hours = Math.floor(seconds / (60*60));
+  var minutes = Math.floor(seconds % (60*60) / 60);
+  var seconds = Math.floor(seconds % 60);
+
+  //return pad(hours) + ':' + pad(minutes) + ':' + pad(seconds)
+  return `${pad(hours)} Horas ${pad(minutes)} Minutos ${pad(seconds)} Segundos`
+}
+
+async function starts() {
+	const client = new WAConnection()
+	client.logger.level = 'warn'
+	console.log(banner.string)
+	client.on('qr', () => {
+		console.log(color('[','white'), color('!','red'), color(']','white'), color(' Escanea el codigo QR es temporal no te tardes Rapido!!!  '))
+	})
+
+	fs.existsSync('./Nazwa.json') && client.loadAuthInfo('./Nazwa.json')
+	client.on('connecting', () => {
+		start('2', 'Desconectado. Utiliza npm start Para conectarte')
+	})
+	client.on('open', () => {
+		success('2', 'Conectado')
+	})
+	await client.connect({timeoutMs: 30*1000})
+        fs.writeFileSync('./Nazwa.json', JSON.stringify(client.base64EncodedAuthInfo(), null, '\t'))
+
+	client.on('group-participants-update', async (anu) => {
+		if (!welkom.includes(anu.jid)) return
+		try {
