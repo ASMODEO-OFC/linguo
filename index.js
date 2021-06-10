@@ -747,3 +747,73 @@ async function starts() {
 		           }
 	           })
                   break
+                 case 'linkgp':
+				case 'linkgrup':
+				case 'linkgc':
+				    client.updatePresence(from, Presence.composing) 
+				    if (!isGroup) return reply(mess.only.group)
+                                     if (!isUser) return reply(mess.only.daftarB)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					linkgc = await client.groupInviteCode (from)
+					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
+					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
+					break
+                case 'qrcode':
+                buff = await getBuffer(`https://api.qrserver.com/v1/create-qr-code/?data=${body.slice(8)}&size=1080%C3%971080`)
+				client.sendMessage(from, buff, image, {quoted: mek})
+				break
+		          		
+			case 'closegc':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					var nomor = mek.participant
+					const close = {
+					text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\nAhora *solo administradores* pueden enviar mensajes`,
+					contextInfo: { mentionedJid: [nomor] }
+					}
+					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
+					reply(close)
+					break
+                case 'opengc':
+                case 'bukagc':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					open = {
+					text: `Grupo abierto por el administrador @${sender.split("@")[0]}\nAhora *todos los participantes* pueden enviar mensajes`,
+					contextInfo: { mentionedJid: [sender] }
+					}
+					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
+					client.sendMessage(from, open, text, {quoted: mek})
+					break
+				case 'tstiker':
+				case 'tsticker':
+					if (args.length < 1) return reply('Donde esta el texto?\nEjemplo *tsticker hola')
+					ranp = getRandom('.png')
+					rano = getRandom('.webp')
+					teks = body.slice(9).trim()
+					anu = await fetchJson(`https://mhankbarbar.moe/api/text2image?text=${teks}&apiKey=${apiKey}`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						exec(`webpmux -set exif ${addMetadata('Shanduy', authorname)} ${rano} -o ${rano}`, async (error) => {
+							if (error) return reply(mess.error.stick)
+							client.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
+							fs.unlinkSync(rano)
+						})
+						/*client.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
+						fs.unlinkSync(rano)*/
+					})
+					break
+				case 's':
+				case 'stk':
+				case 'pegatina':
+				case 'webp':
+				case 'stiker':
+				case 'sticker':
+				case 'stickergif':
+				case 'stikergif':
