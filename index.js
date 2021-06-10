@@ -1,9 +1,9 @@
 /*
 * ShanBot es una creación de shanduy
 * ShanBot no tiene ningun fin de lucro
-* shanduy se reserva todos los derechos de autor
-* © 2021 shanduy, INC.
-Cualquier copia que utilize mi ApiKey sera dado de baja
+* shanduy se reserva todosde autor
+* © 2021 s
+Cualquier copia que a dado de baja
 - Que hay de nuevo?
 * Nada
 */
