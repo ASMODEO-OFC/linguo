@@ -763,7 +763,7 @@ async function starts() {
 				client.sendMessage(from, buff, image, {quoted: mek})
 				break
 		          		
-			case 'closegc':
+			case 'closegp':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
@@ -776,7 +776,7 @@ async function starts() {
 					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
 					reply(close)
 					break
-                case 'opengc':
+                case 'opengp':
                 case 'bukagc':
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
