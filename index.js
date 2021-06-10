@@ -3,6 +3,8 @@
 * Bot solo para entretenimiento
 * Todos los derechos reservados
 
+* © 2021 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
+
 - El bot se ira actualizando
 * Gracias por el apoyo! 🛐
 */
