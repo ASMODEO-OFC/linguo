@@ -1051,7 +1051,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break*/
-					case 'nsfwbobs': 
+					case 'nsfwboobs': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/biganimetiddies`, {method: 'get'})
@@ -1106,7 +1106,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					case 'nsfwsidebobs':
+					case 'nsfwsideboobs':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://meme-api.herokuapp.com/gimme/sideoppai`, {method: 'get'})
