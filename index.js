@@ -7,8 +7,8 @@
 * Todos los derechos reservados
 
 - El bot se ira actualizando con nuevos Comandos y mejoras
-* T
-*/
+* 
+*
 
 const {
     WAConnection,
