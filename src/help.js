@@ -37,6 +37,9 @@ const help = (prefix) => {
 ➛ *${prefix}opengc* [Abrir Grupo]
 ➛ *${prefix}linkgp* [Enlace del Grupo]
 ➛ *${prefix}bienvenida* [1/0]
+➛ *${prefix}leveling* [1/0]
+➛ *${prefix}level*
+➛ *${prefix}fitnah*
 
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
@@ -63,6 +66,7 @@ const help = (prefix) => {
 ➛ *${prefix}nsfwneko*
 ➛ *${prefix}waifu*
 ➛ *${prefix}randomanime*
+➛ *${prefix}randomhentai*
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
 
