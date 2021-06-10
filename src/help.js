@@ -50,6 +50,7 @@ const help = (prefix) => {
 ➛ *${prefix}setprefix* [Cambiar Prefijo]
 ➛ *${prefix}bc* [Transmitir]
 ➛ *${prefix}bcgc* [Transmitir]
+➛ *${prefix}delete*
 ➛ *${prefix}hidetag*
 ➛ *${prefix}send*
 ➛ *${prefix}setppbot*
@@ -57,6 +58,11 @@ const help = (prefix) => {
 ➛ *${prefix}exe*
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
+
+➛ *${prefix}nsfw* [1/0] 🔞
+➛ *${prefix}nsfwneko*
+➛ *${prefix}waifu*
+➛ *${prefix}randomanime*
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
 
