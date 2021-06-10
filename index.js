@@ -380,3 +380,35 @@ async function starts() {
 				case 'menu':
 					client.sendMessage(from, help(prefix), text)
 					break
+                                /*case 'makermenu':
+                                        hisil = fs.readFileSync('./src/makerimg.jpg')
+                                        client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text})
+                                        break*/
+		case 'bahasa':
+		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
+				break
+				case 'shanmenu':
+					client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
+							break
+							case 'menuadmin':
+								client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
+										break
+										case 'nsfwmenu':
+											client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
+													break
+					                                                                case 'desmenu':
+											                client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
+													                  break
+					                                                                                  case 'versión':
+				                                                                                          case 'version':
+				                                                                                          client.sendMessage(from, version(prefix, sender), text, {quoted: mek})
+													                                 break
+                                                                                                                                         case 'welmenu':
+				                                                                                                         client.sendMessage(from, welmenu(prefix, sender), text, {quoted: mek})
+													                                 break
+					
+		/*case 'virtex':
+	       case 'troleo':
+               client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
+               break*/
+                                 case 'demote':
