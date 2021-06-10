@@ -19,11 +19,23 @@ const help = (prefix) => {
 
 ➢ ✪🅜🅔🅙🅞🅡🅔🅢✪
 
+➛ *${prefix}tts es* [Su Texto]
+➛ *${prefix}owner* [Info del Creador]
+
 ➢ ✪🅖🅡🅤🅟🅞🅢✪
+
+➛ *${prefix}promover* [Dar Admin]
+➛ *${prefix}degradar* [Quitar Admin]
 
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
+➛ *${prefix}gay* [@]
+➛ *${prefix}ytmp3* [URL]
+➛ *${prefix}ytmp4* [URL]
+
 ➢ ✪🅞🅣🅡🅞🅢✪
+
+➛ *${prefix}hidetag*
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
@@ -32,6 +44,8 @@ const help = (prefix) => {
 ➢ ✪🅟🅡🅔🅜🅘🅤🅜✪
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
+
+➛ *${prefix}ig*
 
 ➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐🅢✪
 
