@@ -472,3 +472,43 @@ async function starts() {
                 if (!isUser) return reply(mess.only.daftarB)
                 client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
                 break*/
+	case 'creador':
+	    case 'owner':
+                case 'creator':
+                client.sendMessage(from, {displayname: "⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ", vcard: vcard}, MessageType.contact, { quoted: mek})
+		client.sendMessage(from, 'wa.me/5491155607911 :)\n\n❗Este es el numero del propietario del bot❗',MessageType.text, { quoted: mek} )
+                break
+	case 'hidetag':
+                client.updatePresence(from, Presence.composing) 
+                if (!isUser) return reply(mess.only.daftarB)
+                if (!isGroup) return reply(mess.only.group)
+                teks = body.slice(9)
+                group = await client.groupMetadata(from);
+                member = group['participants']
+                jids = [];
+                member.map( async adm => {
+                jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
+                 })
+                 options = {
+                 text: teks,
+                contextInfo: {mentionedJid: jids},
+                quoted: mek
+                }
+              await client.sendMessage(from, options, text)
+               break
+            case 'ig':
+            if (args.length < 1) return reply('Donde esta el link??')
+            if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(mess.error.Iv)
+            try {
+                reply(mess.only.insta)
+                const resp = await get.get(`https://st4rz.herokuapp.com/api/ig?url=${args[0]}`, {method: 'get'})
+                if (resp.result.includes('.mp4')) {
+                    var ext = '.mp4'
+                } else {
+                    var ext = '.jpg'
+                }
+                await client.sendFileFromUrl(from, resp.result, `igeh${ext}, ''`)
+            } catch {
+                client.sendMessage(from, mess.error.Ig)
+                }
+            break
