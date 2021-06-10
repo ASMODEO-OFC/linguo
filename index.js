@@ -557,7 +557,7 @@ async function starts() {
 						})
 					})
 					break
-				case 'listadmins':
+				case 'admins':
 				case 'adminlist':
 					client.updatePresence(from, Presence.composing) 
                                         if (!isUser) return reply(mess.only.daftarB)
