@@ -1172,3 +1172,57 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
+                                case 'ping':    
+			   	        if (!isUser) return reply(mess.only.userB)
+                                        const timestamp = speed();
+                                        const latensi = speed() - timestamp
+                                        client.updatePresence(from, Presence.composing) 
+				        uptime = process.uptime()
+                                        client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Second_*\nDevice: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nJaringan: *WI-FI*\nStatus: *En estado de ebriedad*`, text, { quoted: mek})
+                                        break
+                                case 'ttp':
+					if (args.length < 1) return reply('Donde está el texto?')
+					ranp = getRandom('.png')
+					rano = getRandom('.webp')
+					teks = body.slice(4).trim()
+					anu = await fetchJson(`https://mhankbarbar.tech/api/text2image?text=${teks}&apiKey=${BarBarKey}`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						if (err) return reply(mess.error.stick)
+						client.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					break
+                                /*case 'clone':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('La etiqueta de destino que desea clonar')
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
+					try {
+						pp = await client.getProfilePicture(id)
+						buffer = await getBuffer(pp)
+						client.updateProfilePicture(botNumber, buffer)
+						mentions(`La foto de perfil se actualizó correctamente con la foto de perfil de @${id.split('@')[0]}`, [jid], true)
+					} catch (e) {
+						reply('Fallido mi pana')
+					}
+					break*/
+                              default:
+					if (isGroup && isSimi && budy != undefined) {
+						console.log(budy)
+						muehe = await simih(budy)
+						console.log(muehe)
+						reply(muehe)
+					} else {
+						console.log(color('[WARN]','red'), 'Unregistered Command from', color(sender.split('@')[0]))
+					}
+                           }
+		} catch (e) {
+			console.log('Error : %s', color(e, 'red'))
+		}
+	})
+}
+starts()
