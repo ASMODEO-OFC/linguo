@@ -266,3 +266,44 @@ async function starts() {
 				}
 			}
     			const apakah = ['Si','No']
+        		const gay = ['Eres 15% Gay','Eres 0% Gay 😱','Eres 20% Gay','Eres 78% Gay','Eres 62% Gay','Eres 0.1% Gay','Eres 100% Gay 😬','Eres 6% Gay','Eres 96% Gay','Eres 21% Gay','Eres 50% Gay','Eres 99.99% Gay','Eres 12% Gay','Eres 88% Gay','ERES INFINITAMENTE GAY 🤯','Eres 75% Gay','Eres 19% Gay','Eres Fan Del Yaoi','Eres 44% Gay','Eres 84% Gay']
+		        const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
+			const botNumber = client.user.jid
+			const ownerNumber = ["5491155607911@s.whatsapp.net"] // replace this with your number
+			const nomorOwner = [ownerNumber]
+			const isGroup = from.endsWith('@g.us')
+			const totalchat = await client.chats.all()
+			const sender = isGroup ? mek.participant : mek.key.remoteJid
+			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
+			const groupName = isGroup ? groupMetadata.subject : ''
+			const groupId = isGroup ? groupMetadata.jid : ''
+			const groupMembers = isGroup ? groupMetadata.participants : ''
+			const groupAdmins = isGroup ? getGroupAdmins(groupMembers) : ''
+			const isBotGroupAdmins = groupAdmins.includes(botNumber) || false
+			const isGroupAdmins = groupAdmins.includes(sender) || false
+			const isWelkom = isGroup ? welkom.includes(from) : false
+			const isNsfw = isGroup ? nsfw.includes(from) : false
+			const isSimi = isGroup ? samih.includes(from) : false
+			const isOwner = ownerNumber.includes(sender)
+                        const isUser = user.includes(sender)
+                        const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
+                        const NomerOwner = '5491155607911@s.whatsapp.net'
+                        /******Entrada ApiKey******/
+                        const BarBarKey = 'Mn2Bf58QHQ8kABoLq80g'
+                        /******Fin de la entrada de ApiKey******/
+
+			const isUrl = (url) => {
+			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
+			}
+			const reply = (teks) => {
+				client.sendMessage(from, teks, text, {quoted:mek})
+			}
+			const sendMess = (hehe, teks) => {
+				client.sendMessage(hehe, teks, text)
+			}
+			const mentions = (teks, memberr, id) => {
+				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
+			}
+
+	        //nivelación de funciones
+            if (isGroup && isLevelingOn) {
