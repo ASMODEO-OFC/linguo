@@ -696,3 +696,54 @@ async function starts() {
 					}
 					
                      case 'leave':
+                    if (!isGroup) return reply(mess.only.group)
+                    if (!isGroupAdmins) return reply(mess.only.admin)
+                     setTimeout( () => {
+					client.groupLeave (from) 
+					}, 2000)
+                     setTimeout( () => {
+					client.updatePresence(from, Presence.composing) 
+					client.sendMessage(from, 'Bye Bye 👋🏻', text) // ur cods
+					}, 0)
+                     break
+       /*case 'ownergrup':
+				  case 'ownergroup':
+               client.updatePresence(from, Presence.composing) 
+              options = {
+          text: `El x de este grupo es :@${from.split("-")[0]}`, 
+          contextInfo: { mentionedJid: [from] }
+           }
+           client.sendMessage(from, options, text, { quoted: mek } )
+				break*/
+                                      case 'kick':
+					case 'ban':
+					client.updatePresence(from, Presence.composing) 
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					if (mentioned.length > 1) {
+						teks = 'Pedido recibido, se eliminó con éxito a :\n'
+						for (let _ of mentioned) {
+							teks += `@${_.split('@')[0]}\n`
+						}
+						mentions(teks, mentioned, true)
+						client.groupRemove(from, mentioned)
+					} else {
+						mentions(`Pedido recibido, se eliminó con éxito a : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						client.groupRemove(from, mentioned)
+					client.sendMessage(mentioned, 'Chao gord@ 👋🏻', text)
+					}
+					break
+				case 'exe':
+	              client.updatePresence(from, Presence.composing) 
+	              if (!isOwner) return reply(mess.only.ownerB)
+	               const cmd = body.slice(5)
+	               exec(cmd, (err, stdout) => {
+		           if(err) return client.sendMessage(from, "Adios", text, { quoted: mek })
+		           if (stdout) {
+			       client.sendMessage(from, stdout, text, { quoted: mek })
+		           }
+	           })
+                  break
