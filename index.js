@@ -336,7 +336,7 @@ async function starts() {
  
        /******ENTRADA FIN DE FUNCIONES******/
 			function addMetadata(packname, author) {	
-				if (!packname) packname = 'ShanBot'; if (!author) author = 'Shanduy';	
+				if (!packname) packname = '╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝'; if (!author) author = '⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ';	
 				author = author.replace(/[^a-zA-Z0-9]/g, '');	
 				let name = `${author}_${packname}`
 				if (fs.existsSync(`./src/stickers/${name}.exif`)) return `./src/stickers/${name}.exif`
