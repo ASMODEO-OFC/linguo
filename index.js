@@ -1,11 +1,11 @@
 /*
-*  es una creación de 
-* no tiene ningun fin de lucro
-* shanduy se reserva todosde autor
-* 021 s
-Cualquier copia que a dado de baja
-- Que hay de nuevo?
-* Nada
+* T
+* T
+* T
+* T
+
+- t
+* T
 */
 
 const {
