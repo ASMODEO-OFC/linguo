@@ -977,3 +977,66 @@ async function starts() {
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
+                 case 'level':
+                if (!isLevelingOn) return reply(mess.levelnoton)
+                if (!isGroup) return reply(mess.only.group)
+                const userLevel = getLevelingLevel(sender)
+                const userXp = getLevelingXp(sender)
+                if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
+                sem = sender.replace('@s.whatsapp.net','')
+                resul = `◪ *⬆LEVEL⬆*\n  ├─ ❏ *Nombre* : ${sem}\n  ├─ ❏ *XP* : ${userXp}\n  └─ ❏ *Level* : ${userLevel}`
+               client.sendMessage(from, resul, text, { quoted: mek})
+                .catch(async (err) => {
+                        console.error(err)
+                        await reply(`Error!\n${err}`)
+                    })
+            break
+				case 'fitnah':
+				if (args.length < 1) return reply(`Uso :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @menciona a alguien|Hola|Hola también`)
+				var gh = body.slice(7)
+				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					var replace = gh.split("|")[0];
+					var target = gh.split("|")[1];
+					var bot = gh.split("|")[2];
+					client.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
+					break
+            case 'leveling':
+                if (!isGroup) return reply(mess.only.group)
+                if (!isGroupAdmins) return reply(mess.only.admin)
+                if (args.length < 1) return reply('Digita 1 para ativar el recurso')
+                if (args[0] === '1') {
+                    if (isLevelingOn) return reply('*La función de nivel ya estaba activa*')
+                    _leveling.push(groupId)
+                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
+                     reply(mess.levelon)
+                } else if (args[0] === '0') {
+                    _leveling.splice(groupId, 1)
+                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
+                     reply(mess.leveloff)
+                } else {
+                    reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
+                }
+            break
+                                /*case 'nsfwtrap':
+                                        try{
+                                                if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+                                                if (!isUser) return reply(mess.only.daftarB)
+                                                res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap?apikey=APIKEYLU`, {method: 'get'})
+                                                buffer = await getBuffer(res.result)
+                                                client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Estas enfermo flaco NEFASTOOOOO'})
+                                        } catch (e) {
+                                                console.log(`*Error* :`, color(e,'red'))
+                                                reply('❌ *ERROR* ❌')
+                                        }
+										break*/
+										case 'randomhentai': 
+						try {
+							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
+							res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
+							buffer = await getBuffer(res.result)
+							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Otaku que se esperaba'})
+						} catch (e) {
+							console.log(`Error :`, color(e,'red'))
+							reply('❌ *ERROR* ❌')
+						}
+						break
