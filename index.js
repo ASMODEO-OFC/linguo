@@ -5,7 +5,8 @@
 
 * © 2021 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
 
-- El bot se ira actualizando
+- El bot se ira actualizando periódicamente con mejoras y nuevos comandos
+
 * Gracias por el apoyo! 🛐
 */
 
