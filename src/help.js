@@ -19,6 +19,8 @@ const help = (prefix) => {
 
 ➢ ✪🅜🅔🅙🅞🅡🅔🅢✪
 
+➛ *${prefix}sticker* [Convertir en Sticker]
+➛ *${prefix}tsticker* [Texto]
 ➛ *${prefix}tts es* [Su Texto]
 ➛ *${prefix}owner* [Info del Creador]
 
@@ -30,6 +32,9 @@ const help = (prefix) => {
 ➛ *${prefix}kick* [Eliminar miembro @]
 ➛ *${prefix}marcar* [Mencionar a todos]
 ➛ *${prefix}marcar2-5* [Otras opciones]
+➛ *${prefix}closegc* [Cerrar Grupo]
+➛ *${prefix}opengc* [Abrir Grupo]
+➛ *${prefix}linkgp* [Enlace del Grupo]
 
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
