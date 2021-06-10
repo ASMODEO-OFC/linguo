@@ -907,3 +907,73 @@ async function starts() {
 						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
 						client.sendMessage(from, `\`\`\`Registrado con exito ✔️\`\`\`\n\n\`\`\`Hora: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
 					break
+                                case 'welcome':
+					if (!isGroup) return reply(mess.only.group)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					if (!isGroupAdmins) return reply(mess.only.Badmin)
+					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
+					if (Number(args[0]) === 1) {
+						if (isWelkom) return reply('Ya esta activada!!!')
+						welkom.push(from)
+						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+						reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
+					} else if (Number(args[0]) === 0) {
+						welkom.splice(from, 1)
+						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+						reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
+					} else {
+						reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
+					}
+					break
+                               case 'nsfwneko':
+				    try{
+						if (!isNsfw) return reply('❌ *NSFW NO ESTA ATIVADO* ❌')
+                                                if (!isUser) return reply(mess.only.daftarB)
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'mesum'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('❌ *ERROR* ❌')
+					}
+					break
+                              	case 'nsfw':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (args.length < 1) return reply('Digita 1 para activar los NSFW')
+					if (Number(args[0]) === 1) {
+						if (isNsfw) return reply('Recursos Activados ✅')
+						nsfw.push(from)
+						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
+						reply('❬ EXITO ❭ La funcion NSFW esta habilitado en este grupo')
+					} else if (Number(args[0]) === 0) {
+						nsfw.splice(from, 1)
+						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
+						reply('❬ ✅ ❭ La funcion NSFW esta deshabilitado en este grupo')
+					} else {
+						reply('Digite 1 para activarlo, 0 para desactivarlo')
+					}
+					break	
+				case 'waifu':
+					gatauda = body.slice(7)
+					reply(mess.wait)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					anu = await fetchJson(`https://arugaz.my.id/api/nekonime`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image,{quoted: mek})
+					break
+				case 'randomanime':
+					gatauda = body.slice(13)
+					reply(mess.wait)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=BotWeA`, {method: 'get'})
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break						
+                             case 'delete':
+					case 'del':
+					if (!isGroup)return reply(mess.only.group)
+                                        if (!isUser) return reply(mess.only.daftarB)
+					if (!isGroupAdmins)return reply(mess.only.admin)
+					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+					break
