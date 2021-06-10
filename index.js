@@ -6,7 +6,7 @@
 
 * Todos los derechos reservados
 
-- El bot se ira actualizando con nuevos Comandos y mejoras
+- El bot se ira actualizando
 * -
 * Gracias por el apoyo! 🛐
 
