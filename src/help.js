@@ -24,6 +24,7 @@ const help = (prefix) => {
 
 ➢ ✪🅖🅡🅤🅟🅞🅢✪
 
+➛ *${prefix}admins* [Lista de Admins]
 ➛ *${prefix}promover* [Dar Admin]
 ➛ *${prefix}degradar* [Quitar Admin]
 
@@ -35,6 +36,7 @@ const help = (prefix) => {
 
 ➢ ✪🅞🅣🅡🅞🅢✪
 
+➛ *${prefix}setprefix* [Cambiar Prefijo]
 ➛ *${prefix}hidetag*
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
