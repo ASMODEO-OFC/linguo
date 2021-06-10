@@ -251,3 +251,18 @@ async function starts() {
 					Iv: '❌ Link inválido ❌'
 				},
 				only: {
+					group: '[❗] Este comando es solo para grupos!',
+					ownerG: '[❗] Este comando solo puede ser utilizado por los admins del grupo!',
+					ownerB: '[❗] Este comando solo puede ser usado por ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ',
+					admin: '[❗] Este comando solo puede ser utilizado por los adminis del grupo!',
+					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
+                                        pegatina: 'Creando sticker ✔️\n\n*Recuerda los stickers animados Tienen un limite de 6 segundos 🛐',
+					imgs: 'Recuerda solo sirve para stickers❗\n\n*Convirtiendo de sticker a imagen 🛐',
+					mpcancion: 'Convirtiendo de MP4 a MP3🔄*\n\nNo hagas spam 🙏🏼',
+					mpa: 'Buscando y descargando canción*\n\nAguarda un momento sin hacer spam 🙏🏼',
+					mpv: 'Buscando y descargando video*\n\nAguarda un momento sin hacer spam 🙏🏼',
+					musica: 'Buscando y descargando canción*\n\nAguarda un momento sin hacer spam 🙏🏼\n\n*Recuerda colocar bien el nombre o el link del video de youtube❗',
+					daftarB: `No estas registrado, por favor regístrate \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar asm`,
+				}
+			}
+    			const apakah = ['Si','No']
