@@ -412,3 +412,63 @@ async function starts() {
                client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
                break*/
                                  case 'demote':
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('La etiqueta de destino que el administrador quiere transmitir')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					if (mentioned.length > 1) {
+						teks = ''
+						for (let _ of mentioned) {
+							teks += `Pedido recibido✅\n\nRetirando cargo como administrador :\n`
+							teks += `@_.split('@')[0]`
+						}
+						mentions(teks, mentioned, true)
+						client.groupDemoteAdmin(from, mentioned)
+					} else {
+						mentions(`Pedido recibido✅\n\nRetirando cargo como administrador @${mentioned[0].split('@')[0]}\n*${groupMetadata.subject}*_`, mentioned, true)
+						client.groupDemoteAdmin(from, mentioned)
+					}
+					break
+                 case 'promote':
+					client.updatePresence(from, Presence.composing) 
+                                        if (!isUser) return reply(mess.only.daftarB)
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
+					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta de destino que desea promocionar!')
+					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+					if (mentioned.length > 1) {
+						teks = 'Pedido recibido✅\n\nAgregando cargo como administrador :\n'
+						for (let _ of mentioned) {
+							teks += `@${_.split('@')[0]}\n`
+						}
+						mentions(teks, mentioned, true)
+						client.groupMakeAdmin(from, mentioned)
+					} else {
+						mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
+						client.groupMakeAdmin(from, mentioned)
+					}
+					break
+	      case 'gay':
+                client.updatePresence(from, Presence.composing) 
+              if (!isUser) return reply(mess.only.daftarB)
+                random = gay[Math.floor(Math.random() * (gay.length))]
+	      break
+				  case 'wa.me':
+				  case 'wame':
+  client.updatePresence(from, Presence.composing) 
+      options = {
+          text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nSu link de Whatsapp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*O ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
+          contextInfo: { mentionedJid: [sender] }
+    }
+    client.sendMessage(from, options, text, { quoted: mek } )
+				break
+				if (data.error) return reply(data.error)
+				reply(data.result)
+				break
+		/*case 'tneon':
+                data = await await getBuffer(`https://api.zeks.xyz/api/text3dbox?apikey=tshanduyx&text=${body.slice(8)}`)
+                if (!isUser) return reply(mess.only.daftarB)
+                client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
+                break*/
