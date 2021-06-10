@@ -62,3 +62,36 @@ const { nsfwmenu } = require('./src/nsfwmenu')
 const { desmenu } = require('./src/desmenu')
 const { version } = require('./src/version')
 const { welmenu } = require('./src/welmenu')
+/*const { mediamenu } = require('./database/menu/mediamenu')
+const { educationmenu } = require('./database/menu/educationmenu')
+const { downloadermenu } = require('./database/menu/downloadermenu')
+const { mememenu } = require('./database/menu/mememenu')
+const { kerangmenu } = require('./database/menu/kerangmenu')
+const { groupmenu } = require('./database/menu/groupmenu')
+const { soundmenu } = require('./database/menu/soundmenu')
+const { musicmenu } = require('./database/menu/musicmenu')
+const { islammenu } = require('./database/menu/islammenu')
+const { stalkmenu } = require('./database/menu/stalkmenu')
+const { wibumenu } = require('./database/menu/wibumenu')
+const { funmenu } = require('./database/menu/funmenu')
+const { informationmenu } = require('./database/menu/informationmenu')
+const { 18+menu } require('./database/menu/18+menu')
+const { ownermenu } require('./database/menu/ownermenu')
+const { othermenu } require('./database/menu/othermenu')*/
+/******FIN DE ENTRADA DEL MENÚ******/
+
+/******CARGA DE ENTRADA VCARD******/
+const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
+            + 'VERSION:3.0\n' 
+            + 'FN:asm\n' // Nombre
+            + 'ORG:⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ;\n' // Propietario
+            + 'TEL;type=CELL;type=VOICE;waid=5491155607911:+54 9 11 5560 7911\n' // ID de WhatsApp + número de teléfono
+            + 'END:VCARD'
+/******FIN DE ENTRADA VCARD******/
+
+prefix = '*'
+blocked = []
+
+/******INICIO DE FUNCIONES ENTRADA******/
+const getLevelingXp = (userId) => {
+            let position = false
