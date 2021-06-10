@@ -2,10 +2,11 @@
 * ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝by ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
 * Bot solo para entretenimiento
 
-* 
-* T
+* © 2021 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
 
-- t
+* Todos los derechos reservados
+
+- El bot se ira actualizando con nuevos Comandos y mejoras
 * T
 */
 
