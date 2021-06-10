@@ -64,6 +64,15 @@ const help = (prefix) => {
 
 ➛ *${prefix}nsfw* [1/0] 🔞
 ➛ *${prefix}nsfwneko*
+➛ *${prefix}nsfwboobs*
+➛ *${prefix}nsfwsideboobs*
+➛ *${prefix}nsfwahegao*
+➛ *${prefix}nsfwblowjob*
+➛ *${prefix}nsfwneko*
+➛ *${prefix}nsfwass*
+➛ *${prefix}nsfwthighs*
+➛ *${prefix}nsfwfeets*
+➛ *${prefix}nsfwarmpits*
 ➛ *${prefix}waifu*
 ➛ *${prefix}randomanime*
 ➛ *${prefix}randomhentai*
