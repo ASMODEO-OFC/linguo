@@ -27,6 +27,7 @@ const help = (prefix) => {
 ➛ *${prefix}admins* [Lista de Admins]
 ➛ *${prefix}promover* [Dar Admin]
 ➛ *${prefix}degradar* [Quitar Admin]
+➛ *${prefix}kick* [Eliminar miembro @]
 ➛ *${prefix}marcar* [Mencionar a todos]
 ➛ *${prefix}marcar2-5* [Otras opciones]
 
@@ -44,6 +45,9 @@ const help = (prefix) => {
 ➛ *${prefix}hidetag*
 ➛ *${prefix}send*
 ➛ *${prefix}setppbot*
+➛ *${prefix}leave*
+➛ *${prefix}exe*
+
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
