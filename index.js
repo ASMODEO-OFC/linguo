@@ -1248,7 +1248,7 @@ async function starts() {
 					client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
 					break
 				case 'simi':
-			    	if (!isPremium) return reply(mess.only.premium)
+			    	if (!isUser) return reply(mess.only.daftarB)
 					if (args.length < 1) return reply('Donde está el texto??')
 					teks = body.slice(5)
 					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
@@ -1257,7 +1257,7 @@ async function starts() {
 					break
 				case 'simih':
 					if (!isGroup) return reply(mess.only.group)
-			    	if (!isPremium) return reply(mess.only.premium)
+			    	if (!isUser) return reply(mess.only.daftarB)
 					if (args.length < 1) return reply('Khaaaa?')
 					if (Number(args[0]) === 1) {
 						if (isSimi) return reply('El modo simih esta activado')
