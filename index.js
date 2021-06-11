@@ -1245,6 +1245,31 @@ async function starts() {
 					const kl = ti[Math.floor(Math.random() * ti.length)]
 					client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
 					break
+				case 'simi':
+			    	if (!isPremium) return reply(mess.only.premium)
+					if (args.length < 1) return reply('Donde está el texto??')
+					teks = body.slice(5)
+					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
+					//if (anu.error) return reply('Simi ga tau kak')
+					reply(anu)
+					break
+				case 'simih':
+					if (!isGroup) return reply(mess.only.group)
+			    	if (!isPremium) return reply(mess.only.premium)
+					if (args.length < 1) return reply('Khaaaa?')
+					if (Number(args[0]) === 1) {
+						if (isSimi) return reply('El modo simih esta activado')
+						samih.push(from)
+						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
+						reply('Activado con éxito el modo simih en este grupo 🙂️')
+					} else if (Number(args[0]) === 0) {
+						samih.splice(from, 1)
+						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
+						reply('Desactivado con éxito el modo simih en este grupo 😐️')
+					} else {
+						reply('1 para activar, 0 para desactivar, pedazo de animal')
+					}
+					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
