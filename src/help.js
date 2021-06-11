@@ -45,7 +45,6 @@ const help = (prefix) => {
 ➛ *${prefix}bienvenida* [1/0]
 ➛ *${prefix}leveling* [1/0]
 ➛ *${prefix}level*
-➛ *${prefix}fitnah*
 
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
