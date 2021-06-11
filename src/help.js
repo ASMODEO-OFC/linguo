@@ -55,6 +55,9 @@ const help = (prefix) => {
 ➛ *${prefix}ytmp3* [URL]
 ➛ *${prefix}ytmp4* [URL]
 ➛ *${prefix}tomp3* [Convierte videos a mp3]
+➛ *${prefix}yamete*
+➛ *${prefix}hentaisom*
+➛ *${prefix}onichan*
 
 ➢ ✪🅞🅣🅡🅞🅢✪
 
