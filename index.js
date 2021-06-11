@@ -271,7 +271,7 @@ async function starts() {
 					ownerB: '[❗] Este comando solo puede ser usado por ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ',
 					admin: '[❗] Este comando solo puede ser utilizado por los adminis del grupo!',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
-                                        pegatina: 'Creando sticker ✔️\n\n*Recuerda los stickers animados Tienen un limite de 6 segundos 🛐',
+                                        pegatina: 'Creando sticker ✔️\n\n*Recuerda los stickers animados hasta 10 segundos 🛐',
 					imgs: 'Recuerda solo sirve para stickers❗\n\n*Convirtiendo de sticker a imagen 🛐',
 					mpcancion: 'Convirtiendo de MP4 a MP3🔄*\n\nNo hagas spam 🙏🏼',
 					mpa: 'Buscando y descargando canción*\n\nAguarda un momento sin hacer spam 🙏🏼',
@@ -1271,6 +1271,17 @@ async function starts() {
 					} else {
 						reply('1 para activar, 0 para desactivar, pedazo de animal')
 					}
+					break
+                case 'pinterest':
+                    tels = body.slice(11)
+					client.updatePresence(from, Presence.composing) 
+					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=${tels}`, {method: 'get'})
+					reply(mess.wait)
+					n = JSON.parse(JSON.stringify(data));
+					nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+					client.sendMessage(from, pok, image, { quoted: mek, caption: `*PINTEREST*\n\*Resultado de búsqueda* : *${tels}*`})
+                    await limitAdd(sender)
 					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
