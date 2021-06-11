@@ -266,6 +266,7 @@ async function starts() {
 				},
 				only: {
 					group: '[❗] Este comando es solo para grupos!',
+					premium: '[❗] ESTE PEDIDO ES SOLO PARA *USUARIOS PREMIUM*',
 					ownerG: '[❗] Este comando solo puede ser utilizado por los admins del grupo!',
 					ownerB: '[❗] Este comando solo puede ser usado por ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ',
 					admin: '[❗] Este comando solo puede ser utilizado por los adminis del grupo!',
