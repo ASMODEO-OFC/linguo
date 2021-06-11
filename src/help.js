@@ -42,6 +42,7 @@ const help = (prefix) => {
 ➛ *${prefix}marcar* [Mencionar a todos]
 ➛ *${prefix}marcar2*
 ➛ *${prefix}marcar3* [wame]
+➛ *${prefix}hidetag* [Mencionar a todos sin spam]
 ➛ *${prefix}bienvenida* [1/0]
 ➛ *${prefix}leveling* [1/0]
 ➛ *${prefix}level*
@@ -59,7 +60,6 @@ const help = (prefix) => {
 ➛ *${prefix}bc* [Transmitir]
 ➛ *${prefix}bcgc* [Transmitir]
 ➛ *${prefix}delete*
-➛ *${prefix}hidetag*
 ➛ *${prefix}send*
 ➛ *${prefix}setppbot*
 ➛ *${prefix}leave*
