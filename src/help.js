@@ -21,6 +21,7 @@ const help = (prefix) => {
 
 ➛ *${prefix}sticker* [Convertir en Sticker]
 ➛ *${prefix}tsticker* [Texto]
+➛ *${prefix}toimg* [Convertir Sticker en Imagen]
 ➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}tts es* [Su Texto]
 ➛ *${prefix}owner* [Info del Creador]
@@ -78,6 +79,9 @@ const help = (prefix) => {
 ➛ *${prefix}randomhentai*
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
+
+➛ *${prefix}simih* [1/0]
+➛ *${prefix}simi* [Para una consulta]
 
 ➢ ✪🅟🅡🅔🅜🅘🅤🅜✪
 
