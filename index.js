@@ -1224,6 +1224,20 @@ async function starts() {
 						reply('Fallido mi pana')
 					}
 					break*/
+				case 'toimg':
+					if (!isQuotedSticker) return reply('{ ❗ } *Etiquete la imagen*')
+					reply(mess.wait)
+					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+					media = await client.downloadAndSaveMediaMessage(encmedia)
+					ran = getRandom('.png')
+					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+						fs.unlinkSync(media)
+						if (err) return reply('❌ Falló la conversión del sticker en imagen ❌')
+						buffer = fs.readFileSync(ran)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
+						fs.unlinkSync(ran)
+					})
+					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
