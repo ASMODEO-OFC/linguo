@@ -1283,6 +1283,28 @@ async function starts() {
 					client.sendMessage(from, pok, image, { quoted: mek, caption: `*PINTEREST*\n\*Resultado de búsqueda* : *${tels}*`})
                     await limitAdd(sender)
 					break
+				case 'setfoto':
+                    if (!isGroup) return reply(mess.only.group)
+                    if (!isGroupAdmins) return reply(mess.only.admin)
+                    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                    media = await client.downloadAndSaveMediaMessage(mek)
+                    await client.updateProfilePicture (from, media)
+                    reply('Se cambió con éxito la foto del grupo')
+                    break
+                 case 'setdesc':
+			    	 if (!isGroup) return reply(mess.only.group)
+				     if (!isGroupAdmins) return reply(mess.only.admin)
+			   	     if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+				     client.groupUpdateDescription(from, `${body.slice(9)}`)
+				     client.sendMessage(from, 'Descripción cambiada con éxito', text, {quoted: mek})
+				     break
+				case 'setname':
+                   if (!isGroup) return reply(mess.only.group)
+			       if (!isGroupAdmins) return reply(mess.only.admin)
+			   	   if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                   client.groupUpdateSubject(from, `${body.slice(9)}`)
+                   client.sendMessage(from, 'Nombre del grupo cambiado con éxito', text, {quoted: mek})
+                   break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
