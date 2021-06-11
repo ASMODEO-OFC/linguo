@@ -1,12 +1,14 @@
 const version = (prefix, pushname) => {
     return `
-*Asm*
+*╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝ by ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ*
 
-*Actualizado:* 10 de junio de 2021
-*Versión actual:* 0.1
-*Ofrecida por:* asm
+*Actualizado:* 11 de junio de 2021
+*Versión actual:* 0.4
+*Ofrecida por:* © 2021 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
 
 *INFORME*
+
+Se iran corrigiendo, mejorando y agregando nuevos comandos
 
 `
 
