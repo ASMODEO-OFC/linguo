@@ -63,6 +63,7 @@ const help = (prefix) => {
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
+➛ *${prefix}pinterest* [Texto]
 ➛ *${prefix}nsfw* [1/0] 🔞
 ➛ *${prefix}nsfwneko*
 ➛ *${prefix}nsfwboobs*
