@@ -24,6 +24,7 @@ const help = (prefix) => {
 ➛ *${prefix}toimg* [Convertir Sticker en Imagen]
 ➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}tts es* [Su Texto]
+➛ *${prefix}wame* [Link de su WhatsApp]
 ➛ *${prefix}owner* [Info del Creador]
 
 ➢ ✪🅖🅡🅤🅟🅞🅢✪
@@ -32,14 +33,15 @@ const help = (prefix) => {
 ➛ *${prefix}promover* [Dar Admin]
 ➛ *${prefix}degradar* [Quitar Admin]
 ➛ *${prefix}kick* [Eliminar miembro @]
-➛ *${prefix}marcar* [Mencionar a todos]
-➛ *${prefix}marcar2-5* [Otras opciones]
 ➛ *${prefix}setname* [Cambiar Nombre]
 ➛ *${prefix}setdesc* [Cambiar Descripción]
 ➛ *${prefix}setfoto* [Cambiar Foto]
 ➛ *${prefix}closegc* [Cerrar Grupo]
 ➛ *${prefix}opengc* [Abrir Grupo]
 ➛ *${prefix}linkgp* [Enlace del Grupo]
+➛ *${prefix}marcar* [Mencionar a todos]
+➛ *${prefix}marcar2*
+➛ *${prefix}marcar3* [wame]
 ➛ *${prefix}bienvenida* [1/0]
 ➛ *${prefix}leveling* [1/0]
 ➛ *${prefix}level*
