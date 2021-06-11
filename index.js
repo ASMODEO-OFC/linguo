@@ -51,6 +51,7 @@ const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
+const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
 /******FIN DE ENTRADA JSON******/
 
 /******INICIO DE LA ENTRADA DEL MENÚ******/
@@ -286,7 +287,7 @@ async function starts() {
 			const botNumber = client.user.jid
 			const ownerNumber = ["5491155607911@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
-			const premium = ["5491155607911@s.whatsapp.net","5492323363907@s.whatsapp.net","5492323313621@s.whatsapp.net","5491131390034@s.whatsapp.net","5491162935210@s.whatsapp.net","554792091566@s.whatsapp.net","558699541889@s.whatsapp.net","559294313229@s.whatsapp.net","554298653614@s.whatsapp.net"]
+            const isAntiLink = isGroup ? antilink.includes(from) : false
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
