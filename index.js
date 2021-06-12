@@ -414,9 +414,19 @@ async function starts() {
 			reply("Estan hablando de mi??🤨🤔️")
 	}
 
+		if (messagesC.includes("linguo")){
+			client.updatePresence(from, Presence.composing)
+			reply("Que queres trol@?? 😑")
+	}
+
+		if (messagesC.includes("sami")){
+			client.updatePresence(from, Presence.composing)
+			reply("Chocolatito :3")
+	}
+
 		if (messagesC.includes("juanita")){
 			client.updatePresence(from, Presence.composing)
-			reply("Es re puta esa! 🤗")
+			reply("Jirafita 🦒♥️")
 	}
 
 			if (messagesC.includes("tobi")){
