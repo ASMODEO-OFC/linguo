@@ -287,7 +287,6 @@ async function starts() {
 			const botNumber = client.user.jid
 			const ownerNumber = ["5491155607911@s.whatsapp.net"] // replace this with your number
 			const nomorOwner = [ownerNumber]
-            const isAntiLink = isGroup ? antilink.includes(from) : false
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
