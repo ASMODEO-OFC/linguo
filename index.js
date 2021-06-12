@@ -47,7 +47,7 @@ const speed = require('performance-now')
 /******COMIENZO DE LA ENTRADA JSON******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
-const samih = JSON.parse(fs.readFileSync('./database/json/simi.json'))
+const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
