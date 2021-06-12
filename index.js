@@ -435,6 +435,12 @@ async function starts() {
             client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 	}
 
+			if (messagesC.includes("asmodeo")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./sticker/diablo.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    }
+
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
