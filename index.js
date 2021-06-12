@@ -341,6 +341,14 @@ async function starts() {
             }
         }
 
+if (text.includes("placa"))
+  { const aris = text.replace(/!placa /, "") 
+  axios.get(`https://apicarros.com/v1/consulta/${aris}/json`).then((res) =>{ 
+  let hasil = ` *🔍CONSULTA REALIZADA🔍* \n\n ➸ *AÑO:*  ${res.data.ano}\n ➸ *AÑO DEL MODELO* : ${res.data.anoModelo}\n ➸ *CHASIS* : ${res.data.chassi}\n ➸ *CÓDIGO DE RETORNO* : ${res.data.codigoRetorno}\n ➸ *CÓDIGO DE SITUACIÓN* : ${res.data.codigoSituacao}\n ➸ *COR* : ${res.data.cor}\n ➸ *MARCA* : ${res.data.marca}\n ➸ *MUNICIPIO* : ${res.data.municipio}\n ➸ *SITUACIÓN* : ${res.data.situacao}\n ➸ *UF* : ${res.data.uf}\n *📌BY:╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝*` 
+  conn.sendMessage(id, hasil, MessageType.text); 
+ })
+ }
+
 		    if (messagesC.includes("https://")){
 		if (!isGroup) return
 		if (!isAntiLink) return
