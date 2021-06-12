@@ -44,6 +44,7 @@ const help = (prefix) => {
 ➛ *${prefix}marcar3* [wame]
 ➛ *${prefix}hidetag* [Mencionar a todos sin spam]
 ➛ *${prefix}bienvenida* [1/0]
+➛ *${prefix}antilink* [1/0]
 ➛ *${prefix}delete* [Borrar mensaje del bot]
 ➛ *${prefix}leave* [Sacar al bot del grupo]
 ➛ *${prefix}leveling* [1/0]
