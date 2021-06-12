@@ -437,7 +437,7 @@ async function starts() {
 
 			if (messagesC.includes("asmodeo")){
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/diablo.webp');
+	     	const d = fs.readFileSync('./sticker/asmodeo.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
