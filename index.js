@@ -376,6 +376,39 @@ async function starts() {
 		}, 0)
 	}
 
+		    if (messagesC.includes("http://")){
+		if (!isGroup) return
+		if (!isAntiLink) return
+		if (isGroupAdmins) return reply('Si eres admin, no serás eliminado por tus links, rlx 🙂')
+		client.updatePresence(from, Presence.composing)
+		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
+		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
+		reply(`link detectado ${sender.split("@")[0]} usted sera expulsado de este grupo en 5 segundos`)
+		setTimeout( () => {
+			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
+		}, 5000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("1 BYE BYE 👋")
+		}, 4000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("2")
+		}, 3000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("3")
+		}, 2000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("4")
+		}, 1000)
+		setTimeout( () => {
+			client.updatePresence(from, Presence.composing)
+			reply("5")
+		}, 0)
+	}
+
 		if (messagesC.includes("bot")){
 			client.updatePresence(from, Presence.composing)
 			reply("Estan hablando de mi??🤨🤔️")
