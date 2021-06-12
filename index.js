@@ -379,6 +379,11 @@ async function starts() {
 			reply("Estan hablando de mi??🤨🤔️")
 	}
 
+		if (messagesC.includes("juanita")){
+			client.updatePresence(from, Presence.composing)
+			reply("Es re puta esa! 🤗")
+	}
+
 			if (messagesC.includes("tobi")){
 			client.updatePresence(from, Presence.composing)
 			tujuh = fs.readFileSync('./assets/tobi.mp3');
