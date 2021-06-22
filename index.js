@@ -441,18 +441,6 @@ async function starts() {
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
-			if (messagesC.includes("pocho")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/pocho.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
-			if (messagesC.includes("luu")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./sticker/luu.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
