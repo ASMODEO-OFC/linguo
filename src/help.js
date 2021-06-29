@@ -53,6 +53,7 @@ const help = (prefix) => {
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
 ➛ *${prefix}gay* [@]
+➛ *${prefix}puta* [@]
 ➛ *${prefix}ytmp3* [URL]
 ➛ *${prefix}ytmp4* [URL]
 ➛ *${prefix}tomp3* [Convierte videos a mp3]
