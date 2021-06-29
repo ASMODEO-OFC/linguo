@@ -1282,6 +1282,13 @@ async function starts() {
 					const kl = ti[Math.floor(Math.random() * ti.length)]
 					client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
 					break
+		        case 'puta':		
+	            	if (args.length < 1) return reply('Mencione a su amig@!')
+					rate = body.slice(1)
+					const ti =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39','50','65','90','77','7','90','40','Adicto al yaoi']
+					const kl = ti[Math.floor(Math.random() * ti.length)]
+					client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
+					break
 				case 'simi':
 			    	if (!isUser) return reply(mess.only.daftarB)
 					if (args.length < 1) return reply('Donde está el texto??')
