@@ -981,11 +981,12 @@ async function starts() {
 					})
 					break
                case 'play':   
+	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
 	        if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduytf`)
-               if (anu.error) return reply(anu.error)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
+               if  (anu.error) return reply(anu.error)
                  infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
