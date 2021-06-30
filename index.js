@@ -677,7 +677,7 @@ async function starts() {
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpa)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${args[0]}`, {method: 'get'})
+					anu = await fetchJson(`https://api.xteam.xyz/dl/ytmp3?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*DESCARGA EXITOSA ✅*\n❏ *Título* : ${anu.title}\n❏ *Tamaño del archivo* : ${anu.result.size}\n\n*ENVIANDO CANCIÓN, POR FAVOR NO HAGAS SPAM 🛐*`
 					thumb = await getBuffer(anu.thumb)
@@ -689,7 +689,7 @@ async function starts() {
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpv)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
+					anu = await fetchJson(`https://api.xteam.xyz/dl/ytmp4?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
 					teks = `*DESCARGA EXITOSA ✅*\n❏ Título* : ${anu.title}\n\n*ENVIANDO VIDEO, POR FAVOR NO HAGAS SPAM 🛐*`
 					thumb = await getBuffer(anu.thumb)
