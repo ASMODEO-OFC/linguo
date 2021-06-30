@@ -454,6 +454,18 @@ async function starts() {
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
+			if (messagesC.includes("brillith")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./stickers/brillith.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    }
+
+			if (messagesC.includes("anto")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./stickers/anto.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    }
+
 			colors = ['red','white','black','blue','yellow','green']
 			const isMedia = (type === 'imageMessage' || type === 'videoMessage')
 			const isQuotedImage = type === 'extendedTextMessage' && content.includes('imageMessage')
