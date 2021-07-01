@@ -3,7 +3,7 @@ const version = (prefix, pushname) => {
 *╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝ by ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ*
 
 *Actualizado:* 11 de junio de 2021
-*Versión actual:* 1.2.4
+*Versión actual:* 1.3.7
 *Ofrecida por:* © 2021 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
 
 *INFORME*
