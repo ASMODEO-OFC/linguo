@@ -1054,7 +1054,7 @@ async function starts() {
 					gatauda = body.slice(7)
 					reply(mess.wait)
                                         if (!isUser) return reply(mess.only.daftarB)
-					anu = await fetchJson(`https://arugaz.my.id/api/nekonime`, {method: 'get'})
+					anu = await fetchJson(`https://api.xteam.xyz/anime/waifu?APIKEY=APIKEYMU`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image,{quoted: mek})
 					break
