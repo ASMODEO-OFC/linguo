@@ -919,11 +919,18 @@ async function starts() {
 							})
 							.on('end', function () {
 								console.log('Finish')
-								client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
-								fs.unlinkSync(media)
-								fs.unlinkSync(ran)
+								exec(`webpmux -set exif ${addMetadata(pack, author)} ${ran} -o ${ran}`, async (error) => {
+									 if (error) {
+											 reply(ind.stikga())
+											 fs.unlinkSync(media)	
+											 fs.unlinkSync(ran)
+											 }
+									client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+									fs.unlinkSync(media)	
+									fs.unlinkSync(ran)	
+								})
 							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(520,iw)':min'(520,ih)':force_original_aspect_ratio=decrease,fps=15, pad=520:520:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
 							.toFormat('webp')
 							.save(ran)
 						} else if ((isMedia && mek.message.videoMessage.seconds < 11 || isQuotedVideo && mek.message.extendedTextMessage.contextInfo.quotedMessage.videoMessage.seconds < 11) && args.length == 0) {
@@ -944,15 +951,23 @@ async function starts() {
 							})
 							.on('end', function () {
 								console.log('Finish')
-				                                buff = fs.readFileSync(ran)
-								client.sendMessage(from, buff, sticker)
-								fs.unlinkSync(media)
-								fs.unlinkSync(ran)
+								exec(`webpmux -set exif ${addMetadata(pack, author)} ${ran} -o ${ran}`, async (error) => {
+									if (error) {
+											 reply(ind.stikga())
+											 fs.unlinkSync(media)	
+											 fs.unlinkSync(ran)
+											 }
+									client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+									fs.unlinkSync(media)
+									fs.unlinkSync(ran)
+								})
 							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(520,iw)':min'(520,ih)':force_original_aspect_ratio=decrease,fps=15, pad=520:520:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
+							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=white@0.0, split [a][b]; [a] palettegen=reserve_transparent=on:transparency_color=ffffff [p]; [b][p] paletteuse`])
 							.toFormat('webp')
 							.save(ran)
-						}
+					} else {
+						reply(`Envíe una imagen con el comando ${prefix}s o etiqueta a una imagen que ya se haya enviado`)
+					}
 						break
                 	case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
