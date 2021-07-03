@@ -846,8 +846,8 @@ async function starts() {
 				case 'linkgrup':
 				case 'linkgc':
 				    client.updatePresence(from, Presence.composing) 
-				    if (!isGroup) return reply(mess.only.group)
-                                     if (!isUser) return reply(mess.only.daftarB)
+					if (!isGroup) return reply(mess.only.group)
+					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
 					linkgc = await client.groupInviteCode (from)
 					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
@@ -915,7 +915,6 @@ async function starts() {
 			        if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
-                                                if (!isUser) return reply(mess.only.daftarB)
 						ran = getRandom('.webp')
 						await ffmpeg(`./${media}`)
 							.input(media)
@@ -966,7 +965,6 @@ async function starts() {
 						break
                 	case 'tomp3':
                 	client.updatePresence(from, Presence.composing) 
-                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isQuotedVideo) return reply('❌ Solo videos ❌')
 					reply(mess.only.mpcancion)
 					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
@@ -982,7 +980,6 @@ async function starts() {
 					break
                case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
-	        if (!isUser) return reply(mess.only.daftarB)
                 reply(mess.only.musica)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
@@ -1005,7 +1002,6 @@ async function starts() {
 					break
                                 case 'bienvenida':
 					if (!isGroup) return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins) return reply(mess.only.Badmin)
 					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
 					if (Number(args[0]) === 1) {
@@ -1024,7 +1020,6 @@ async function starts() {
                                case 'nsfwneko':
 				    try{
 						if (!isNsfw) return reply('❌ *NSFW NO ESTA ATIVADO* ❌')
-                                                if (!isUser) return reply(mess.only.daftarB)
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
 						buffer = await getBuffer(res.result)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'mesum'})
@@ -1053,7 +1048,6 @@ async function starts() {
 				case 'waifu':
 					gatauda = body.slice(7)
 					reply(mess.wait)
-                                        if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://api.xteam.xyz/anime/waifu?APIKEY=APIKEYMU`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image,{quoted: mek})
@@ -1061,15 +1055,14 @@ async function starts() {
 				case 'randomanime':
 					gatauda = body.slice(13)
 					reply(mess.wait)
-                                        if (!isUser) return reply(mess.only.daftarB)
 					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=BotWeA`, {method: 'get'})
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
 					break						
                              case 'delete':
 					case 'del':
+                                        case 'dlt':
 					if (!isGroup)return reply(mess.only.group)
-                                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroupAdmins)return reply(mess.only.admin)
 					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
 					break
@@ -1116,7 +1109,6 @@ async function starts() {
                                 /*case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-                                                if (!isUser) return reply(mess.only.daftarB)
                                                 res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap?apikey=APIKEYLU`, {method: 'get'})
                                                 buffer = await getBuffer(res.result)
                                                 client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Estas enfermo Bruce Wayne 🤨'})
@@ -1269,7 +1261,6 @@ async function starts() {
 						}
 						break
                                 case 'ping':    
-			   	        if (!isUser) return reply(mess.only.userB)
                                         const timestamp = speed();
                                         const latensi = speed() - timestamp
                                         client.updatePresence(from, Presence.composing) 
@@ -1290,22 +1281,6 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
-                                /*case 'clone':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('La etiqueta de destino que desea clonar')
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
-					let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
-					try {
-						pp = await client.getProfilePicture(id)
-						buffer = await getBuffer(pp)
-						client.updateProfilePicture(botNumber, buffer)
-						mentions(`La foto de perfil se actualizó correctamente con la foto de perfil de @${id.split('@')[0]}`, [jid], true)
-					} catch (e) {
-						reply('Fallido mi pana')
-					}
-					break*/
 				case 'toimg':
 					if (!isQuotedSticker) return reply('{ ❗ } *Etiquete la imagen*')
 					reply(mess.wait)
