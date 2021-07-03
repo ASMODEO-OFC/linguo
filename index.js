@@ -93,6 +93,13 @@ const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
 prefix = '/'
 blocked = []
 
+/******CONFIGURACION DE CARGA******/
+const settingan = JSON.parse(fs.readFileSync('./admin/set.json'))
+const {
+	author,
+	pack
+} = settingan
+
 /******INICIO DE FUNCIONES ENTRADA******/
 const getLevelingXp = (userId) => {
             let position = false
