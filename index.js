@@ -1283,7 +1283,7 @@ async function starts() {
 			    	if (!isUser) return reply(mess.only.daftarB)
 					if (args.length < 1) return reply('Donde está el texto??')
 					teks = body.slice(5)
-					anu = await simih(teks) fetchJson(`https://api.xteam.xyz/simsimi?kata=halo&APIKEY=APIKEYMU${teks}`, {method: 'get'})
+					anu = await simih(teks) fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
 					if (anu.error) return reply('Simi ga tau kak')
 					reply(anu)
 					break
