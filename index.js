@@ -593,7 +593,6 @@ async function starts() {
 					break
                  case 'promover':
 					client.updatePresence(from, Presence.composing) 
-                                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
 					if (!isGroupAdmins) return reply(mess.only.admin)
 					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
@@ -613,7 +612,6 @@ async function starts() {
 					break
 	      case 'gay2':
                 client.updatePresence(from, Presence.composing) 
-              if (!isUser) return reply(mess.only.daftarB)
                 random = gay[Math.floor(Math.random() * (gay.length))]
 	      break
 				  case 'wa.me':
@@ -628,11 +626,6 @@ async function starts() {
 				if (data.error) return reply(data.error)
 				reply(data.result)
 				break
-		/*case 'tneon':
-                data = await await getBuffer(`https://api.zeks.xyz/api/text3dbox?apikey=tshanduyx&text=${body.slice(8)}`)
-                if (!isUser) return reply(mess.only.daftarB)
-                client.sendMessage(from, data, image, {quoted: mek, caption: body.slice(8)})
-                break*/
 	case 'creador':
 	    case 'owner':
                 case 'creator':
@@ -641,8 +634,8 @@ async function starts() {
                 break
 	case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
-                if (!isUser) return reply(mess.only.daftarB)
                 if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
                 teks = body.slice(9)
                 group = await client.groupMetadata(from);
                 member = group['participants']
@@ -700,7 +693,6 @@ async function starts() {
 	                        case 'tts':
 				   client.updatePresence(from, Presence.recording) 
 				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?', text, {quoted: mek})
-                                   if (!isUser) return reply(mess.only.daftarB)
 					const gtts = require('./lib/gtts')(args[0])
 					if (args.length < 2) return client.sendMessage(from, 'Donde está el texto?', text, {quoted: mek})
 					dtt = body.slice(8)
@@ -721,7 +713,6 @@ async function starts() {
 				case 'admins':
 				case 'adminlist':
 					client.updatePresence(from, Presence.composing) 
-                                        if (!isUser) return reply(mess.only.daftarB)
 					if (!isGroup) return reply(mess.only.group)
 					teks = `Lista De Admins Del Grupo*${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
 					no = 0
@@ -802,7 +793,7 @@ async function starts() {
 					}, 0)
                      break
        /*case 'ownergrup':
-				  case 'ownergroup':
+				  case 'ownergp':
                client.updatePresence(from, Presence.composing) 
               options = {
           text: `El x de este grupo es :@${from.split("-")[0]}`, 
