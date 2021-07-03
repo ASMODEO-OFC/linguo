@@ -657,29 +657,13 @@ async function starts() {
                 }
               await client.sendMessage(from, options, text)
                break
-            case 'ig':
-            if (args.length < 1) return reply('Donde esta el link??')
-            if (!isUrl(args[0]) && !args[0].includes('instagram.com')) return reply(mess.error.Iv)
-            try {
-                reply(mess.only.insta)
-                const resp = await get.get(`https://st4rz.herokuapp.com/api/ig?url=${args[0]}`, {method: 'get'})
-                if (resp.result.includes('.mp4')) {
-                    var ext = '.mp4'
-                } else {
-                    var ext = '.jpg'
-                }
-                await client.sendFileFromUrl(from, resp.result, `igeh${ext}, ''`)
-            } catch {
-                client.sendMessage(from, mess.error.Ig)
-                }
-            break
-				case 'ytmp3':
+                                case 'ytmp3':
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpa)
-					anu = await fetchJson(`https://api.xteam.xyz/dl/ytmp3?url=${args[0]}`, {method: 'get'})
+					anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
-					teks = `*DESCARGA EXITOSA ✅*\n❏ *Título* : ${anu.title}\n❏ *Tamaño del archivo* : ${anu.result.size}\n\n*ENVIANDO CANCIÓN, POR FAVOR NO HAGAS SPAM 🛐*`
+					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
 					thumb = await getBuffer(anu.thumb)
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
 					buffer = await getBuffer(anu.result)
@@ -689,9 +673,9 @@ async function starts() {
 					if (args.length < 1) return reply('Donde esta la URL?')
 					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 					reply(mess.only.mpv)
-					anu = await fetchJson(`https://api.xteam.xyz/dl/ytmp4?url=${args[0]}`, {method: 'get'})
+					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
 					if (anu.error) return reply(anu.error)
-					teks = `*DESCARGA EXITOSA ✅*\n❏ Título* : ${anu.title}\n\n*ENVIANDO VIDEO, POR FAVOR NO HAGAS SPAM 🛐*`
+					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
 					thumb = await getBuffer(anu.thumb)
 					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
 					buffer = await getBuffer(anu.result)
@@ -881,26 +865,6 @@ async function starts() {
 					}
 					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
 					client.sendMessage(from, open, text, {quoted: mek})
-					break
-				case 'tstiker':
-				case 'tsticker':
-					if (args.length < 1) return reply('Donde esta el texto?\nEjemplo *tsticker hola')
-					ranp = getRandom('.png')
-					rano = getRandom('.webp')
-					teks = body.slice(9).trim()
-					anu = await fetchJson(`https://mhankbarbar.moe/api/text2image?text=${teks}&apiKey=${apiKey}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						exec(`webpmux -set exif ${addMetadata('⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ', authorname)} ${rano} -o ${rano}`, async (error) => {
-							if (error) return reply(mess.error.stick)
-							client.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
-							fs.unlinkSync(rano)
-						})
-						/*client.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
-						fs.unlinkSync(rano)*/
-					})
 					break
 				case 's':
 				case 'stk':
