@@ -929,9 +929,6 @@ async function starts() {
 								console.log('Finish')
 								exec(`webpmux -set exif ${addMetadata(pack, author)} ${ran} -o ${ran}`, async (error) => {
 									 if (error) {
-											 reply(ind.stikga())
-											 fs.unlinkSync(media)	
-											 fs.unlinkSync(ran)
 											 }
 									client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)	
@@ -961,9 +958,6 @@ async function starts() {
 								console.log('Finish')
 								exec(`webpmux -set exif ${addMetadata(pack, author)} ${ran} -o ${ran}`, async (error) => {
 									if (error) {
-											 reply(ind.stikga())
-											 fs.unlinkSync(media)	
-											 fs.unlinkSync(ran)
 											 }
 									client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
 									fs.unlinkSync(media)
