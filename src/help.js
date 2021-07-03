@@ -20,12 +20,12 @@ const help = (prefix) => {
 ➢ ✪🅜🅔🅙🅞🅡🅔🅢✪
 
 ➛ *${prefix}sticker* [Convertir en Sticker]
-➛ *${prefix}tsticker* [Texto]
 ➛ *${prefix}toimg* [Convertir Sticker en Imagen]
 ➛ *${prefix}play* [Nombre de la Canción]
-➛ *${prefix}tts es* [Su Texto]
+➛ *${prefix}tts* [Idioma y su texto]
 ➛ *${prefix}wame* [Link de su WhatsApp]
 ➛ *${prefix}owner* [Info del Creador]
+➛ *${prefix}ping*
 
 ➢ ✪🅖🅡🅤🅟🅞🅢✪
 
