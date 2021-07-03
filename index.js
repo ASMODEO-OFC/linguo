@@ -518,8 +518,8 @@ async function starts() {
 				let len = JSON.stringify(json).length	
 				let last	
 
-				if (len > 520) {	
-					len = len - 520	
+				if (len > 320) {	
+					len = len - 320	
 					bytes.unshift(0x01)	
 				} else {	
 					bytes.unshift(0x00)	
