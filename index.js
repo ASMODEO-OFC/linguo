@@ -563,7 +563,7 @@ async function starts() {
 										case 'nsfwmenu':
 											client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
 													break
-					                                                                case 'desmenu':
+					                                                                case 'daftarvip':
 											                client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
 													                  break
 					                                                                                  case 'versión':
