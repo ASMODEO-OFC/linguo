@@ -21,6 +21,8 @@ const {
 
 /******COMIENZO DE LA ENTRADA DEL ARCHIVO******/
 const { color, bgcolor } = require('./lib/color')
+const { destrava } = require('./src/destrava')
+const { destrava2 } = require('./src/destrava')
 const { gbin } = require('./src/gbin')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
@@ -1401,7 +1403,15 @@ break
 					break
                    case 'gbin':
                     if (!isPremium) return reply(mess.only.premium)
+                    if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN UN GRUPO❌')
                     client.sendMessage(from, gbin(prefix), text, { quoted: mek })
+                    break
+                   case 'destrava':
+                    if (!isPremium) return reply(mess.only.premium)
+		    if (!isGroup) return reply(mess.only.group)
+		    if (!isGroupAdmins) return reply(mess.only.admin)
+		    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                    client.sendMessage(from, destrava(prefix), text, { quoted: mek })
                     break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
