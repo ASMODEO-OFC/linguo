@@ -551,7 +551,7 @@ async function starts() {
                                         hisil = fs.readFileSync('./src/makerimg.jpg')
                                         client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text})
                                         break*/
-		case 'bahasa':
+		case 'idiomas':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
 				break
 				case 'asmmenu':
