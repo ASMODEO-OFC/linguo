@@ -85,10 +85,13 @@ const help = (prefix) => {
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
 
-➛ *${prefix}simih* [1/0]
-➛ *${prefix}simi* [Para una consulta]
+➛ *${prefix}simih* [1/0] 
+➛ *${prefix}simi* [Para una consulta] (*Premium*)
 
 ➢ ✪🅟🅡🅔🅜🅘🅤🅜✪
+
+➛ *${prefix}daftarvip* [Si desea ser miembro Premium] 
+➛ *${prefix}cekvip* [Consultar estado de Membresía]
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
