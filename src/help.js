@@ -89,15 +89,14 @@ const help = (prefix) => {
 ➛ *${prefix}simi* [Para una consulta] (*Premium*)
 
 ➢ ✪🅟🅡🅔🅜🅘🅤🅜✪
-
-➛ *${prefix}daftarvip* [Si desea ser miembro Premium] 
+ 
 ➛ *${prefix}cekvip* [Consultar estado de Membresía]
 ➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
 ➛ *${prefix}destrava* [destrabar grupo en caso de ataque]
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
-➛ *${prefix}daftar* [Registro]
+➛ *${prefix}idiomas* [Idiomas para el comando *${prefix}tts*]
 ➛ *${prefix}ig*
 
 ➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐🅢✪
