@@ -1,12 +1,17 @@
 const desmenu = (prefix, pushname) => {
     return `
-*SI DESEAS SER PREMIUM*
+*Comandos De Descargas ✅*
  
-- Contacta al propietario o usando el siguiente comando
-
-- ${prefix}*owner*
+- ${prefix}play
+  Coloca el nombre de la cancion. O el link del video YT
+- ${prefix}ytmp3
+  Coloca el link del video YT
+- ${prefix}ytmp4
+  Coloca el link del video YT
+    
+_*play tiene un limite de 2000 canciones si llega a su limite se restablecera dentro de 24 horas_
      
-⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ`
+by shanduy`
 
 }
 
