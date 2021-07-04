@@ -92,6 +92,8 @@ const help = (prefix) => {
 
 ➛ *${prefix}daftarvip* [Si desea ser miembro Premium] 
 ➛ *${prefix}cekvip* [Consultar estado de Membresía]
+➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
+➛ *${prefix}destrava* [destrabar grupo en caso de ataque]
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
