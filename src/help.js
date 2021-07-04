@@ -96,7 +96,7 @@ const help = (prefix) => {
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
-➛ *${prefix}idiomas* [Idiomas para el comando *${prefix}tts*]
+➛ *${prefix}idiomas* [Idiomas para el comando *"${prefix}tts"*]
 ➛ *${prefix}ig*
 
 ➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐🅢✪
