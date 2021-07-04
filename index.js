@@ -21,6 +21,7 @@ const {
 
 /******COMIENZO DE LA ENTRADA DEL ARCHIVO******/
 const { color, bgcolor } = require('./lib/color')
+const { gbin } = require('./src/gbin')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
 const { virtex } = require('./src/virtex')
@@ -1398,6 +1399,10 @@ break
 					uptime = process.uptime()
 					client.sendMessage(from,  `*──────────────────*\n*Nombre del bot:* ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Estado:* *ACTIVO*\n*──────────────────*\n*Estado del Bot:* *${kyun(uptime)}*\n\n*ERES UN MIEMBRO PREMIUM, FELICIDADES! 👌🏼😌* \n*──────────────────*` , text, { quoted: mek, })
 					break
+                   case 'gbin':
+                    if (!isPremium) return reply(mess.only.premium)
+                    client.sendMessage(from, gbin(prefix), text, { quoted: mek })
+                    break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
