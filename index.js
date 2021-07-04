@@ -36,6 +36,9 @@ const { exec } = require('child_process')
 const kagApi = require('@kagchi/kag-api')
 const fetch = require('node-fetch')
 /*const tiktod = require('tiktok-scraper')*/
+const { cekvip } = require('./src/cekvip')
+const { daftarvip } = require('./src/daftarvip')
+const { daftatvip } = require('./src/daftarvip')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
@@ -269,7 +272,7 @@ async function starts() {
 				},
 				only: {
 					group: '[❗] Este comando es solo para grupos!',
-					premium: '[❗] ESTE PEDIDO ES SOLO PARA *USUARIOS PREMIUM*',
+					premium: '[❗] ESTE PEDIDO ES SOLO PARA *USUARIOS PREMIUM* DIGITE EL COMANDO *daftarvip* SI ESTA INTERESAD@ EM CONSEGUIR SU MEMBRESÍA PREMIUM',
 					ownerG: '[❗] Este comando solo puede ser utilizado por los admins del grupo!',
 					ownerB: '[❗] Este comando solo puede ser usado por ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ',
 					admin: '[❗] Este comando solo puede ser utilizado por los adminis del grupo!',
@@ -1385,6 +1388,15 @@ break
 					} else {
 						reply('1 para activar, 0 para desactivar ')
 					}
+					break
+					case 'daftarvip': 
+					client.sendMessage(from, daftarvip(prefix) , text, { quoted: mek })
+					break
+					case 'cekvip': 
+					if (!isPremium) return reply(mess.only.premium)
+					me = client.user
+					uptime = process.uptime()
+					client.sendMessage(from,  `*──────────────────*\n*Nome do bot:* NABUTOBOT\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Status:* *ATIVO*\n*──────────────────*\n*Status Bot:* *${kyun(uptime)}*\n\n*VOCE É UM MEMBRO PREMIUM* \n*──────────────────*` , text, { quoted: mek, })
 					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
