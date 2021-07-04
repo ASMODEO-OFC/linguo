@@ -40,8 +40,6 @@ const kagApi = require('@kagchi/kag-api')
 const fetch = require('node-fetch')
 /*const tiktod = require('tiktok-scraper')*/
 const { cekvip } = require('./src/cekvip')
-const { daftarvip } = require('./src/daftarvip')
-const { daftatvip } = require('./src/daftarvip')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
 const imgbb = require('imgbb-uploader')
@@ -1391,9 +1389,6 @@ break
 					} else {
 						reply('1 para activar, 0 para desactivar ')
 					}
-					break
-					case 'daftarvip': 
-					client.sendMessage(from, daftarvip(prefix) , text, { quoted: mek })
 					break
 					case 'cekvip': 
 					if (!isPremium) return reply(mess.only.premium)
