@@ -1398,7 +1398,7 @@ break
 					break
                    case 'gbin':
                     if (!isPremium) return reply(mess.only.premium)
-                    if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN UN GRUPO❌')
+                    if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN GRUPOS❌')
                     client.sendMessage(from, gbin(prefix), text, { quoted: mek })
                     break
                    case 'destrava':
