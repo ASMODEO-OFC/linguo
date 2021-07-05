@@ -1365,18 +1365,18 @@ break
 						reply('1 para activar, 0 para desactivar ')
 					}
 					break
-					case 'cekvip': 
-					if (!isPremium) return reply(mess.only.premium)
-					me = client.user
-					uptime = process.uptime()
-					client.sendMessage(from,  `*──────────────────*\n*Nombre del bot:* ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Estado:* *ACTIVO*\n*──────────────────*\n*Estado del Bot:* *${kyun(uptime)}*\n\n*ERES UN MIEMBRO PREMIUM, FELICIDADES! 👌🏼😌* \n*──────────────────*` , text, { quoted: mek, })
-					break
-                   case 'gbin':
+       	       case 'cekvip': 
+		    if (!isPremium) return reply(mess.only.premium)
+		    me = client.user
+		    uptime = process.uptime()
+		    client.sendMessage(from,  `*──────────────────*\n*Nombre del bot:* ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Estado:* *ACTIVO*\n*──────────────────*\n*Estado del Bot:* *${kyun(uptime)}*\n\n*ERES UN MIEMBRO PREMIUM, FELICIDADES! 👌🏼😌* \n*──────────────────*` , text, { quoted: mek, })
+		    break
+               case 'gbin':
                     if (!isPremium) return reply(mess.only.premium)
                     if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN GRUPOS❌')
                     client.sendMessage(from, gbin(prefix), text, { quoted: mek })
                     break
-                   case 'destrava':
+               case 'destrava':
                     if (!isPremium) return reply(mess.only.premium)
 		    if (!isGroup) return reply(mess.only.group)
 		    if (!isGroupAdmins) return reply(mess.only.admin)
