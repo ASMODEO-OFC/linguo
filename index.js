@@ -277,7 +277,6 @@ async function starts() {
 				}
 			}
     			const apakah = ['Si','No']
-        		const gay2 = ['Eres 15% Gay','Eres 0% Gay 😱','Eres 20% Gay','Eres 78% Gay','Eres 62% Gay','Eres 0.1% Gay','Eres 100% Gay 😬','Eres 6% Gay','Eres 96% Gay','Eres 21% Gay','Eres 50% Gay','Eres 99.99% Gay','Eres 12% Gay','Eres 88% Gay','ERES INFINITAMENTE GAY 🤯','Eres 75% Gay','Eres 19% Gay','Eres Fan Del Yaoi','Eres 44% Gay','Eres 84% Gay']
 		        const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
 			const ownerNumber = ["5491155607911@s.whatsapp.net"] // replace this with your number
@@ -525,64 +524,58 @@ async function starts() {
 	       case 'troleo':
                client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
                break*/
-                                 case 'degradar':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('La etiqueta de destino que el administrador quiere transmitir')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = ''
-						for (let _ of mentioned) {
-							teks += `Pedido recibido✅\n\nRetirando cargo como administrador :\n`
-							teks += `@_.split('@')[0]`
-						}
-						mentions(teks, mentioned, true)
-						client.groupDemoteAdmin(from, mentioned)
-					} else {
-						mentions(`Pedido recibido✅\n\nRetirando cargo como administrador @${mentioned[0].split('@')[0]}\n*${groupMetadata.subject}*_`, mentioned, true)
-						client.groupDemoteAdmin(from, mentioned)
-					}
-					break
-                 case 'promover':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta de destino que desea promocionar!')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = 'Pedido recibido✅\n\nAgregando cargo como administrador :\n'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						client.groupMakeAdmin(from, mentioned)
-					} else {
-						mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
-						client.groupMakeAdmin(from, mentioned)
-					}
-					break
-	      case 'gay2':
+          case 'degradar':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('La etiqueta de destino que el administrador quiere transmitir')
+		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+		if (mentioned.length > 1) {
+		teks = ''
+		for (let _ of mentioned) {
+		teks += `Pedido recibido✅\n\nRetirando cargo como administrador :\n`
+		teks += `@_.split('@')[0]`
+		}
+		mentions(teks, mentioned, true)
+		client.groupDemoteAdmin(from, mentioned)
+		} else {
+		mentions(`Pedido recibido✅\n\nRetirando cargo como administrador @${mentioned[0].split('@')[0]}\n*${groupMetadata.subject}*_`, mentioned, true)
+		client.groupDemoteAdmin(from, mentioned)
+		}
+		break
+          case 'promover':
+		client.updatePresence(from, Presence.composing) 
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta de destino que desea promocionar!')
+		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+		if (mentioned.length > 1) {
+		teks = 'Pedido recibido✅\n\nAgregando cargo como administrador :\n'
+		for (let _ of mentioned) {
+		teks += `@${_.split('@')[0]}\n`
+		}
+		mentions(teks, mentioned, true)
+		client.groupMakeAdmin(from, mentioned)
+		} else {
+		mentions(`Pedido recibido✅\n\nAgregando cargo como administrador : @${mentioned[0].split('@')[0]}`, mentioned, true)
+		client.groupMakeAdmin(from, mentioned)
+		}
+		break
+	  case 'wa.me':
+	  case 'wame':
                 client.updatePresence(from, Presence.composing) 
-                random = gay[Math.floor(Math.random() * (gay.length))]
-	      break
-				  case 'wa.me':
-				  case 'wame':
-  client.updatePresence(from, Presence.composing) 
-      options = {
-          text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nSu link de Whatsapp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*O ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
-          contextInfo: { mentionedJid: [sender] }
-    }
-    client.sendMessage(from, options, text, { quoted: mek } )
-				break
-	case 'creador':
-	    case 'owner':
-                case 'creator':
+                options = {
+                text: `「 *LINK WHATSAPP* 」\n\n_Solicitado por_ : *@${sender.split("@s.whatsapp.net")[0]}\n\nSu link de Whatsapp : *https://wa.me/${sender.split("@s.whatsapp.net")[0]}*\n*O ( / )*\n*https://api.whatsapp.com/send?phone=${sender.split("@")[0]}*`,
+                contextInfo: { mentionedJid: [sender] }
+                }
+                client.sendMessage(from, options, text, { quoted: mek } )
+		break
+	  case 'owner':
                 client.sendMessage(from, {displayname: "⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ", vcard: vcard}, MessageType.contact, { quoted: mek})
 		client.sendMessage(from, 'wa.me/5491155607911 :)\n\n❗Este es el numero del propietario del bot❗',MessageType.text, { quoted: mek} )
                 break
-	case 'hidetag':
+	  case 'hidetag':
                 client.updatePresence(from, Presence.composing) 
                 if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
@@ -592,83 +585,76 @@ async function starts() {
                 jids = [];
                 member.map( async adm => {
                 jids.push(adm.id.replace('c.us', 's.whatsapp.net'));
-                 })
-                 options = {
-                 text: teks,
+                })
+                options = {
+                text: teks,
                 contextInfo: {mentionedJid: jids},
                 quoted: mek
                 }
-              await client.sendMessage(from, options, text)
-               break
-                                case 'ytmp3':
-					if (args.length < 1) return reply('Donde esta la URL?')
-					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-					reply(mess.only.mpa)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
-					thumb = await getBuffer(anu.thumb)
-					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
-					break
-				case 'ytmp4':
-					if (args.length < 1) return reply('Donde esta la URL?')
-					if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
-					reply(mess.only.mpv)
-					anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
-					thumb = await getBuffer(anu.thumb)
-					client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
-					break
-	                        case 'tts':
-				   client.updatePresence(from, Presence.recording) 
-				   if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?', text, {quoted: mek})
-					const gtts = require('./lib/gtts')(args[0])
-					if (args.length < 2) return client.sendMessage(from, 'Donde está el texto?', text, {quoted: mek})
-					dtt = body.slice(8)
-					ranm = getRandom('.mp3')
-					rano = getRandom('.ogg')
-					dtt.length > 600
-					? reply('No querés que te lea un libro también?')
-					: gtts.save(ranm, dtt, function() {
-						exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
-							fs.unlinkSync(ranm)
-							buff = fs.readFileSync(rano)
-							if (err) return reply('Gagal om:(')
-							client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
-							fs.unlinkSync(rano)
-						})
-					})
-					break
-				case 'admins':
-				case 'adminlist':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					teks = `Lista De Admins Del Grupo*${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
-					no = 0
-					for (let admon of groupAdmins) {
-						no += 1
-						teks += `[${no.toString()}] @${admon.split('@')[0]}\n`
-					}
-					mentions(teks, groupAdmins, true)
-					break
-			case 'setprefix':
-					client.updatePresence(from, Presence.composing) 
-					if (args.length < 1) return
-					if (!isOwner) return reply(mess.only.ownerB)
-					prefix = args[0]
-					reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
-					break
-				case 'send':
-					var pc = body.slice(6)
-					var nomor = pc.split("|")[0];
-					var pesan = pc.split("|")[1];
-					client.sendMessage(nomor+'@s.whatsapp.net', pesan, text)
-					break
+                await client.sendMessage(from, options, text)
+                break
+          case 'ytmp3':
+		if (args.length < 1) return reply('Donde esta la URL?')
+		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
+		reply(mess.only.mpa)
+		anu = await fetchJson(`https://st4rz.herokuapp.com/api/yta2?url=${args[0]}`, {method: 'get'})
+		if (anu.error) return reply(anu.error)
+		teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
+		thumb = await getBuffer(anu.thumb)
+		client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
+		buffer = await getBuffer(anu.result)
+		client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
+		break
+	  case 'ytmp4':
+		if (args.length < 1) return reply('Donde esta la URL?')
+		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
+		reply(mess.only.mpv)
+		anu = await fetchJson(`https://st4rz.herokuapp.com/api/ytv2?url=${args[0]}`, {method: 'get'})
+		if (anu.error) return reply(anu.error)
+		teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
+		thumb = await getBuffer(anu.thumb)
+		client.sendMessage(from, thumb, image, {quoted: mek, caption: teks})
+		buffer = await getBuffer(anu.result)
+		client.sendMessage(from, buffer, video, {mimetype: 'video/mp4', filename: `${anu.title}.mp4`, quoted: mek})
+		break
+	  case 'tts':
+	        client.updatePresence(from, Presence.recording) 
+	        if (args.length < 1) return client.sendMessage(from, 'Cual es el código de idioma?', text, {quoted: mek})
+		const gtts = require('./lib/gtts')(args[0])
+		if (args.length < 2) return client.sendMessage(from, 'Donde está el texto?', text, {quoted: mek})
+		dtt = body.slice(8)
+		ranm = getRandom('.mp3')
+		rano = getRandom('.ogg')
+		dtt.length > 600
+		? reply('No querés que te lea un libro también?')
+		: gtts.save(ranm, dtt, function() {
+		exec(`ffmpeg -i ${ranm} -ar 48000 -vn -c:a libopus ${rano}`, (err) => {
+		fs.unlinkSync(ranm)
+		buff = fs.readFileSync(rano)
+		if (err) return reply('Gagal om:(')
+		client.sendMessage(from, buff, audio, {quoted: mek, ptt:true})
+		fs.unlinkSync(rano)
+		})
+		})
+		break
+	  case 'admins':
+		client.updatePresence(from, Presence.composing) 
+		if (!isGroup) return reply(mess.only.group)
+		teks = `Lista De Admins Del Grupo*${groupMetadata.subject}*\nTotal : ${groupAdmins.length}\n\n`
+		no = 0
+		for (let admon of groupAdmins) {
+		no += 1
+		teks += `[${no.toString()}] @${admon.split('@')[0]}\n`
+		}
+		mentions(teks, groupAdmins, true)
+		break
+	  case 'setprefix':
+		client.updatePresence(from, Presence.composing) 
+		if (args.length < 1) return
+		if (!isOwner) return reply(mess.only.ownerB)
+		prefix = args[0]
+		reply(`El prefijo se ha cambiado correctamente a : ${prefix}`)
+		break
 	  case 'setppbot':
 		client.updatePresence(from, Presence.composing) 
 	        if (!isQuotedImage) return reply(`Etiqueta una imagen`)
