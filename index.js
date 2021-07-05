@@ -1332,18 +1332,18 @@ async function starts() {
 					}
 					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
 					break
-case 'onichan':
-tujuh = fs.readFileSync('./assets/onichan.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'yamete':
-tujuh = fs.readFileSync('./assets/yamete.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
-case 'hentaisom':
-tujuh = fs.readFileSync('./assets/somhentai.mp3');
-client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
-break
+          case 'onichan':
+                tujuh = fs.readFileSync('./assets/onichan.mp3');
+                client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                break
+          case 'yamete':
+                tujuh = fs.readFileSync('./assets/yamete.mp3');
+                client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                break
+          case 'hentaisom':
+                tujuh = fs.readFileSync('./assets/somhentai.mp3');
+                client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
+                break
           case 'antilink':
                 if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
