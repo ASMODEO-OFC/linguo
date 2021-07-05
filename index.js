@@ -960,30 +960,19 @@ async function starts() {
 						reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
 					}
 					break
-                               case 'nsfwneko':
-				    try{
-						if (!isNsfw) return reply('❌ *NSFW NO ESTA ATIVADO* ❌')
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko?apikey=BotWeA`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'mesum'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('❌ *ERROR* ❌')
-					}
-					break
           case 'nsfw':
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
-		if (args.length < 1) return reply('Digita 1 para activar los NSFW')
+		if (args.length < 1) return reply('Digita 1 para activar')
 		if (Number(args[0]) === 1) {
 		if (isNsfw) return reply('Recursos Activados ✅')
 		nsfw.push(from)
 		fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-		reply('❬ EXITO ❭ La funcion NSFW esta habilitado en este grupo')
+		reply('❬ EXITO ❭ NSFW habilitado en este grupo')
 	        } else if (Number(args[0]) === 0) {
 		nsfw.splice(from, 1)
 		fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-		reply('❬ ✅ ❭ La funcion NSFW esta deshabilitado en este grupo')
+		reply('❬ ✅ ❭ NSFW deshabilitado en este grupo')
 		} else {
 		reply('Digite 1 para activarlo, 0 para desactivarlo')
 		}
@@ -1213,7 +1202,7 @@ async function starts() {
                 if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
 		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-		if (args.length < 1) return reply('Ponga 1 para activar ')
+		if (args.length < 1) return reply('Digite 1 para activar ')
         	if (Number(args[0]) === 1) {
 		if (isAntiLink) return reply('Modo anti-link ya está activado')
 		antilink.push(from)
