@@ -715,95 +715,80 @@ async function starts() {
 						reply('Grupo de transmisión exitoso')
 					}
 					
-                     case 'leave':
-                    if (!isGroup) return reply(mess.only.group)
-                    if (!isGroupAdmins) return reply(mess.only.admin)
-                     setTimeout( () => {
-					client.groupLeave (from) 
-					}, 2000)
-                     setTimeout( () => {
-					client.updatePresence(from, Presence.composing) 
-					client.sendMessage(from, 'Bye Bye 👋🏻', text) // ur cods
-					}, 0)
-                     break
-         case 'ownergrup':
-				  case 'ownergp':
-               client.updatePresence(from, Presence.composing) 
-              options = {
-          text: `El x de este grupo es :@${from.split("-")[0]}`, 
-          contextInfo: { mentionedJid: [from] }
-           }
-           client.sendMessage(from, options, text, { quoted: mek } )
-				break
-                                      case 'kick':
-					case 'ban':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
-					mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					if (mentioned.length > 1) {
-						teks = 'Pedido recibido, se eliminó con éxito a :\n'
-						for (let _ of mentioned) {
-							teks += `@${_.split('@')[0]}\n`
-						}
-						mentions(teks, mentioned, true)
-						client.groupRemove(from, mentioned)
-					} else {
-						mentions(`Pedido recibido, se eliminó con éxito a : @${mentioned[0].split('@')[0]}`, mentioned, true)
-						client.groupRemove(from, mentioned)
-					client.sendMessage(mentioned, 'Chao gord@ 👋🏻', text)
-					}
-					break
-				case 'exe':
-	              client.updatePresence(from, Presence.composing) 
-	              if (!isOwner) return reply(mess.only.ownerB)
-	               const cmd = body.slice(5)
-	               exec(cmd, (err, stdout) => {
-		           if(err) return client.sendMessage(from, "Adios", text, { quoted: mek })
-		           if (stdout) {
-			       client.sendMessage(from, stdout, text, { quoted: mek })
-		           }
-	           })
-                  break
-                 case 'linkgp':
-				case 'linkgrup':
-				case 'linkgc':
-				    client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					linkgc = await client.groupInviteCode (from)
-					yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
-					client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
-					break
-			case 'closegc':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					var nomor = mek.participant
-					const close = {
-					text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\nAhora *solo administradores* pueden enviar mensajes`,
-					contextInfo: { mentionedJid: [nomor] }
-					}
-					client.groupSettingChange (from, GroupSettingChange.messageSend, true);
-					reply(close)
-					break
-                case 'opengc':
-                case 'abrirgc':
-					client.updatePresence(from, Presence.composing) 
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					open = {
-					text: `Grupo abierto por el administrador @${sender.split("@")[0]}\nAhora *todos los participantes* pueden enviar mensajes`,
-					contextInfo: { mentionedJid: [sender] }
-					}
-					client.groupSettingChange (from, GroupSettingChange.messageSend, false)
-					client.sendMessage(from, open, text, {quoted: mek})
-					break
+          case 'leave':
+                if (!isGroup) return reply(mess.only.group)
+                if (!isGroupAdmins) return reply(mess.only.admin)
+                setTimeout( () => {
+		client.groupLeave (from) 
+	        }, 2000)
+                setTimeout( () => {
+		client.updatePresence(from, Presence.composing) 
+		client.sendMessage(from, 'Bye Bye 👋🏻', text) // ur cods
+		}, 0)
+                break
+	  case 'ownergp':
+                client.updatePresence(from, Presence.composing) 
+                options = {
+                text: `Este grupo es de:@${from.split("-")[0]}`, 
+                contextInfo: { mentionedJid: [from] }
+                }
+                client.sendMessage(from, options, text, { quoted: mek } )
+		break
+          case 'kick':
+	  case 'ban':
+		client.updatePresence(from, Presence.composing) 
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
+		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
+		if (mentioned.length > 1) {
+		teks = 'Pedido recibido, se eliminó con éxito a :\n'
+		for (let _ of mentioned) {
+		teks += `@${_.split('@')[0]}\n`
+		}
+		mentions(teks, mentioned, true)
+		client.groupRemove(from, mentioned)
+		} else {
+		mentions(`Pedido recibido, se eliminó con éxito a : @${mentioned[0].split('@')[0]}`, mentioned, true)
+		client.groupRemove(from, mentioned)
+		client.sendMessage(mentioned, 'Chao gord@ 👋🏻', text)
+		}
+		break
+          case 'linkgp':
+	        client.updatePresence(from, Presence.composing) 
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		linkgc = await client.groupInviteCode (from)
+		yeh = `https://chat.whatsapp.com/${linkgc}\n\nLink Del Grupo *${groupName}*`
+		client.sendMessage(from, yeh, text, {quoted: mek, detectLinks: false})
+		break
+          case 'closegc':
+		client.updatePresence(from, Presence.composing) 
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		var nomor = mek.participant
+		const close = {
+		text: `Grupo cerrado por el administrador @${nomor.split("@s.whatsapp.net")[0]}\nAhora *solo administradores* pueden enviar mensajes`,
+		contextInfo: { mentionedJid: [nomor] }
+		}
+		client.groupSettingChange (from, GroupSettingChange.messageSend, true);
+		reply(close)
+		break
+          case 'opengc':
+		client.updatePresence(from, Presence.composing) 
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		open = {
+		text: `Grupo abierto por el administrador @${sender.split("@")[0]}\nAhora *todos los participantes* pueden enviar mensajes`,
+		contextInfo: { mentionedJid: [sender] }
+		}
+		client.groupSettingChange (from, GroupSettingChange.messageSend, false)
+		client.sendMessage(from, open, text, {quoted: mek})
+		break
 	  case 's':
 	  case 'stk':
 	  case 'stiker':
@@ -928,7 +913,7 @@ async function starts() {
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-           case 'daftar':
+          case 'daftar':
 		client.updatePresence(from, Presence.composing)
 		if (isUser) return reply('Ya estas registrad@ 🙄')
 		if (args.length < 1) return reply(`Incorrecto \nCommand : ${prefix}daftar Nombre\nComando : ${prefix}daftar ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ`)
@@ -938,7 +923,7 @@ async function starts() {
 		fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
 		client.sendMessage(from, `\`\`\`Registrado con exito ✔️\`\`\`\n\n\`\`\`Hora: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
 		break
-           case 'bienvenida':
+          case 'bienvenida':
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.Badmin)
 	        if (args.length < 1) return reply('Para activar está funcion coloca 1')
