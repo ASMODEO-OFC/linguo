@@ -64,7 +64,6 @@ const { logomaker } = require('./database/menu/logomaker')
 const { toinmenu } = require('./src/toinmenu')
 const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
-const { desmenu } = require('./src/desmenu')
 const { version } = require('./src/version')
 const { welmenu } = require('./src/welmenu')
 
@@ -509,9 +508,6 @@ async function starts() {
 										case 'nsfwmenu':
 											client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
 													break
-					                                                                case 'desmenu':
-											                client.sendMessage(from, desmenu(prefix, sender), text, {quoted: mek})
-													                  break
 					                                                                                  case 'versión':
 				                                                                                          case 'version':
 				                                                                                          client.sendMessage(from, version(prefix, sender), text, {quoted: mek})
