@@ -1222,116 +1222,105 @@ async function starts() {
 						fs.unlinkSync(rano)
 					})
 					break
-				case 'toimg':
-					if (!isQuotedSticker) return reply('{ ❗ } *Etiquete la imagen*')
-					reply(mess.wait)
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.png')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('❌ Falló la conversión del sticker en imagen ❌')
-						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
-						fs.unlinkSync(ran)
-					})
-					break
-		        case 'gay':		
-	            	if (args.length < 1) return reply('Mencione a su amig@!')
-					rate = body.slice(1)
-					const ti =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39','50','65','90','77','7','90','40','Adicto al yaoi']
-					const kl = ti[Math.floor(Math.random() * ti.length)]
-					client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
-					break
-				case 'simi':
-					if (args.length < 1) return reply('Donde está el texto??')
-                                        if (!isPremium) return reply(mess.only.premium)
-					teks = body.slice(5)
-					anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
-					//if (anu.error) return reply('Simi ga tau kak')
-					reply(anu)
-					break
-				case 'simih':
-					if (!isGroup) return reply(mess.only.group)
-					if (args.length < 1) return reply('Khaaaa?')
-					if (Number(args[0]) === 1) {
-						if (isSimi) return reply('El modo simih esta activado')
-						samih.push(from)
-						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Activado con éxito el modo simih en este grupo 🙂️')
-					} else if (Number(args[0]) === 0) {
-						samih.splice(from, 1)
-						fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
-						reply('Desactivado con éxito el modo simih en este grupo 😐️')
-					} else {
-						reply('1 para activar, 0 para desactivar, pedazo de animal')
-					}
-					break
-                case 'pinterest':
-                    tels = body.slice(11)
-					client.updatePresence(from, Presence.composing) 
-					data = await fetchJson(`https://api.xteam.xyz/dl/pinterestdl?url=${tels}`, {method: 'get'})
-					reply(mess.wait)
-					n = JSON.parse(JSON.stringify(data));
-					nimek =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nimek)
-					client.sendMessage(from, pok, image, { quoted: mek, caption: `*PINTEREST*\n\*Resultado de búsqueda* : *${tels}*`})
-                    await limitAdd(sender)
-					break
-				case 'setfoto':
-                    if (!isGroup) return reply(mess.only.group)
-                    if (!isGroupAdmins) return reply(mess.only.admin)
-                    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                    media = await client.downloadAndSaveMediaMessage(mek)
-                    await client.updateProfilePicture (from, media)
-                    reply('Se cambió con éxito la foto del grupo')
-                    break
-                 case 'setdesc':
-			    	 if (!isGroup) return reply(mess.only.group)
-				     if (!isGroupAdmins) return reply(mess.only.admin)
-			   	     if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-				     client.groupUpdateDescription(from, `${body.slice(9)}`)
-				     client.sendMessage(from, 'Descripción cambiada con éxito', text, {quoted: mek})
-				     break
-				case 'setname':
-                   if (!isGroup) return reply(mess.only.group)
-			       if (!isGroupAdmins) return reply(mess.only.admin)
-			   	   if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                   client.groupUpdateSubject(from, `${body.slice(9)}`)
-                   client.sendMessage(from, 'Nombre del grupo cambiado con éxito', text, {quoted: mek})
-                   break
-				case 'marcar':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
-					for (let mem of groupMembers) {
-						teks += `*#* @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					mentions(teks, members_id, true)
-					break
+	  case 'toimg':
+		if (!isQuotedSticker) return reply('{ ❗ } *Etiquete la imagen*')
+		reply(mess.wait)
+		encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+		media = await client.downloadAndSaveMediaMessage(encmedia)
+		ran = getRandom('.png')
+        	exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+		fs.unlinkSync(media)
+		if (err) return reply('❌ Falló la conversión del sticker en imagen ❌')
+		buffer = fs.readFileSync(ran)
+		client.sendMessage(from, buffer, image, {quoted: mek, caption: '>//<'})
+		fs.unlinkSync(ran)
+		})
+		break
+          case 'gay':		
+	       	if (args.length < 1) return reply('Mencione a su amig@!')
+		rate = body.slice(1)
+		const ti =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39','50','65','90','77','7','90','40','Adicto al yaoi']
+		const kl = ti[Math.floor(Math.random() * ti.length)]
+		client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
+		break
+	  case 'simi':
+		if (args.length < 1) return reply('Donde está el texto??')
+                if (!isPremium) return reply(mess.only.premium)
+		teks = body.slice(5)
+		anu = await simih(teks) //fetchJson(`https://mhankbarbars.herokuapp.com/api/samisami?text=${teks}`, {method: 'get'})
+		//if (anu.error) return reply('Simi ga tau kak')
+		reply(anu)
+		break
+ 	  case 'simih':
+		if (!isGroup) return reply(mess.only.group)
+		if (args.length < 1) return reply('Khaaaa?')
+		if (Number(args[0]) === 1) {
+		if (isSimi) return reply('El modo simih esta activado')
+		samih.push(from)
+		fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
+		reply('Activado con éxito el modo simih en este grupo 🙂️')
+		} else if (Number(args[0]) === 0) {
+		samih.splice(from, 1)
+		fs.writeFileSync('./src/simi.json', JSON.stringify(samih))
+		reply('Desactivado con éxito el modo simih en este grupo 😐️')
+		} else {
+		reply('1 para activar, 0 para desactivar, pedazo de animal')
+		}
+		break
+	  case 'setfoto':
+                if (!isGroup) return reply(mess.only.group)
+                if (!isGroupAdmins) return reply(mess.only.admin)
+                if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                media = await client.downloadAndSaveMediaMessage(mek)
+                await client.updateProfilePicture (from, media)
+                reply('Se cambió con éxito la foto del grupo')
+                break
+          case 'setdesc':
+         	if (!isGroup) return reply(mess.only.group)
+	        if (!isGroupAdmins) return reply(mess.only.admin)
+	        if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+	        client.groupUpdateDescription(from, `${body.slice(9)}`)
+	        client.sendMessage(from, 'Descripción cambiada con éxito', text, {quoted: mek})
+	        break
+          case 'setname':
+                if (!isGroup) return reply(mess.only.group)
+                if (!isGroupAdmins) return reply(mess.only.admin)
+	        if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                client.groupUpdateSubject(from, `${body.slice(9)}`)
+                client.sendMessage(from, 'Nombre del grupo cambiado con éxito', text, {quoted: mek})
+                break
+	  case 'marcar':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+        	members_id = []
+		teks = (args.length > 1) ? body.slice(8).trim() : ''
+		teks += '\n\n'
+		for (let mem of groupMembers) {
+		teks += `*#* @${mem.jid.split('@')[0]}\n`
+		members_id.push(mem.jid)
+		}
+        	mentions(teks, members_id, true)
+		break
                 case 'marcar2':
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
-					for (let mem of groupMembers) {
-						teks += `╠➥ @${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					reply(teks)
-					break
-                 case 'marcar3':
-					members_id = []
-					teks = (args.length > 1) ? body.slice(8).trim() : ''
-					teks += '\n\n'
-					for (let mem of groupMembers) {
-						teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
-						members_id.push(mem.jid)
-					}
-					client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
-					break
+		members_id = []
+		teks = (args.length > 1) ? body.slice(8).trim() : ''
+		teks += '\n\n'
+		for (let mem of groupMembers) {
+		teks += `╠➥ @${mem.jid.split('@')[0]}\n`
+		members_id.push(mem.jid)
+		}
+		reply(teks)
+		break
+          case 'marcar3':
+	        members_id = []
+		teks = (args.length > 1) ? body.slice(8).trim() : ''
+		teks += '\n\n'
+		for (let mem of groupMembers) {
+		teks += `╠➥ https://wa.me/${mem.jid.split('@')[0]}\n`
+		members_id.push(mem.jid)
+		}
+		client.sendMessage(from, teks, text, {detectLinks: false, quoted: mek})
+		break
           case 'onichan':
                 tujuh = fs.readFileSync('./assets/onichan.mp3');
                 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
