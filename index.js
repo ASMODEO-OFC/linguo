@@ -1206,7 +1206,7 @@ async function starts() {
                                         const latensi = speed() - timestamp
                                         client.updatePresence(from, Presence.composing) 
 				        uptime = process.uptime()
-                                        client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Second_*\nDevice: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nJaringan: *WI-FI*\nStatus: *En estado de ebriedad*`, text, { quoted: mek})
+                                        client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Seconds_*\nDispositivo: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nConectividad: *WI-FI*\nEstado: *En estado de ebriedad*`, text, { quoted: mek})
                                         break
                                 case 'ttp':
 					if (args.length < 1) return reply('Donde está el texto?')
