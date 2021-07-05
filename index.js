@@ -1112,7 +1112,9 @@ async function starts() {
 		reply(anu)
 		break
  	  case 'simih':
+                if (!isPremium) return reply(mess.only.premium)
 		if (!isGroup) return reply(mess.only.group)
+                if (!isGroupAdmins) return reply(mess.only.admin)
 		if (args.length < 1) return reply('Khaaaa?')
 		if (Number(args[0]) === 1) {
 		if (isSimi) return reply('El modo simih esta activado')
