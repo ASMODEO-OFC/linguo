@@ -1201,27 +1201,13 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-                                case 'ping':    
-                                        const timestamp = speed();
-                                        const latensi = speed() - timestamp
-                                        client.updatePresence(from, Presence.composing) 
-				        uptime = process.uptime()
-                                        client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Seconds_*\nDispositivo: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nConectividad: *WI-FI*\nEstado: *En estado de ebriedad*`, text, { quoted: mek})
-                                        break
-                                case 'ttp':
-					if (args.length < 1) return reply('Y el texto flaco?')
-					ranp = getRandom('.png')
-					rano = getRandom('.webp')
-					teks = body.slice(4).trim()
-					anu = await fetchJson(`https://mhankbarbar.tech/api/text2image?text=${teks}&apiKey=${BarBarKey}`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
-						fs.unlinkSync(ranp)
-						if (err) return reply(mess.error.stick)
-						client.sendMessage(from, fs.readFileSync(rano), sticker, {quoted: mek})
-						fs.unlinkSync(rano)
-					})
-					break
+          case 'ping':    
+                const timestamp = speed();
+                const latensi = speed() - timestamp
+                client.updatePresence(from, Presence.composing) 
+                uptime = process.uptime()
+                client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Seconds_*\nDispositivo: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nConectividad: *WI-FI*\nEstado: *En estado de ebriedad*`, text, { quoted: mek})
+                break
 	  case 'toimg':
 		if (!isQuotedSticker) return reply('{ ❗ } *Etiquete la imagen*')
 		reply(mess.wait)
