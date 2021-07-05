@@ -1047,7 +1047,7 @@ async function starts() {
                     reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
                 }
             break
-                                /*case 'nsfwtrap':
+                                case 'nsfwtrap':
                                         try{
                                                 if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
                                                 res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap?apikey=APIKEYLU`, {method: 'get'})
@@ -1057,7 +1057,7 @@ async function starts() {
                                                 console.log(`*Error* :`, color(e,'red'))
                                                 reply('❌ *ERROR* ❌')
                                         }
-										break*/
+										break
 										case 'randomhentai': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -1069,7 +1069,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					/*case 'nsfwloli':
+					case 'nsfwloli':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://api.lolis.life/random?nsfw=true`, {method: 'get'})
@@ -1079,7 +1079,7 @@ async function starts() {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-						break*/
+						break
 					case 'nsfwboobs': 
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
@@ -1113,7 +1113,7 @@ async function starts() {
 							reply('❌ *ERROR* ❌')
 						}
 						break
-					/*case 'nsfwyuri':
+					case 'nsfwyuri':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 							res = await fetchJson(`https://api.computerfreaker.cf/v1/yuri`, {method: 'get'})
@@ -1123,7 +1123,7 @@ async function starts() {
 							console.log(`Error :`, color(e,'red'))
 							reply('❌ *ERROR* ❌')
 						}
-					break*/
+					break
 				case 'nsfwass':
 						try {
 							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
