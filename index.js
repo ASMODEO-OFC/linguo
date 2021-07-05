@@ -243,6 +243,7 @@ async function starts() {
 			const args = body.trim().split(/ +/).slice(1)
 			let authorname = client.contacts[from] != undefined ? client.contacts[from].vname || client.contacts[from].notify : undefined
 			const isCmd = body.startsWith(prefix)
+			pushname2 = client.contacts[nameReq] != undefined ? client.contacts[nameReq].vname || client.contacts[nameReq].notify : undefined
 
 			mess = {
 				wait: '❗Por favor no hagas spam👏❗\n\nProcesando... 🔁🛐',
