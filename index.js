@@ -492,20 +492,13 @@ async function starts() {
        /***𝙁𝙄𝙉 𝘿𝙀 𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎***/
 
 			switch(command) {
-				case 'help':
-				case 'menu':
-					client.sendMessage(from, help(prefix), text)
-					break
-                                /*case 'makermenu':
-                                        hisil = fs.readFileSync('./src/makerimg.jpg')
-                                        client.sendMessage(from, hisil, image, {quoted: mek, caption: makermenu(prefix), text})
-                                        break*/
-		case 'idiomas':
+	  case 'help':
+	  case 'menu':
+		client.sendMessage(from, help(prefix), text)
+		break
+	  case 'idiomas':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
-				break
-				case 'asmmenu':
-					client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
-							break
+		break
 	  case 'nsfwmenu':
 		client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
 		break
