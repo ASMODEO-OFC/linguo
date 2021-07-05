@@ -515,15 +515,7 @@ async function starts() {
 					                                                                                  case 'versión':
 				                                                                                          case 'version':
 				                                                                                          client.sendMessage(from, version(prefix, sender), text, {quoted: mek})
-													                                 break
-                                                                                                                                         case 'welmenu':
-				                                                                                                         client.sendMessage(from, welmenu(prefix, sender), text, {quoted: mek})
-													                                 break
-					
-		/*case 'virtex':
-	       case 'troleo':
-               client.sendMessage(from, virtex(prefix, sender), text, {quoted: mek})
-               break*/
+		break
           case 'degradar':
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
