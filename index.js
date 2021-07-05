@@ -301,9 +301,9 @@ async function starts() {
                         const isUser = user.includes(sender)
                         const isLevelingOn = isGroup ? _leveling.includes(groupId) : false
                         const NomerOwner = '5491155607911@s.whatsapp.net'
-                        /******Entrada ApiKey******/
+                        /***𝘼𝙋𝙄𝙆𝙀𝙔***/
                         const BarBarKey = 'Mn2Bf58QHQ8kABoLq80g'
-                        /******Fin de la entrada de ApiKey******/
+                        /***𝙁𝙄𝙉 𝘿𝙀 𝘼𝙋𝙄𝙆𝙀𝙔***/
 
 			const isUrl = (url) => {
 			    return url.match(new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/, 'gi'))
@@ -318,7 +318,7 @@ async function starts() {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
 
-	        //nivelación de funciones
+	        //𝙉𝙄𝙑𝙀𝙇𝘼𝘾𝙄𝙊́𝙉 𝘿𝙀 𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎
             if (isGroup && isLevelingOn) {
             const currentLevel = getLevelingLevel(sender)
             const checkId = getLevelingId(sender)
