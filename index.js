@@ -576,9 +576,6 @@ async function starts() {
     }
     client.sendMessage(from, options, text, { quoted: mek } )
 				break
-				if (data.error) return reply(data.error)
-				reply(data.result)
-				break
 	case 'creador':
 	    case 'owner':
                 case 'creator':
@@ -974,45 +971,30 @@ async function starts() {
 						reply('❌ *ERROR* ❌')
 					}
 					break
-                              	case 'nsfw':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (args.length < 1) return reply('Digita 1 para activar los NSFW')
-					if (Number(args[0]) === 1) {
-						if (isNsfw) return reply('Recursos Activados ✅')
-						nsfw.push(from)
-						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply('❬ EXITO ❭ La funcion NSFW esta habilitado en este grupo')
-					} else if (Number(args[0]) === 0) {
-						nsfw.splice(from, 1)
-						fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
-						reply('❬ ✅ ❭ La funcion NSFW esta deshabilitado en este grupo')
-					} else {
-						reply('Digite 1 para activarlo, 0 para desactivarlo')
-					}
-					break	
-				case 'waifu':
-					gatauda = body.slice(7)
-					reply(mess.wait)
-					anu = await fetchJson(`https://api.xteam.xyz/anime/waifu?APIKEY=APIKEYMU`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image,{quoted: mek})
-					break
-				case 'randomanime':
-					gatauda = body.slice(13)
-					reply(mess.wait)
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomanime?apikey=BotWeA`, {method: 'get'})
-					buffer = await getBuffer(anu.result)
-					client.sendMessage(from, buffer, image, {quoted: mek})
-					break						
-                             case 'delete':
-					case 'del':
-                                        case 'dlt':
-					if (!isGroup)return reply(mess.only.group)
-					if (!isGroupAdmins)return reply(mess.only.admin)
-					client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
-					break
-                 case 'level':
+          case 'nsfw':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (args.length < 1) return reply('Digita 1 para activar los NSFW')
+		if (Number(args[0]) === 1) {
+		if (isNsfw) return reply('Recursos Activados ✅')
+		nsfw.push(from)
+		fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
+		reply('❬ EXITO ❭ La funcion NSFW esta habilitado en este grupo')
+	        } else if (Number(args[0]) === 0) {
+		nsfw.splice(from, 1)
+		fs.writeFileSync('./database/json/nsfw.json', JSON.stringify(nsfw))
+		reply('❬ ✅ ❭ La funcion NSFW esta deshabilitado en este grupo')
+		} else {
+		reply('Digite 1 para activarlo, 0 para desactivarlo')
+		}
+		break						
+          case 'delete':
+	  case 'del':
+		if (!isGroup)return reply(mess.only.group)
+		if (!isGroupAdmins)return reply(mess.only.admin)
+		client.deleteMessage(from, { id: mek.message.extendedTextMessage.contextInfo.stanzaId, remoteJid: from, fromMe: true })
+		break
+          case 'level':
                 if (!isLevelingOn) return reply(mess.levelnoton)
                 if (!isGroup) return reply(mess.only.group)
                 const userLevel = getLevelingLevel(sender)
@@ -1020,21 +1002,12 @@ async function starts() {
                 if (userLevel === undefined && userXp === undefined) return reply(mess.levelnol)
                 sem = sender.replace('@s.whatsapp.net','')
                 resul = `◪ *⬆LEVEL⬆*\n  ├─ ❏ *Nombre* : ${sem}\n  ├─ ❏ *XP* : ${userXp}\n  └─ ❏ *Level* : ${userLevel}`
-               client.sendMessage(from, resul, text, { quoted: mek})
+                client.sendMessage(from, resul, text, { quoted: mek})
                 .catch(async (err) => {
-                        console.error(err)
-                        await reply(`Error!\n${err}`)
-                    })
-            break
-				case 'fitnah':
-				if (args.length < 1) return reply(`Uso :\n${prefix}fitnah [@tag|pesan|balasanbot]]\n\nEx : \n${prefix}fitnah @menciona a alguien|Hola|Hola también`)
-				var gh = body.slice(7)
-				mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-					var replace = gh.split("|")[0];
-					var target = gh.split("|")[1];
-					var bot = gh.split("|")[2];
-					client.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
-					break
+                console.error(err)
+                await reply(`Error!\n${err}`)
+                })
+                break
           case 'leveling':
                 if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
