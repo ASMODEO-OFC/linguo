@@ -30,7 +30,7 @@ const { destrava } = require('./src/destrava')
 const { destrava2 } = require('./src/destrava')
 const { gbin } = require('./src/gbin')
 const { bahasa } = require('./src/bahasa')
-const { negara } = require('./src/kodenegara')
+const { negara } = require('./src/negara')
 const { wait, pegatinas, musica, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -492,7 +492,7 @@ async function starts() {
 		client.sendMessage(from, help(prefix), text)
 		break
 	  case 'code':
-		client.sendMessage(from, kodenegara(prefix, sender), text, {quoted: mek})
+		client.sendMessage(from, negara(prefix, sender), text, {quoted: mek})
 		break
 	  case 'idiomas':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
