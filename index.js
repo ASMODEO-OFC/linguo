@@ -14,7 +14,7 @@ const {
     GroupSettingChange
 } = require('@adiwajshing/baileys');
 
-/******COMIENZO DE LA ENTRADA DEL ARCHIVO******/
+/******ENTRADA DE ARCHIVOS******/
 const { color, bgcolor } = require('./lib/color')
 const { destrava } = require('./src/destrava')
 const { destrava2 } = require('./src/destrava')
@@ -25,9 +25,9 @@ const { virtex } = require('./src/virtex')
 const { wait, pegatinas, musica, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
-/******FIN DE ENTRADA DE ARCHIVO******/
+/******FIN DE ENTRADA DE ARCHIVOS******/
 
-/******COMIENZO DE LA ENTRADA DEL PAQUETE NPM******/
+/******ENTRADA DE PAQUETES NPM******/
 const fs = require('fs')
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
@@ -41,9 +41,9 @@ const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
-/******FIN DE ENTRADA DEL PAQUETE NPM******/
+/******FIN DE ENTRADA DE PAQUETES NPM******/
 
-/******COMIENZO DE LA ENTRADA JSON******/
+/******ENTRADA DE JSON******/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
@@ -53,7 +53,7 @@ const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 /******FIN DE ENTRADA JSON******/
 
-/******INICIO DE LA ENTRADA DEL MENÚ******/
+/***𝙈𝙀𝙉𝙐́𝙎***/
 const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
 const { toinmenu } = require('./src/toinmenu')
@@ -62,21 +62,21 @@ const { nsfwmenu } = require('./src/nsfwmenu')
 const { version } = require('./src/version')
 const { welmenu } = require('./src/welmenu')
 
-/******FIN DE ENTRADA DEL MENÚ******/
+/***𝙁𝙄𝙉 𝘿𝙀 𝙈𝙀𝙉𝙐́𝙎***/
 
-/******CARGA DE ENTRADA VCARD******/
+/***𝙑𝘾𝘼𝙍𝘿***/
 const vcard = 'BEGIN:VCARD\n' // Tarjeta de contacto
             + 'VERSION:3.0\n' 
             + 'FN:⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ\n' // Nombre
             + 'ORG:⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ;\n' // Propietario
             + 'TEL;type=CELL;type=VOICE;waid=5491155607911:+54 9 11 5560 7911\n' // ID de WhatsApp + número de teléfono
             + 'END:VCARD'
-/******FIN DE ENTRADA VCARD******/
+/***𝙁𝙄𝙉 𝘿𝙀 𝙑𝘾𝘼𝙍𝘿***/
 
 prefix = '/'
 blocked = []
 
-/******INICIO DE FUNCIONES ENTRADA******/
+/***𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎***/
 const getLevelingXp = (userId) => {
             let position = false
             Object.keys(_level).forEach((i) => {
@@ -480,7 +480,7 @@ async function starts() {
 			if (isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;32mEXEC\x1b[1;37m]', time, color(command), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
 			if (!isCmd && isGroup) console.log('\x1b[1;31m~\x1b[1;37m>', '[\x1b[1;31mRECV\x1b[1;37m]', time, color('Message'), 'from', color(sender.split('@')[0]), 'in', color(groupName), 'args :', color(args.length))
  
-       /******ENTRADA FIN DE FUNCIONES******/
+       /***𝙁𝙄𝙉 𝘿𝙀 𝙁𝙐𝙉𝘾𝙄𝙊𝙉𝙀𝙎***/
 
 			switch(command) {
 				case 'help':
