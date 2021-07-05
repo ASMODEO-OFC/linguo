@@ -506,15 +506,12 @@ async function starts() {
 				case 'asmmenu':
 					client.sendMessage(from, toinmenu(prefix, sender), text, {quoted: mek})
 							break
-							case 'menuadmin':
-								client.sendMessage(from, menuadmin(prefix, sender), text, {quoted: mek})
-										break
-										case 'nsfwmenu':
-											client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
-													break
-					                                                                                  case 'versión':
-				                                                                                          case 'version':
-				                                                                                          client.sendMessage(from, version(prefix, sender), text, {quoted: mek})
+	  case 'nsfwmenu':
+		client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
+		break
+	  case 'version':
+          case 'versión':
+		client.sendMessage(from, version(prefix, sender), text, {quoted: mek})
 		break
           case 'degradar':
 		if (!isGroup) return reply(mess.only.group)
