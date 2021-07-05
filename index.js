@@ -1,13 +1,8 @@
 /*
 * ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝by ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
-* Bot solo para entretenimiento
-* Todos los derechos reservados
 
 * © 2021 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ
 
-- El bot se ira actualizando periódicamente con mejoras y nuevos comandos
-
-* Gracias por el apoyo! 🛐
 */
 
 const {
