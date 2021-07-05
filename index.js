@@ -273,7 +273,7 @@ async function starts() {
 				},
 				only: {
 					group: '[❗] Este comando es solo para grupos!',
-					premium: '[❗] ESTE PEDIDO ES SOLO PARA *USUARIOS PREMIUM* CONTACTA AL PROPIETARIO SI ESTÁS INTERESAD@ EN CONSEGUIR SU MEMBRESÍA PREMIUM',
+					premium: '[❗] Este comando es solo para *USUARIOS PREMIUM* contacta al propietario si deseas serlo',
 					ownerG: '[❗] Este comando solo puede ser utilizado por los admins del grupo!',
 					ownerB: '[❗] Este comando solo puede ser usado por ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ',
 					admin: '[❗] Este comando solo puede ser utilizado por los adminis del grupo!',
@@ -939,6 +939,7 @@ async function starts() {
 					break
                case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
+                if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
