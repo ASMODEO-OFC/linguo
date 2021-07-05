@@ -880,86 +880,86 @@ async function starts() {
 								client.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: mek})
 							})
 						})
-					/*} else if ((isMedia || isQuotedImage) && colors.includes(args[0])) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						const media = await client.downloadAndSaveMediaMessage(encmedia)
-						ran = getRandom('.webp')
-						await ffmpeg(`./${media}`)
-							.on('start', function (cmd) {
-								console.log('Started :', cmd)
-							})
-							.on('error', function (err) {
-								fs.unlinkSync(media)
-								console.log('Error :', err)
-							})
-							.on('end', function () {
-								console.log('Finish')
-								fs.unlinkSync(media)
-								client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
-								fs.unlinkSync(ran)
-							})
-							.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=${args[0]}@0.0, split [a][b]; [a] palettegen=reserve_transparent=off; [b][p] paletteuse`])
-							.toFormat('webp')
-							.save(ran)*/
-					} else {
-						reply(`Envíe una imagen con el comando ${prefix}s o etiqueta a una imagen que ya se haya enviado`)
-					}
-					break
-                	case 'tomp3':
-                	client.updatePresence(from, Presence.composing) 
-					if (!isQuotedVideo) return reply('❌ Solo videos ❌')
-					reply(mess.only.mpcancion)
-					encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(encmedia)
-					ran = getRandom('.mp4')
-					exec(`ffmpeg -i ${media} ${ran}`, (err) => {
-						fs.unlinkSync(media)
-						if (err) return reply('❌ No se pudo convertir el video a mp3 ❌')
-						buffer = fs.readFileSync(ran)
-						client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
-						fs.unlinkSync(ran)
-					})
-					break
-               case 'play':   
+		/*} else if ((isMedia || isQuotedImage) && colors.includes(args[0])) {
+		const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+		const media = await client.downloadAndSaveMediaMessage(encmedia)
+		ran = getRandom('.webp')
+		await ffmpeg(`./${media}`)
+		.on('start', function (cmd) {
+		console.log('Started :', cmd)
+	        })
+		.on('error', function (err) {
+		fs.unlinkSync(media)
+		console.log('Error :', err)
+		})
+		.on('end', function () {
+		console.log('Finish')
+		fs.unlinkSync(media)
+		client.sendMessage(from, fs.readFileSync(ran), sticker, {quoted: mek})
+		fs.unlinkSync(ran)
+		})
+		.addOutputOptions([`-vcodec`,`libwebp`,`-vf`,`scale='min(320,iw)':min'(320,ih)':force_original_aspect_ratio=decrease,fps=15, pad=320:320:-1:-1:color=${args[0]}@0.0, split [a][b]; [a] palettegen=reserve_transparent=off; [b][p] paletteuse`])
+	        .toFormat('webp')
+		.save(ran)*/
+		} else {
+		reply(`Envíe una imagen con el comando ${prefix}s o etiqueta a una imagen que ya se haya enviado`)
+		}
+		break
+          case 'tomp3':
+               	client.updatePresence(from, Presence.composing) 
+		if (!isQuotedVideo) return reply('❌ Solo videos ❌')
+		reply(mess.only.mpcancion)
+		encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+		media = await client.downloadAndSaveMediaMessage(encmedia)
+		ran = getRandom('.mp4')
+	        exec(`ffmpeg -i ${media} ${ran}`, (err) => {
+		fs.unlinkSync(media)
+		if (err) return reply('❌ No se pudo convertir el video a mp3 ❌')
+		buffer = fs.readFileSync(ran)
+		client.sendMessage(from, buffer, audio, {mimetype: 'audio/mp4', quoted: mek})
+		fs.unlinkSync(ran)
+		})
+		break
+          case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
                 if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy25`)
-               if  (anu.error) return reply(anu.error)
-                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
+                if  (anu.error) return reply(anu.error)
+                infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
                 buffer = await getBuffer(anu.result.thumbnail)
                 lagu = await getBuffer(anu.result.url_audio)
                 client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
                 client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
                 break
-                                case 'daftar':
-					client.updatePresence(from, Presence.composing)
-					if (isUser) return reply('Ya estas registrad@ 🙄')
-					if (args.length < 1) return reply(`Incorrecto \nCommand : ${prefix}daftar Nombre\nComando : ${prefix}daftar ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ`)
-					var reg = body.slice(8)
-					var nombre = reg.split("|")[0];
-                                                user.push(sender)
-						fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
-						client.sendMessage(from, `\`\`\`Registrado con exito ✔️\`\`\`\n\n\`\`\`Hora: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
-					break
-                                case 'bienvenida':
-					if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('Para activar está funcion coloca *welcome 1')
-					if (Number(args[0]) === 1) {
-						if (isWelkom) return reply('Ya esta activada!!!')
-						welkom.push(from)
-						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
-					} else if (Number(args[0]) === 0) {
-						welkom.splice(from, 1)
-						fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
-						reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
-					} else {
-						reply('Escribe el comando 1 para activarlo y 0 para desactivarlo Ejemplo: *welcome 1')
-					}
-					break
+           case 'daftar':
+		client.updatePresence(from, Presence.composing)
+		if (isUser) return reply('Ya estas registrad@ 🙄')
+		if (args.length < 1) return reply(`Incorrecto \nCommand : ${prefix}daftar Nombre\nComando : ${prefix}daftar ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ`)
+		var reg = body.slice(8)
+		var nombre = reg.split("|")[0];
+                user.push(sender)
+		fs.writeFileSync('./database/json/user.json', JSON.stringify(user))
+		client.sendMessage(from, `\`\`\`Registrado con exito ✔️\`\`\`\n\n\`\`\`Hora: ${time}\`\`\`\n\n\`\`\`Fecha: ${date}\`\`\`\n\n\`\`\`[Usuario]: ${nombre}\`\`\`\n\`\`\`[Número]: wa.me/${sender.split("@")[0]}\`\`\`\n\`\`\`Para usar el bot\`\`\`\n\`\`\`Por favor\`\`\`\n\`\`\`enviar ${prefix}help\`\`\`\n\`\`\`\nTotal de usuários ${user.length}\`\`\``, text, {quoted: mek})
+		break
+           case 'bienvenida':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.Badmin)
+	        if (args.length < 1) return reply('Para activar está funcion coloca 1')
+		if (Number(args[0]) === 1) {
+		if (isWelkom) return reply('Ya esta activada!!!')
+		welkom.push(from)
+		fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+		reply('❬ ✅ ❭ La funcion de bienvenida esta habilitada en este grupo')
+		} else if (Number(args[0]) === 0) {
+		welkom.splice(from, 1)
+		fs.writeFileSync('./database/json/welkom.json', JSON.stringify(welkom))
+		reply('❬ ✅ ❭ La funcion de bienvenida esta deshabilitada en este grupo')
+		} else {
+		reply('Escribe 1 para activarlo y 0 para desactivarlo')
+		}
+		break
           case 'nsfw':
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
