@@ -876,7 +876,7 @@ async function starts() {
 							fs.writeFileSync(ranp, buffer, (err) => {
 								if (err) return reply('❌ Ocurrió un error, intente mas tarde ❌')
 							})
-							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${ranw}`, (err) => {
+							exec(`ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=20 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 1080:1080 ${ranw}`, (err) => {
 								fs.unlinkSync(ranp)
 								if (err) return reply(mess.error.stick)
 								client.sendMessage(from, fs.readFileSync(ranw), sticker, {quoted: mek})
