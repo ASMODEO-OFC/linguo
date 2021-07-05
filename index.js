@@ -1209,7 +1209,7 @@ async function starts() {
                                         client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Seconds_*\nDispositivo: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nConectividad: *WI-FI*\nEstado: *En estado de ebriedad*`, text, { quoted: mek})
                                         break
                                 case 'ttp':
-					if (args.length < 1) return reply('Donde está el texto?')
+					if (args.length < 1) return reply('Y el texto flaco?')
 					ranp = getRandom('.png')
 					rano = getRandom('.webp')
 					teks = body.slice(4).trim()
