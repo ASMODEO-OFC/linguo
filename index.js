@@ -31,7 +31,6 @@ const { destrava2 } = require('./src/destrava')
 const { gbin } = require('./src/gbin')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/kodenegara')
-const { virtex } = require('./src/virtex')
 const { wait, pegatinas, musica, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
@@ -43,7 +42,6 @@ const moment = require('moment-timezone')
 const { exec } = require('child_process')
 const kagApi = require('@kagchi/kag-api')
 const fetch = require('node-fetch')
-/*const tiktod = require('tiktok-scraper')*/
 const { cekvip } = require('./src/cekvip')
 const ffmpeg = require('fluent-ffmpeg')
 const { removeBackgroundFromImageFile } = require('remove.bg')
@@ -66,11 +64,8 @@ const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
 /***𝙈𝙀𝙉𝙐́𝙎***/
 const { help } = require('./src/help')
 const { logomaker } = require('./database/menu/logomaker')
-const { toinmenu } = require('./src/toinmenu')
-const { menuadmin } = require('./src/menuadmin')
 const { nsfwmenu } = require('./src/nsfwmenu')
 const { version } = require('./src/version')
-const { welmenu } = require('./src/welmenu')
 
 /***𝙁𝙄𝙉 𝘿𝙀 𝙈𝙀𝙉𝙐́𝙎***/
 
@@ -209,7 +204,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `se fue @${num.split('@')[0]} 👋😑`
+				teks = `𝙎𝙚 𝙛𝙪𝙚 ➢@${num.split('@')[0]} 𝙉𝙤 𝙩𝙚 𝙫𝙖𝙢𝙤𝙨 𝙖 𝙚𝙭𝙩𝙧𝙖𝙣̃𝙖𝙧 𝙩𝙧𝙤𝙡@ 👋🏻`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
@@ -495,6 +490,9 @@ async function starts() {
 	  case 'help':
 	  case 'menu':
 		client.sendMessage(from, help(prefix), text)
+		break
+	  case 'code':
+		client.sendMessage(from, kodenegara(prefix, sender), text, {quoted: mek})
 		break
 	  case 'idiomas':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
