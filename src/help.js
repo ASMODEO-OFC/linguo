@@ -27,6 +27,7 @@ const help = (prefix) => {
 
 ➢ ✪🅖🅡🅤🅟🅞🅢✪
 
+➛ *${prefix}ownergp* [Dueñ@ del grupo]
 ➛ *${prefix}admins* [Lista de Admins]
 ➛ *${prefix}promover* [Dar Admin]
 ➛ *${prefix}degradar* [Quitar Admin]
@@ -65,6 +66,7 @@ const help = (prefix) => {
 
 ➛ *${prefix}setprefix* [Cambiar Prefijo]
 ➛ *${prefix}bc* [Transmitir]
+➛ *${prefix}setppbot* [Cambiar la foto del bot]
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
