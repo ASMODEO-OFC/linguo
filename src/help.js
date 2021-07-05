@@ -89,6 +89,7 @@ const help = (prefix) => {
 
 ➛ *${prefix}idiomas* [Idiomas para el comando *"${prefix}tts"*]
 ➛ *${prefix}ping* [Velocidad del bot]
+➛ *${prefix}code* [Códigos de país]
 
 ➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐́🅢✪
 
