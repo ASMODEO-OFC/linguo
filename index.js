@@ -1344,45 +1344,45 @@ case 'hentaisom':
 tujuh = fs.readFileSync('./assets/somhentai.mp3');
 client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
 break
-                                case 'antilink':
-                    if (!isGroup) return reply(mess.only.group)
-					if (!isGroupAdmins) return reply(mess.only.admin)
-					if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-					if (args.length < 1) return reply('Ponga 1 para activar ')
-					if (Number(args[0]) === 1) {
-						if (isAntiLink) return reply('Modo anti-link ya está activado')
-						antilink.push(from)
-						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Modo anti-link activado con éxito en este grupo ✔️')
-						client.sendMessage(from,`Atención todos los miembros de este grupo anti-link. ACTIVADO si envias un link de grupo, seras expulsado`, text)
-					} else if (Number(args[0]) === 0) {
-						if (isAntiLink) return reply('Modo anti-link desactivado con éxito en este grupo ✔')
-						var ini = anti.clientOf(from)
-						antilink.splice(ini, 1)
-						fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
-						reply('Modo anti-link desactivado con éxito en este grupo ✔️')
-					} else {
-						reply('1 para activar, 0 para desactivar ')
-					}
-					break
-       	       case 'cekvip': 
-		    if (!isPremium) return reply(mess.only.premium)
-		    me = client.user
-		    uptime = process.uptime()
-		    client.sendMessage(from,  `*──────────────────*\n*Nombre del bot:* ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Estado:* *ACTIVO*\n*──────────────────*\n*Estado del Bot:* *${kyun(uptime)}*\n\n*ERES UN MIEMBRO PREMIUM, FELICIDADES! 👌🏼😌* \n*──────────────────*` , text, { quoted: mek, })
-		    break
-               case 'gbin':
-                    if (!isPremium) return reply(mess.only.premium)
-                    if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN GRUPOS❌')
-                    client.sendMessage(from, gbin(prefix), text, { quoted: mek })
-                    break
-               case 'destrava':
-                    if (!isPremium) return reply(mess.only.premium)
-		    if (!isGroup) return reply(mess.only.group)
-		    if (!isGroupAdmins) return reply(mess.only.admin)
-		    if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                    client.sendMessage(from, destrava(prefix), text, { quoted: mek })
-                    break
+          case 'antilink':
+                if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+		if (args.length < 1) return reply('Ponga 1 para activar ')
+        	if (Number(args[0]) === 1) {
+		if (isAntiLink) return reply('Modo anti-link ya está activado')
+		antilink.push(from)
+		fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
+		reply('Modo anti-link activado con éxito en este grupo ✔️')
+		client.sendMessage(from,`Atención todos los miembros de este grupo anti-link. ACTIVADO si envias un link de grupo, seras expulsado`, text)
+         	} else if (Number(args[0]) === 0) {
+		if (isAntiLink) return reply('Modo anti-link desactivado con éxito en este grupo ✔')
+		var ini = anti.clientOf(from)
+		antilink.splice(ini, 1)
+		fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
+		reply('Modo anti-link desactivado con éxito en este grupo ✔️')
+		} else {
+		reply('1 para activar, 0 para desactivar ')
+		}
+	        break
+       	  case 'cekvip': 
+	        if (!isPremium) return reply(mess.only.premium)
+		me = client.user
+		uptime = process.uptime()
+		client.sendMessage(from,  `*──────────────────*\n*Nombre del bot:* ╚»★𝗟𝗶𝗻𝗴𝘂𝗼★«╝\n*─────────────────*\n『 *𝐕𝐈𝐏 𝐔𝐒𝐄𝐑*』\n*──────────────────*\n*•Número:* *${sender.split("@s.whatsapp.net")[0]}*\n*•Estado:* *ACTIVO*\n*──────────────────*\n*Estado del Bot:* *${kyun(uptime)}*\n\n*ERES UN MIEMBRO PREMIUM, FELICIDADES! 👌🏼😌* \n*──────────────────*` , text, { quoted: mek, })
+		break
+          case 'gbin':
+                if (!isPremium) return reply(mess.only.premium)
+                if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN GRUPOS❌')
+                client.sendMessage(from, gbin(prefix), text, { quoted: mek })
+                break
+          case 'destrava':
+                if (!isPremium) return reply(mess.only.premium)
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
+		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                client.sendMessage(from, destrava(prefix), text, { quoted: mek })
+                break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
