@@ -21,11 +21,9 @@ const help = (prefix) => {
 
 ➛ *${prefix}sticker* [Convertir en Sticker]
 ➛ *${prefix}toimg* [Convertir Sticker en Imagen]
-➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}tts* [Idioma y su texto]
 ➛ *${prefix}wame* [Link de su WhatsApp]
 ➛ *${prefix}owner* [Info del Creador]
-➛ *${prefix}ping*
 
 ➢ ✪🅖🅡🅤🅟🅞🅢✪
 
@@ -50,38 +48,28 @@ const help = (prefix) => {
 ➛ *${prefix}leveling* [1/0]
 ➛ *${prefix}level*
 
+➢ ✪🅓🅞🅦🅝🅛🅞🅐🅓✪
+
+➛ *${prefix}ytmp3* [URL]
+➛ *${prefix}ytmp4* [URL]
+
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
 ➛ *${prefix}gay* [@]
-➛ *${prefix}ytmp3* [URL]
-➛ *${prefix}ytmp4* [URL]
 ➛ *${prefix}tomp3* [Convierte videos a mp3]
 ➛ *${prefix}yamete*
 ➛ *${prefix}hentaisom*
 ➛ *${prefix}onichan*
 
-➢ ✪🅞🅣🅡🅞🅢✪
+➢ ✪🅞🅦🅝🅔🅡✪
 
 ➛ *${prefix}setprefix* [Cambiar Prefijo]
 ➛ *${prefix}bc* [Transmitir]
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
-➛ *${prefix}pinterest* [Texto]
 ➛ *${prefix}nsfw* [1/0] 🔞
-➛ *${prefix}nsfwneko*
-➛ *${prefix}nsfwboobs*
-➛ *${prefix}nsfwsideboobs*
-➛ *${prefix}nsfwahegao*
-➛ *${prefix}nsfwblowjob*
-➛ *${prefix}nsfwneko*
-➛ *${prefix}nsfwass*
-➛ *${prefix}nsfwthighs*
-➛ *${prefix}nsfwfeets*
-➛ *${prefix}nsfwarmpits*
-➛ *${prefix}waifu*
-➛ *${prefix}randomanime*
-➛ *${prefix}randomhentai*
+➛ *${prefix}nsfwmenu*
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
 
@@ -91,15 +79,16 @@ const help = (prefix) => {
 ➢ ✪🅟🅡🅔🅜🅘🅤🅜✪
  
 ➛ *${prefix}cekvip* [Consultar estado de Membresía]
+➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
 ➛ *${prefix}destrava* [destrabar grupo en caso de ataque]
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
 ➛ *${prefix}idiomas* [Idiomas para el comando *"${prefix}tts"*]
-➛ *${prefix}ig*
+➛ *${prefix}ping* [Velocidad del bot]
 
-➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐🅢✪
+➢ ✪🅐🅛🅖🅤🅝🅞🅢 🅜🅐́🅢✪
 
 ➢ ✪🅓🅤🅔🅝̃🅞✪
 
