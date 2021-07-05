@@ -1,6 +1,8 @@
 const nsfwmenu = (prefix, pushname) => {
     return `*🅒🅞🅜🅐🅝🅓🅞🅢 🅝🅢🅕🅦 🔥*
 
+➢ ${prefix}nsfwboobs
+➢ ${prefix}nsfwsideboobs
 ➢ ${prefix}nsfwahegao
 ➢ ${prefix}nsfwthighs
 ➢ ${prefix}nsfwfeets
