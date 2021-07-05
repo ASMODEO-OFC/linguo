@@ -726,7 +726,7 @@ async function starts() {
 					client.sendMessage(from, 'Bye Bye 👋🏻', text) // ur cods
 					}, 0)
                      break
-       /*case 'ownergrup':
+         case 'ownergrup':
 				  case 'ownergp':
                client.updatePresence(from, Presence.composing) 
               options = {
@@ -734,7 +734,7 @@ async function starts() {
           contextInfo: { mentionedJid: [from] }
            }
            client.sendMessage(from, options, text, { quoted: mek } )
-				break*/
+				break
                                       case 'kick':
 					case 'ban':
 					client.updatePresence(from, Presence.composing) 
