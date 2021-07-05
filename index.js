@@ -1035,56 +1035,23 @@ async function starts() {
 					var bot = gh.split("|")[2];
 					client.sendMessage(from, `${bot}`, text, {quoted: { key: { fromMe: false, participant: `${mentioned}`, ...(from ? { remoteJid: from } : {}) }, message: { conversation: `${target}` }}})
 					break
-            case 'leveling':
+          case 'leveling':
                 if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
                 if (args.length < 1) return reply('Digita 1 para ativar el recurso')
                 if (args[0] === '1') {
-                    if (isLevelingOn) return reply('*La función de nivel ya estaba activa*')
-                    _leveling.push(groupId)
-                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
-                     reply(mess.levelon)
+                if (isLevelingOn) return reply('*La función de nivel ya estaba activa*')
+                _leveling.push(groupId)
+                fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
+                reply(mess.levelon)
                 } else if (args[0] === '0') {
-                    _leveling.splice(groupId, 1)
-                    fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
-                     reply(mess.leveloff)
+                _leveling.splice(groupId, 1)
+                fs.writeFileSync('./database/json/leveling.json', JSON.stringify(_leveling))
+                reply(mess.leveloff)
                 } else {
-                    reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
+                reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
                 }
-            break
-                                case 'nsfwtrap':
-                                        try{
-                                                if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-                                                res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap?apikey=APIKEYLU`, {method: 'get'})
-                                                buffer = await getBuffer(res.result)
-                                                client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Estas enfermo Bruce Wayne 🤨'})
-                                        } catch (e) {
-                                                console.log(`*Error* :`, color(e,'red'))
-                                                reply('❌ *ERROR* ❌')
-                                        }
-										break
-										case 'randomhentai': 
-						try {
-							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://tobz-api.herokuapp.com/api/hentai?apikey=BotWeA`, {method: 'get'})
-							buffer = await getBuffer(res.result)
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Otaku tenia que ser...'})
-						} catch (e) {
-							console.log(`Error :`, color(e,'red'))
-							reply('❌ *ERROR* ❌')
-						}
-						break
-					case 'nsfwloli':
-						try {
-							if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
-							res = await fetchJson(`https://api.lolis.life/random?nsfw=true`, {method: 'get'})
-							buffer = await getBuffer(res.url)
-							client.sendMessage(from, buffer, image, {quoted: mek, caption: '😳'})
-						} catch (e) {
-							console.log(`Error :`, color(e,'red'))
-							reply('❌ *ERROR* ❌')
-						}
-						break
+                break
 	  case 'nsfwboobs': 
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
