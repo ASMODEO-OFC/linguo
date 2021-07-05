@@ -669,34 +669,34 @@ async function starts() {
 					var pesan = pc.split("|")[1];
 					client.sendMessage(nomor+'@s.whatsapp.net', pesan, text)
 					break
-				case 'setppbot':
-				client.updatePresence(from, Presence.composing) 
-				if (!isQuotedImage) return reply(`Sube fotos con subtítulos ${prefix}Ok`)
-					if (!isOwner) return reply(mess.only.ownerB)
-					enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-					media = await client.downloadAndSaveMediaMessage(enmedia)
-					await client.updateProfilePicture(botNumber, media)
-					reply('Gracias por el nuevo perfil')
-					break
-				case 'bc':
-					client.updatePresence(from, Presence.composing) 
-					if (!isOwner) return reply(mess.only.ownerB)
-					if (args.length < 1) return reply('.......')
-					anu = await client.chats.all()
-					if (isMedia && !mek.message.videoMessage || isQuotedImage) {
-						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
-						buff = await client.downloadMediaMessage(encmedia)
-						for (let _ of anu) {
-							client.sendMessage(_.jid, buff, image, {caption: `*「 TRANSMISIÓN 」*\n\n${body.slice(4)}`})
-						}
-						reply('')
-					} else {
-						for (let _ of anu) {
-							sendMess(_.jid, `*「 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ 」*\n\n${body.slice(4)}`)
-						}
-						reply('Transmisión exitosa')
-					}
-					break
+	  case 'setppbot':
+		client.updatePresence(from, Presence.composing) 
+	        if (!isQuotedImage) return reply(`Etiqueta una imagen`)
+		if (!isOwner) return reply(mess.only.ownerB)
+		enmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+		media = await client.downloadAndSaveMediaMessage(enmedia)
+		await client.updateProfilePicture(botNumber, media)
+		reply('Gracias por el nuevo perfil')
+		break
+	  case 'bc':
+		client.updatePresence(from, Presence.composing) 
+		if (!isOwner) return reply(mess.only.ownerB)
+		if (args.length < 1) return reply('.......')
+		anu = await client.chats.all()
+		if (isMedia && !mek.message.videoMessage || isQuotedImage) {
+		const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
+		buff = await client.downloadMediaMessage(encmedia)
+		for (let _ of anu) {
+		client.sendMessage(_.jid, buff, image, {caption: `*「 TRANSMISIÓN 」*\n\n${body.slice(4)}`})
+		}
+		reply('')
+		} else {
+		for (let _ of anu) {
+		sendMess(_.jid, `*「 ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ 」*\n\n${body.slice(4)}`)
+		}
+		reply('Transmisión exitosa')
+		}
+		break
           case 'leave':
                 if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
