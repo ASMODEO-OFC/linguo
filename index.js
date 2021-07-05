@@ -1179,20 +1179,20 @@ async function starts() {
                 const pcpt = porcentagemcps[Math.floor(Math.random() * porcentagemcps.length)]                
                 client.sendMessage(from, foto, MessageType.image, {quoted: mek, caption: `Su porcentaje de puta es: ${pcpt}`})
                 break
-                        case 'casal':
-					if (!isGroup) return reply(mess.only.group)
-						membr = []
-						const suamae11 = groupMembers
-						const suamae21 = groupMembers
-						const teupai11 = suamae11[Math.floor(Math.random() * suamae11.length)]
-						const teupai21 = suamae21[Math.floor(Math.random() * suamae21.length)]
-						var shipted1 = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
-						const shipted = shipted1[Math.floor(Math.random() * shipted1.length)]
-						teks = `*Hmmm.... Eu Shipo eles 2💘💘*\n\n1= @${teupai11.jid.split('@')[0]}\ne esse\n2= @${teupai21.jid.split('@')[0]}\ncom uma porcentagem de: ${shipted}`
-						membr.push(teupai11.jid)
-						membr.push(teupai21.jid)
-						mentions(teks, membr, true)
-					break
+          case 'ship':
+	        if (!isGroup) return reply(mess.only.group)
+		membr = []
+		const suamae11 = groupMembers
+		const suamae21 = groupMembers
+		const teupai11 = suamae11[Math.floor(Math.random() * suamae11.length)]
+		const teupai21 = suamae21[Math.floor(Math.random() * suamae21.length)]
+		var shipted1 = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
+		const shipted = shipted1[Math.floor(Math.random() * shipted1.length)]
+		teks = `*𝘾𝙖𝙡𝙘𝙪𝙡𝙖𝙣𝙙𝙤 𝙉𝙪𝙚𝙫𝙤 𝙎𝙝𝙞𝙥 𝙀𝙣𝙩𝙧𝙚...💘💘*\n\n1= @${teupai11.jid.split('@')[0]}\𝙮\n2= @${teupai21.jid.split('@')[0]}\n𝙎𝙪 𝙥𝙤𝙧𝙘𝙚𝙣𝙩𝙖𝙟𝙚 𝙚𝙨: ${shipted}`
+		membr.push(teupai11.jid)
+		membr.push(teupai21.jid)
+		mentions(teks, membr, true)
+	        break
 		case 'gays':
 					if (!isGroup) return reply(`Esse comando so pode ser usadoem grupos parsa`)
 					membr = []
