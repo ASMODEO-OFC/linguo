@@ -14,7 +14,7 @@ const {
     GroupSettingChange
 } = require('@adiwajshing/baileys');
 
-/******ENTRADA DE ARCHIVOS******/
+/***𝘼𝙍𝘾𝙃𝙄𝙑𝙊𝙎***/
 const { color, bgcolor } = require('./lib/color')
 const { destrava } = require('./src/destrava')
 const { destrava2 } = require('./src/destrava')
@@ -25,9 +25,9 @@ const { virtex } = require('./src/virtex')
 const { wait, pegatinas, musica, simih, getBuffer, h2k, generateMessageID, getGroupAdmins, getRandom, banner, start, info, success, close } = require('./lib/functions')
 const { fetchJson } = require('./lib/fetcher')
 const { recognize } = require('./lib/ocr')
-/******FIN DE ENTRADA DE ARCHIVOS******/
+/***𝙁𝙄𝙉 𝘿𝙀 𝘼𝙍𝘾𝙃𝙄𝙑𝙊𝙎***/
 
-/******ENTRADA DE PAQUETES NPM******/
+/***𝙋𝘼𝙌𝙐𝙀𝙏𝙀𝙎 𝙉𝙋𝙈***/
 const fs = require('fs')
 const moment = require('moment-timezone')
 const { exec } = require('child_process')
@@ -41,9 +41,9 @@ const imgbb = require('imgbb-uploader')
 const lolis = require('lolis.life')
 const loli = new lolis()
 const speed = require('performance-now')
-/******FIN DE ENTRADA DE PAQUETES NPM******/
+/***𝙁𝙄𝙉 𝘿𝙀 𝙋𝘼𝙌𝙐𝙀𝙏𝙀𝙎 𝙉𝙋𝙈***/
 
-/******ENTRADA DE JSON******/
+/***𝙅𝙎𝙊𝙉***/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
@@ -51,7 +51,7 @@ const user = JSON.parse(fs.readFileSync('./database/json/user.json'))
 const _leveling = JSON.parse(fs.readFileSync('./database/json/leveling.json'))
 const antilink = JSON.parse(fs.readFileSync('./database/json/antilink.json'))
 const _level = JSON.parse(fs.readFileSync('./database/json/level.json'))
-/******FIN DE ENTRADA JSON******/
+/***𝙁𝙄𝙉 𝘿𝙀 𝙅𝙎𝙊𝙉***/
 
 /***𝙈𝙀𝙉𝙐́𝙎***/
 const { help } = require('./src/help')
