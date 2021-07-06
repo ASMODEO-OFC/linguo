@@ -60,6 +60,7 @@ const help = (prefix) => {
 ➛ *${prefix}cogible* [@]
 ➛ *${prefix}gay* [@]
 ➛ *${prefix}puta* [@]
+➛ *${prefix}fiel* [@]
 ➛ *${prefix}tomp3* [Convierte videos a mp3]
 ➛ *${prefix}yamete*
 ➛ *${prefix}hentaisom*
