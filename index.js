@@ -243,9 +243,6 @@ async function starts() {
 			const args = body.trim().split(/ +/).slice(1)
 			let authorname = client.contacts[from] != undefined ? client.contacts[from].vname || client.contacts[from].notify : undefined
 			const isCmd = body.startsWith(prefix)
-			const insom = from.endsWith('@g.us')
-			const nameReq = insom ? mek.participant : mek.key.remoteJid
-			pushname2 = client.contacts[nameReq] != undefined ? client.contacts[nameReq].vname || client.contacts[nameReq].notify : undefined
 
 			mess = {
 				wait: '❗Por favor no hagas spam👏❗\n\nProcesando... 🔁🛐',
@@ -511,7 +508,7 @@ async function starts() {
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
 		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('La etiqueta de destino que el administrador quiere transmitir')
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Menciona a la persona que deseas degradar')
 		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 		if (mentioned.length > 1) {
 		teks = ''
@@ -531,7 +528,7 @@ async function starts() {
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
 		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('¡La etiqueta de destino que desea promocionar!')
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Menciona a la persona que deseas promover')
 		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
 		if (mentioned.length > 1) {
 		teks = 'Pedido recibido✅\n\nAgregando cargo como administrador :\n'
@@ -1199,52 +1196,6 @@ async function starts() {
 		membr.push(teupai21.jid)
 		mentions(teks, membr, true)
 	        break
-	  case 'gays':
-		if (!isGroup) return reply(mess.only.group)
-		membr = []
-		const gay1 = groupMembers
-		const gay2 = groupMembers
-		const gay3 = groupMembers
-		const gay4 = groupMembers
-		const gay5 = groupMembers
-		const gays1 = gay1[Math.floor(Math.random() * gay1.length)]
-		const gays2 = gay2[Math.floor(Math.random() * gay2.length)]
-		const gays3 = gay3[Math.floor(Math.random() * gay3.length)]
-		const gays4 = gay4[Math.floor(Math.random() * gay4.length)]
-		const gays5 = gay5[Math.floor(Math.random() * gay5.length)]
-		var porcentagemgay = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7%`, `8%`, `9%`, `10%`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
-		const porcentagem = porcentagemgay[Math.floor(Math.random() * porcentagemgay.length)]
-		teks = `${pushname2} 𝘌𝘴𝘵𝘰𝘴 𝘴𝘰𝘯 𝘭𝘰𝘴 𝘮𝘢𝘴 𝘨𝘢𝘺𝘴 𝘥𝘦𝘭 𝘨𝘳𝘶𝘱𝘰: ${groupName}\n@${gays1.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagem}\n@${gays2.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagem}\n@${gays3.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦 ${porcentagem}\n@${gays4.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagem}\n@${gays5.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦 ${porcentagem}`
-		membr.push(gays1.jid)
-		membr.push(gays2.jid)
-		membr.push(gays3.jid)
-		membr.push(gays4.jid)
-		membr.push(gays5.jid)
-		mentions(teks, membr, true)
-		break
-	  case 'cogibles':
-		if (!isGroup) return reply(mess.only.group)
-		membr = []
-		const cogible1 = groupMembers
-		const cogible2 = groupMembers
-		const cogible3 = groupMembers
-		const cogible4 = groupMembers
-		const cogible5 = groupMembers
-		const cogibles1 = cogible1[Math.floor(Math.random() * cogible1.length)]
-		const cogibles2 = cogible2[Math.floor(Math.random() * cogible2.length)]
-		const cogibles3 = cogible3[Math.floor(Math.random() * cogible3.length)]
-		const cogibles4 = cogible4[Math.floor(Math.random() * cogible4.length)]
-		const cogibles5 = cogible5[Math.floor(Math.random() * cogible5.length)]
-		var porcentagemcogible = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7%`, `8%`, `9%`, `10%`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
-		const porcentagemc = porcentagemcogible[Math.floor(Math.random() * porcentagemcogible.length)]
-		teks = `${pushname2} 𝘌𝘴𝘵𝘰𝘴 𝘴𝘰𝘯 𝘭𝘰𝘴 𝘮𝘢𝘴 𝘤𝘰𝘨𝘪𝘣𝘭𝘦𝘴 𝘥𝘦𝘭 𝘨𝘳𝘶𝘱𝘰: ${groupName}\n@${cogibles1.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagemc}\n@${cogibles2.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagemc}\n@${cogibles3.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagemc}\n@${cogibles4.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagemc}\n@${cogibles5.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagemc}`
-		membr.push(cogibles1.jid)
-		membr.push(cogibles2.jid)
-		membr.push(cogibles3.jid)
-		membr.push(cogibles4.jid)
-		membr.push(cogibles5.jid)
-		mentions(teks, membr, true)
-		break
           case 'gostosa':
                 if (!isGroup) return reply(mess.only.group)
                 membr = []
