@@ -1161,7 +1161,7 @@ async function starts() {
                 client.sendMessage(from, destrava(prefix), text, { quoted: mek })
                 break
           case 'cons':		
-	        if (args.length < 1) return reply('Mencione a su amig@!')
+	        if (args.length < 1) return reply('Donde esta su consulta?')
 		rate = body.slice(1)
 		const ti =['𝙎𝙞','𝙉𝙤','𝗧𝗮𝗹 𝗩𝗲𝘇']
 		const kl = ti[Math.floor(Math.random() * ti.length)]
@@ -1210,7 +1210,7 @@ async function starts() {
                 foto = await getBuffer(pisk)
                 var porcentagemcpscrn = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7%`, `8%`, `9%`, `10%`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
                 const pcptcrn = porcentagemcpscrn[Math.floor(Math.random() * porcentagemcpscrn.length)]                
-                client.sendMessage(from, foto, MessageType.image, {quoted: mek, caption: `𝙎𝙪 𝙥𝙤𝙧𝙘𝙚𝙣𝙩𝙖𝙟𝙚 𝙙𝙚 𝙘𝙤𝙧𝙣𝙪𝙙𝙤@ 𝙚𝙨: ${pcptcrn} andá a limarte las astas`})
+                client.sendMessage(from, foto, MessageType.image, {quoted: mek, caption: `𝙎𝙪 𝙥𝙤𝙧𝙘𝙚𝙣𝙩𝙖𝙟𝙚 𝙙𝙚 𝙘𝙤𝙧𝙣𝙪𝙙@ 𝙚𝙨: ${pcptcrn} andá a limarte las astas`})
                 break
           case 'puta':
                 if (!isGroup) return reply(mess.only.group)
