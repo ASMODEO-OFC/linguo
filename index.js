@@ -1160,6 +1160,13 @@ async function starts() {
 		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 client.sendMessage(from, destrava(prefix), text, { quoted: mek })
                 break
+          case 'cons':		
+	        if (args.length < 1) return reply('Mencione a su amig@!')
+		rate = body.slice(1)
+		const ti =['Si','No','Tal vez']
+		const kl = ti[Math.floor(Math.random() * ti.length)]
+		client.sendMessage(from, '*'+rate+'*\n\n: '+ kl+'%', text, { quoted: mek })
+		break
           case 'gay':		
                 if (!isGroup) return reply(mess.only.group)
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
