@@ -1035,7 +1035,7 @@ async function starts() {
 		rate = body.slice(1)
 		const ti =['4','9','17','28','34','48','59','62','74','83','97','100','29','94','75','82','41','39','50','65','90','77','7','90','40','Adicto al yaoi']
 		const kl = ti[Math.floor(Math.random() * ti.length)]
-		client.sendMessage(from, 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
+		client.sendMessage(from, foto, MessageType.image, {quoted: mek, caption: 'Ya sospechaba que era: *'+rate+'*\n\nSu porcentaje 👀 : '+ kl+'%', text, { quoted: mek })
 		break
 	  case 'simi':
 		if (args.length < 1) return reply('Donde está el texto??')
@@ -1194,7 +1194,7 @@ async function starts() {
 		mentions(teks, membr, true)
 	        break
 	  case 'gays':
-		if (!isGroup) return reply(`Esse comando so pode ser usadoem grupos parsa`)
+		if (!isGroup) return reply(mess.only.group)
 		membr = []
 		const gay1 = groupMembers
 		const gay2 = groupMembers
@@ -1208,7 +1208,7 @@ async function starts() {
 		const gays5 = gay5[Math.floor(Math.random() * gay5.length)]
 		var porcentagemgay = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7`, `8%`, `9%`, `10`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
 		const porcentagem = porcentagemgay[Math.floor(Math.random() * porcentagemgay.length)]
-		teks = `${pushname2} Esses são os mais SuperGays do grupo ${groupName}\n@${gays1.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays2.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays3.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays4.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n@${gays5.jid.split('@')[0]}\nCom uma porcentagem de ${porcentagem}\n\n⚡ Zeus ⚡`
+		teks = `${pushname2} 𝘌𝘴𝘵𝘰𝘴 𝘴𝘰𝘯 𝘭𝘰𝘴 𝘮𝘢𝘴 𝘨𝘢𝘺𝘴 𝘥𝘦𝘭 𝘨𝘳𝘶𝘱𝘰: ${groupName}\n@${gays1.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagem}\n@${gays2.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagem}\n@${gays3.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦 ${porcentagem}\n@${gays4.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦: ${porcentagem}\n@${gays5.jid.split('@')[0]}\n𝘚𝘶 𝘱𝘰𝘳𝘤𝘦𝘯𝘵𝘢𝘫𝘦 ${porcentagem}`
 		membr.push(gays1.jid)
 		membr.push(gays2.jid)
 		membr.push(gays3.jid)
@@ -1217,7 +1217,7 @@ async function starts() {
 		mentions(teks, membr, true)
 		break
 	  case 'cornos':
-		if (!isGroup) return reply(`Esse comando so pode ser usadoem grupos parsa`)
+		if (!isGroup) return reply(mess.only.group)
 		membr = []
 		const corno1 = groupMembers
 		const corno2 = groupMembers
