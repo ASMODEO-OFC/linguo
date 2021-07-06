@@ -1165,7 +1165,7 @@ async function starts() {
 		rate = body.slice(1)
 		const ti =['𝙎𝙞','𝙉𝙤','𝗧𝗮𝗹 𝗩𝗲𝘇']
 		const kl = ti[Math.floor(Math.random() * ti.length)]
-		client.sendMessage(from, '*'+rate+'*:\n\n➛ '+ kl+'', text, { quoted: mek })
+		client.sendMessage(from, '*'+rate+':*\n\n➛ '+ kl+'', text, { quoted: mek })
 		break
           case 'gay':		
                 if (!isGroup) return reply(mess.only.group)
