@@ -263,7 +263,7 @@ async function starts() {
 					premium: '[❗] Este comando es solo para *USUARIOS PREMIUM* contacta al propietario si deseas serlo',
 					ownerG: '[❗] Este comando solo puede ser utilizado por los admins del grupo!',
 					ownerB: '[❗] Este comando solo puede ser usado por ⸸𖤐𝐀𝐒𝐌𝐎𝐃𝐄𝐎𖤐⸸ᴼᶠᶜ',
-					admin: '[❗] Este comando solo puede ser utilizado por los adminis del grupo!',
+					admin: '[❗] Este comando solo puede ser utilizado por los admins del grupo!',
 					Badmin: '[❗] Este comando solo se puede usar cuando el bot se convierte en administrador!',
                                         pegatina: 'Creando sticker ✔️\n\n*Recuerda los stickers animados hasta 10 segundos 🛐',
 					imgs: 'Recuerda solo sirve para stickers❗\n\n*Convirtiendo de sticker a imagen 🛐',
