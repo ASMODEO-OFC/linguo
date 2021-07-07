@@ -645,6 +645,22 @@ async function starts() {
 		await client.updateProfilePicture(botNumber, media)
 		reply('Gracias por el nuevo perfil')
 		break
+          case 'clonar':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isOwner) return reply(mess.only.ownerB)
+		if (args.length < 1) return reply('Mencione a la persona que desea clonar\n\n*EXEMPLO:* clone @')
+		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Tag cvk')
+		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid[0]
+		let { jid, id, notify } = groupMembers.find(x => x.jid === mentioned)
+		try {
+		pp = await client.getProfilePicture(id)
+		buffer = await getBuffer(pp)
+		client.updateProfilePicture(botNumber, buffer)
+		mentions(`Foto de perfil actualizada con éxito, usando la foto de perfil de @${id.split('@')[0]}`, [jid], true)
+		} catch (e) {
+		reply('Falló, esta persona debe estar sin foto 😔')
+		}
+		break
 	  case 'bc':
 		client.updatePresence(from, Presence.composing) 
 		if (!isOwner) return reply(mess.only.ownerB)
