@@ -68,12 +68,15 @@ const help = (prefix) => {
 ➛ *${prefix}yamete*
 ➛ *${prefix}hentaisom*
 ➛ *${prefix}onichan*
+➛ *${prefix}dado*
 
 ➢ ✪🅞🅦🅝🅔🅡✪
 
 ➛ *${prefix}setprefix* [Cambiar Prefijo]
 ➛ *${prefix}bc* [Transmitir]
 ➛ *${prefix}setppbot* [Cambiar la foto del bot]
+➛ *${prefix}clonar*
+➛ *${prefix}atacar*
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
