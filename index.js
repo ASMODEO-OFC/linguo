@@ -1237,16 +1237,13 @@ async function starts() {
 		membr.push(teupai21.jid)
 		mentions(teks, membr, true)
 	        break
-          case 'gostosa':
+          case 'simp':
                 if (!isGroup) return reply(mess.only.group)
                 membr = []
-                const gostosa12 = groupMembers
-                const gostosa11 = groupMembers
-                const gostoso12 = gostosa12[Math.floor(Math.random() * gostosa12.length)]
-                const gostoso11 = gostosa11[Math.floor(Math.random() * gostosa11.length)]
-                reply(`*ＤＥＴＥＣＴＯＲ   ＤＥ  ＧＯＳＴＯＳＡＳ👩‍⚕️*\n\n*pi pi pi pi*  \n*pipipipi🚨🚨🚨pipipipi🚨🚨🚨pipipipi🚨🚨🚨pipi*\n\n@${gostoso11.jid.split('@')[0]} @${gostoso12.jid.split('@')[0]} *PARADA(O)S AÍ🖐*\n\n*VOCÊ ACABA DE RECEBER DUAS MULTAS*\n\n*1 por não dar bom dia,boa tarde,boa noite e outra por ser muito*\n\n*gostosa(o)*\n\n*valor da multa:*\n*FOTO DA TETINHA NO PV kkkkk*`)
-                membr.push(gostosa11.jid)
-                membr.push(gostosa12.jid)
+                const simp12 = groupMembers
+                const simpb12 = simp12[Math.floor(Math.random() * simp12.length)]
+                reply(`*💖😏🅓🅔🅣🅔🅒🅣🅞🅡 🅓🅔 🅢🅘🅜🅟😏💖*\n\n*𝙏𝙐 𝙎𝙄𝙈𝙋 𝙀𝙎:*\n\n*🚨   🚨   🚨   🚨   🚨   🚨   🚨   🚨   🚨   🚨*\n\n@${simpb12.jid.split('@')[0]}*\n\n*⛔    ❌𝗣𝗘𝗟𝗜𝗚𝗥𝗢❌    ⛔*\n\n*𝙉𝙤 𝙡𝙚 𝙥𝙖𝙨𝙚𝙨 𝙛𝙤𝙩𝙤𝙨...\n\n𝙇𝙖𝙨 𝙩𝙞𝙚𝙣𝙚 𝙥𝙚𝙜𝙖𝙙𝙖𝙨 𝙚𝙣 𝙚𝙡 𝙩𝙚𝙘𝙝𝙤 𝙮 𝙮𝙖 𝙨𝙖𝙗𝙚𝙨 𝙦𝙪𝙚 𝙝𝙖𝙘𝙚 𝙖𝙣𝙩𝙚𝙨 𝙙𝙚 𝙢𝙞𝙢𝙞𝙧😖*`)
+                membr.push(simp12.jid)
                 mentions(teks, membr, true)
                 break
                               default:
