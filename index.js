@@ -1051,12 +1051,6 @@ async function starts() {
                 uptime = process.uptime()
                 client.sendMessage(from, `Velocidad: *${latensi.toFixed(4)} _Seconds_*\nDispositivo: *SAMSUNG S8+*\nRAM: *4GB*\nData: *35GB*\nConectividad: *WI-FI*\nEstado: *En estado de ebriedad*`, text, { quoted: mek})
                 break
-          case 'dado':    
-		kapankah = body.slice(1)
-		const elu =['1','2','3','4','5','6']
-		const ule = elu[Math.floor(Math.random() * elu.length)]
-		client.sendMessage(from, ule, text, { quoted: mek })
-		break
 	  case 'toimg':
 		if (!isQuotedSticker) return reply('{ ❗ } *Etiquete la imagen*')
 		reply(mess.wait)
