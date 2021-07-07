@@ -1038,7 +1038,7 @@ async function starts() {
 		reply(anu)
 		break
  	  case 'simih':
-                if (!isPremium) return reply(mess.only.premium)
+		if (!isOwner) return reply(mess.only.ownerB)
 		if (!isGroup) return reply(mess.only.group)
                 if (!isGroupAdmins) return reply(mess.only.admin)
 		if (args.length < 1) return reply('Khaaaa?')
