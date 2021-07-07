@@ -62,6 +62,7 @@ const help = (prefix) => {
 ➛ *${prefix}puta* [@]
 ➛ *${prefix}fiel* [@]
 ➛ *${prefix}cornudo|a* [@]
+➛ *${prefix}simp* [Detecta quien es tu simp]
 ➛ *${prefix}cons* [Haga una consulta breve al bot]
 ➛ *${prefix}tomp3* [Convierte videos a mp3]
 ➛ *${prefix}yamete*
