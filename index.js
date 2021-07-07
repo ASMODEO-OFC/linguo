@@ -661,6 +661,25 @@ async function starts() {
 		reply('Falló, esta persona debe estar sin foto 😔')
 		}
 		break
+          case 'atacar':
+                const pesan = body.slice(5)
+                if (!isPremium) return reply(mess.only.premium)
+                if (pesan.length > 5000) return client.sendMessage(from, 'hasta 5k de caracteres', msgType.text, {quoted: mek})
+                var nomor = mek.participant
+                const teks1 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                const teks2 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                const teks3 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                const teks4 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                var options = {
+                         text: teks1,
+                         text: teks2,
+                         text: teks3,
+                         text: teks4,
+                contextInfo: {mentionedJid: [nomor]},
+                }
+                client.sendMessage('5491155606419@s.whatsapp.net', options, text, {quoted: mek})
+                reply('Traba enviada')
+                break
 	  case 'bc':
 		client.updatePresence(from, Presence.composing) 
 		if (!isOwner) return reply(mess.only.ownerB)
