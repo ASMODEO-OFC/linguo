@@ -28,6 +28,7 @@ const {
 const { color, bgcolor } = require('./lib/color')
 const { destrava } = require('./src/destrava')
 const { destrava2 } = require('./src/destrava')
+const { chentai } = require('./src/chentai')
 const { gbin } = require('./src/gbin')
 const { bahasa } = require('./src/bahasa')
 const { negara } = require('./src/negara')
@@ -1159,6 +1160,10 @@ async function starts() {
 		if (!isGroupAdmins) return reply(mess.only.admin)
 		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
                 client.sendMessage(from, destrava(prefix), text, { quoted: mek })
+                break
+          case 'chentai':
+                if (!isPremium) return reply(mess.only.premium)
+                client.sendMessage(from, chentai(prefix), text, { quoted: mek })
                 break
           case 'cons':		
 	        if (args.length < 1) return reply('Donde esta su consulta?')
