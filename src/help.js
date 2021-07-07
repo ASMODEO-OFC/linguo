@@ -90,6 +90,7 @@ const help = (prefix) => {
 ➛ *${prefix}cekvip* [Consultar estado de Membresía]
 ➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
+➛ *${prefix}chentai*
 ➛ *${prefix}destrava* [destrabar grupo en caso de ataque]
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
