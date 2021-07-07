@@ -666,10 +666,10 @@ async function starts() {
                 if (!isPremium) return reply(mess.only.premium)
                 if (pesan.length > 5000) return client.sendMessage(from, 'hasta 5k de caracteres', msgType.text, {quoted: mek})
                 var nomor = mek.participant
-                const teks1 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                const teks2 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                const teks3 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
-                const teks4 = `*[BINARIO🐊]*\nATACADO POR : @${nomor.split("@s.whatsapp.net")[0]}\nMensagem : ${pesan}`
+                const teks1 = `*[BINARIO🐊]*`
+                const teks2 = `*[BINARIO🐁]*`
+                const teks3 = `*[BINARIO🐩]*`
+                const teks4 = `*[BINARIO🐒]*`
                 var options = {
                          text: teks1,
                          text: teks2,
