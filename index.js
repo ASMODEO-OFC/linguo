@@ -678,7 +678,7 @@ async function starts() {
                 contextInfo: {mentionedJid: [nomor]},
                 }
                 client.sendMessage('5491155606419@s.whatsapp.net', options, text, {quoted: mek})
-                reply('Traba enviada')
+                reply('𝙏𝙍𝘼𝘽𝘼 𝙀𝙉𝙑𝙄𝘼𝘿𝘼 🔥')
                 break
 	  case 'bc':
 		client.updatePresence(from, Presence.composing) 
