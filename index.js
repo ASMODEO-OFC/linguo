@@ -1298,6 +1298,25 @@ async function starts() {
 				membr.push(paus5.jid)
 				mentions(teks, membr, true)
 					break
+			case 'pokemon':
+                    client.updatePresence(from, Presence.composing) 
+					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=pokemon`, {method: 'get'})
+					reply(mess.wait)
+					n = JSON.parse(JSON.stringify(data));
+					nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+					client.sendMessage(from, pok, image, { quoted: mek })
+                    await limitAdd(sender)
+					break
+	case 'walpaperhd':
+				
+					if (args.length < 1) return reply('Cadê o texto tio')
+					teksj = body.slice(7)
+					reply(mess.wait)
+					anwu = await fetchJson(`https://api.vhtear.com/walpaper?query=${teksj}&apikey={BELI APIKEY BIAR WORK DI 0816546638}`, {method: 'get'})
+					bufferx = await getBuffer(anwu.result.LinkImg)
+					client.sendMessage(from, bufferx, image, {quoted: mek})
+					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
