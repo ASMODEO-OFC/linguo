@@ -1342,12 +1342,12 @@ async function starts() {
                     tels = body.slice(10)
 					client.updatePresence(from, Presence.composing) 
 					data = await fetchJson(`https://fdciabdul.tech/api/pinterest?keyword=${tels}`, {method: 'get'})
-					reply('⚡Zeus⚡ está a procurar...')
+					reply(mess.wait)
 					n = JSON.parse(JSON.stringify(data));
 					nimek =  n[Math.floor(Math.random() * n.length)];
 					pok = await getBuffer(nimek)
-                    reply('Encontrado !!!')
-					client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado da pesquisa: ${tels}`})
+                    reply('Encontrada 👌🏼')
+					client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado de Búsqueda: ${tels}`})
                     await limitAdd(sender)
 					break
 		case 'animecry':
