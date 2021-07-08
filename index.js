@@ -1303,6 +1303,18 @@ async function starts() {
 		membr.push(paus5.jid)
 		mentions(teks, membr, true)
 		break
+          case 'pinterest':
+                tels = body.slice(10)
+		client.updatePresence(from, Presence.composing) 
+		data = await fetchJson(`https://fdciabdul.tech/api/pinterest?keyword=${tels}`, {method: 'get'})
+		reply(mess.wait)
+		n = JSON.parse(JSON.stringify(data));
+		nimek =  n[Math.floor(Math.random() * n.length)];
+		pok = await getBuffer(nimek)
+                reply('Encontrada 👌🏼')
+		client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado de Búsqueda: ${tels}`})
+                await limitAdd(sender)
+		break
 			case 'pokemon':
                     client.updatePresence(from, Presence.composing) 
 					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=pokemon`, {method: 'get'})
@@ -1337,18 +1349,6 @@ async function starts() {
 					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=Aris komtol`, {method: 'get'})
 					capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
 					client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
-					break
-                case 'pinterest':
-                    tels = body.slice(10)
-					client.updatePresence(from, Presence.composing) 
-					data = await fetchJson(`https://fdciabdul.tech/api/pinterest?keyword=${tels}`, {method: 'get'})
-					reply(mess.wait)
-					n = JSON.parse(JSON.stringify(data));
-					nimek =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nimek)
-                    reply('Encontrada 👌🏼')
-					client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado de Búsqueda: ${tels}`})
-                    await limitAdd(sender)
 					break
 		case 'animecry':
 					cry = getRandom('.gif')
