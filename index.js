@@ -1315,64 +1315,22 @@ async function starts() {
 		client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado de Búsqueda: ${tels}`})
                 await limitAdd(sender)
 		break
-	case 'walpaperhd':
-				
-					if (args.length < 1) return reply('Cadê o texto tio')
-					teksj = body.slice(7)
-					reply(mess.wait)
-					anwu = await fetchJson(`https://api.vhtear.com/walpaper?query=${teksj}&apikey={BELI APIKEY BIAR WORK DI 0816546638}`, {method: 'get'})
-					bufferx = await getBuffer(anwu.result.LinkImg)
-					client.sendMessage(from, bufferx, image, {quoted: mek})
-					break
-                  case 'playstore':
+          case 'playstore':
                 ps = `${body.slice(11)}`
-                  anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/playstore?q=${ps}`, {method: 'get'})
-                  store = '======================\n'
-                  for (let ply of anu.result){
-                  store += `• *Nome Apk:* ${ply.app.name}\n• *ID:* ${ply.app.id}\n• *Link Apk:* ${ply.app.url}\n===================°]\n`
-                  }
-                  reply(store.trim())
-                  break
-	case 'playstore':
-					kuji = body.slice(7)
-					reply(mess.wait)
-					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=Aris komtol`, {method: 'get'})
-					capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
-					client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
-					break
-	    case 'nsfwblowjob':
-				    try {
-						if (!isNsfw) return reply('❌ *FALSO* ❌')
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwblowjob`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Não faça ingredientes para o tio comum'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('❌ *ERRO* ❌')
-					}
-					break
-	    case 'nsfwneko':
-				    try {
-						if (!isNsfw) return reply('❌ *FALSO* ❌')
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni anjim'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('❌ *ERRO* ❌')
-					}
-					break
-				case 'nsfwtrap':
-				    try {
-						if (!isNsfw) return reply('❌ *FALSO* ❌')
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap`, {method: 'get'})
-						buffer = await getBuffer(res.result)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni Anjim'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('❌ *ERRO* ❌')
-					}
-					break
+                anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/playstore?q=${ps}`, {method: 'get'})
+                store = '❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥\n\n'
+                for (let ply of anu.result){
+                store += `• *🅝🅞🅜🅑🅡🅔 🅓🅔 🅐🅟🅚:* ${ply.app.name}\n• *🅘🅓:* ${ply.app.id}\n• *🅛🅘🅝🅚 🅓🅔 🅐🅟🅚:* ${ply.app.url}\n===================°]\n`
+                }
+                reply(store.trim())
+                break
+	Bbcase 'playstore':
+		kuji = body.slice(7)
+		reply(mess.wait)
+		anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=Aris komtol`, {method: 'get'})
+		capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
+		client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
+		break
 	    case 'waifu':
 				    try {
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
