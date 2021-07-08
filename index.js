@@ -1318,7 +1318,7 @@ async function starts() {
           case 'playstore':
                 ps = `${body.slice(11)}`
                 anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/playstore?q=${ps}`, {method: 'get'})
-                store = '=================================\n\n'
+                store = '======================\n'
                 for (let ply of anu.result){
                 store += `• *🅝🅞🅜🅑🅡🅔 🅓🅔 🅐🅟🅚:* ${ply.app.name}\n• *🅘🅓:* ${ply.app.id}\n• *🅛🅘🅝🅚 🅓🅔 🅐🅟🅚:* ${ply.app.url}\n===================°]\n`
                 }
