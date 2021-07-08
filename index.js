@@ -1315,16 +1315,6 @@ async function starts() {
 		client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado de Búsqueda: ${tels}`})
                 await limitAdd(sender)
 		break
-			case 'pokemon':
-                    client.updatePresence(from, Presence.composing) 
-					data = await fetchJson(`https://api.fdci.se/rep.php?gambar=pokemon`, {method: 'get'})
-					reply(mess.wait)
-					n = JSON.parse(JSON.stringify(data));
-					nimek =  n[Math.floor(Math.random() * n.length)];
-					pok = await getBuffer(nimek)
-					client.sendMessage(from, pok, image, { quoted: mek })
-                    await limitAdd(sender)
-					break
 	case 'walpaperhd':
 				
 					if (args.length < 1) return reply('Cadê o texto tio')
