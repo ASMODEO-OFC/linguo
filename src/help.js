@@ -82,6 +82,7 @@ const help = (prefix) => {
 ➛ *${prefix}pinterest* [Usa palabras en ingles]
 ➛ *${prefix}nsfw* [1/0] 🔞
 ➛ *${prefix}nsfwmenu*
+➛ *${prefix}text3d*
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
 
@@ -99,6 +100,7 @@ const help = (prefix) => {
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
+➛ *${prefix}playstore*
 ➛ *${prefix}idiomas* [Idiomas para el comando *"${prefix}tts"*]
 ➛ *${prefix}ping* [Velocidad del bot]
 ➛ *${prefix}code* [Códigos de país]
