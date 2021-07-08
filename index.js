@@ -1318,13 +1318,13 @@ async function starts() {
           case 'playstore':
                 ps = `${body.slice(11)}`
                 anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/playstore?q=${ps}`, {method: 'get'})
-                store = '======================\n\n'
+                store = '❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥❥\n\n'
                 for (let ply of anu.result){
-                store += `• *NOMBRE DE APK:* ${ply.app.name}\n• *ID:* ${ply.app.id}\n• *LINK DE APK:* ${ply.app.url}\n===================°]\n`
+                store += `• *🅝🅞🅜🅑🅡🅔 🅓🅔 🅐🅟🅚:* ${ply.app.name}\n• *🅘🅓:* ${ply.app.id}\n• *🅛🅘🅝🅚 🅓🅔 🅐🅟🅚:* ${ply.app.url}\n===================°]\n`
                 }
                 reply(store.trim())
                 break
-	Bbcase 'playstore':
+	  case 'playstore':
 		kuji = body.slice(7)
 		reply(mess.wait)
 		anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=Aris komtol`, {method: 'get'})
