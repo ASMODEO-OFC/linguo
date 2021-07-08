@@ -1331,31 +1331,13 @@ async function starts() {
 		capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
 		client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
 		break
-	    case 'waifu':
-				    try {
-						res = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
-						buffer = await getBuffer(res.image)
-						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ksksksks hmm'})
-					} catch (e) {
-						console.log(`Error :`, color(e,'red'))
-						reply('❌ *ERROR* ❌')
-					}
-					break
-			    case 'waifu2':
-					reply(mess.wait)
-					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
-					if (anu.error) return reply(anu.error)
-					buffer = await getBuffer(anu.image)
-					waifu = `*${anu.desc}`
-					client.sendMessage(from, buffer, image, {quoted: mek, caption: waifu})
-					break
-				case 'text3d':
-              	    if (args.length < 1) return reply('Onde está o texto, irmão??')
-                    teks = `${body.slice(8)}`
-                    if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
-                    buff = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${teks}`, {method: 'get'})
-                    client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
-			     	break
+          case 'text3d':
+                if (args.length < 1) return reply('Donde está el texto??')
+                teks = `${body.slice(8)}`
+                if (teks.length > 10) return client.sendMessage(from, 'Solo hasta 10 caracteres, sorry', text, {quoted: mek})
+                buff = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${teks}`, {method: 'get'})
+                client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
+	        break
 	case 'imoji':
 					reply(mess.wait)
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=`, {method: 'get'})
