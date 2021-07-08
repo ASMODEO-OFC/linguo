@@ -1267,6 +1267,37 @@ async function starts() {
                 membr.push(simp12.jid)
                 mentions(teks, membr, true)
                 break
+	case 'pene':
+				if (!isGroup) return reply(mess.only.group)
+				membr = []
+				const pauz1 = groupMembers
+				const pauz2 = groupMembers
+				const pauz3 = groupMembers
+				const pauz4 = groupMembers
+				const pauz5 = groupMembers
+				const paus1 = pauz1[Math.floor(Math.random() * pauz1.length)]
+				const paus2 = pauz2[Math.floor(Math.random() * pauz2.length)]
+				const paus3 = pauz3[Math.floor(Math.random() * pauz3.length)]
+				const paus4 = pauz4[Math.floor(Math.random() * pauz4.length)]
+				const paus5 = pauz5[Math.floor(Math.random() * pauz5.length)]
+				var pcpau1 = ["Minúsculo 🤣🤏🏼", `Maní 🤣`, `Pequeño 😂`, `Mediano 👌🏼`, `Por encima de la media 👍🏻`, `Grande 😮👍🏻`, `Gigante 😎👍🏼🥒`]
+				var pcpau2 = ["Minúsculo 🤣🤏🏼", `Maní 🤣`, `Pequeño 😂`, `Mediano 👌🏼`, `Por encima de la media 👍🏻`, `Grande 😮👍🏻`, `Gigante 😎👍🏼🥒`]
+				var pcpau3 = ["Minúsculo 🤣🤏🏼", `Maní 🤣`, `Pequeño 😂`, `Mediano 👌🏼`, `Por encima de la media 👍🏻`, `Grande 😮👍🏻`, `Gigante 😎👍🏼🥒`]
+				var pcpau4 = ["Minúsculo 🤣🤏🏼", `Maní 🤣`, `Pequeño 😂`, `Mediano 👌🏼`, `Por encima de la media 👍🏻`, `Grande 😮👍🏻`, `Gigante 😎👍🏼🥒`]
+				var pcpau5 = ["Minúsculo 🤣🤏🏼", `Maní 🤣`, `Pequeño 😂`, `Mediano 👌🏼`, `Por encima de la media 👍🏻`, `Grande 😮👍🏻`, `Gigante 😎👍🏼🥒`]
+				const pc1 = pcpau1[Math.floor(Math.random() * pcpau1.length)]
+				const pc2 = pcpau2[Math.floor(Math.random() * pcpau2.length)]
+				const pc3 = pcpau3[Math.floor(Math.random() * pcpau3.length)]
+				const pc4 = pcpau4[Math.floor(Math.random() * pcpau4.length)]
+				const pc5 = pcpau5[Math.floor(Math.random() * pcpau5.length)]
+				teks = `Este es el tamaño de los penes de los miembros del grupo:\n${groupName}\n\n@${paus1.jid.split('@')[0]}\n${pc1}\n@${paus2.jid.split('@')[0]}\n${pc2}\n@${paus3.jid.split('@')[0]}\n${pc3}\n@${paus4.jid.split('@')[0]}\n${pc4}\n@${paus5.jid.split('@')[0]}\n${pc5}`
+				membr.push(paus1.jid)
+				membr.push(paus2.jid)
+				membr.push(paus3.jid)
+				membr.push(paus4.jid)
+				membr.push(paus5.jid)
+				mentions(teks, membr, true)
+					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
