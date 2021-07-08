@@ -1317,6 +1317,34 @@ async function starts() {
 					bufferx = await getBuffer(anwu.result.LinkImg)
 					client.sendMessage(from, bufferx, image, {quoted: mek})
 					break
+                  case 'playstore':
+                ps = `${body.slice(11)}`
+                  anu = await fetchJson(`https://docs-jojo.herokuapp.com/api/playstore?q=${ps}`, {method: 'get'})
+                  store = '======================\n'
+                  for (let ply of anu.result){
+                  store += `• *Nome Apk:* ${ply.app.name}\n• *ID:* ${ply.app.id}\n• *Link Apk:* ${ply.app.url}\n===================°]\n`
+                  }
+                  reply(store.trim())
+                  break
+	case 'playstore':
+					kuji = body.slice(7)
+					reply(mess.wait)
+					anu = await getBuffer(`https://api.vhtear.com/playstore?query={kuji}&apikey=Aris komtol`, {method: 'get'})
+					capty = `*➸ title :* ${anu.title}\n*➸ app_id :* ${anu.app_id}\n*➸ description :* ${anu.description}\n*➸ developer_id :* ${anu.developer_id}\n*➸ developer :* ${anu.developer}\n*➸ score :* ${anu.score}\n*➸ full_price :* ${anu.full_price}\n*➸ price :* ${anu.price}\n*➸ free :* ${anu.free}`
+					client.sendMessage(from, anu, image, {quoted: mek, caption: capty})
+					break
+                case 'pinterest':
+                    tels = body.slice(10)
+					client.updatePresence(from, Presence.composing) 
+					data = await fetchJson(`https://fdciabdul.tech/api/pinterest?keyword=${tels}`, {method: 'get'})
+					reply('⚡Zeus⚡ está a procurar...')
+					n = JSON.parse(JSON.stringify(data));
+					nimek =  n[Math.floor(Math.random() * n.length)];
+					pok = await getBuffer(nimek)
+                    reply('Encontrado !!!')
+					client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado da pesquisa: ${tels}`})
+                    await limitAdd(sender)
+					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
