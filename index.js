@@ -1267,7 +1267,7 @@ async function starts() {
                 membr.push(simp12.jid)
                 mentions(teks, membr, true)
                 break
-	case 'pene':
+	case 'pepinos':
 				if (!isGroup) return reply(mess.only.group)
 				membr = []
 				const pauz1 = groupMembers
