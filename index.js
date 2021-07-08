@@ -1387,12 +1387,46 @@ async function starts() {
 					})
 					await limitAdd(sender) 
 					break
+		case 'animekiss':
+					anp = getRandom('.gif')
+					rano = getRandom('.webp')
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/kiss?apikey=${TobzApi}`, {method: 'get'})
+					exec(`wget ${anu.result} -O ${ranp} && ffmpeg -i ${ranp} -vcodec libwebp -filter:v fps=fps=15 -lossless 1 -loop 0 -preset default -an -vsync 0 -s 512:512 ${rano}`, (err) => {
+						fs.unlinkSync(ranp)
+						buffer = fs.readFileSync(rano)
+						client.sendMessage(from, buffer, sticker, {quoted: mek})
+						fs.unlinkSync(rano)
+					})
+					await limitAdd(sender) 
+					break
 	    case 'nsfwblowjob':
 				    try {
 						if (!isNsfw) return reply('❌ *FALSO* ❌')
 						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwblowjob`, {method: 'get'})
 						buffer = await getBuffer(res.result)
 						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'Não faça ingredientes para o tio comum'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('❌ *ERRO* ❌')
+					}
+					break
+	    case 'nsfwneko':
+				    try {
+						if (!isNsfw) return reply('❌ *FALSO* ❌')
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwneko`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni anjim'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('❌ *ERRO* ❌')
+					}
+					break
+				case 'nsfwtrap':
+				    try {
+						if (!isNsfw) return reply('❌ *FALSO* ❌')
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/nsfwtrap`, {method: 'get'})
+						buffer = await getBuffer(res.result)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ni Anjim'})
 					} catch (e) {
 						console.log(`Error :`, color(e,'red'))
 						reply('❌ *ERRO* ❌')
