@@ -80,6 +80,7 @@ const help = (prefix) => {
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
+➛ *${prefix}pinterest* [Usa Palabras en ingles como referencia]
 ➛ *${prefix}nsfw* [1/0] 🔞
 ➛ *${prefix}nsfwmenu*
 
