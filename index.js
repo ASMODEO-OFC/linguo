@@ -1345,34 +1345,6 @@ async function starts() {
 					client.sendMessage(from, pok, image, { quoted: mek, caption: `Resultado da pesquisa: ${tels}`})
                     await limitAdd(sender)
 					break
-				 case 'naruto':
-				 data = fs.readFileSync('./image/naruto.js');
-                 jsonData = JSON.parse(data);
-                 randIndex = Math.floor(Math.random() * jsonData.length);
-                 randKey = jsonData[randIndex];
-                hasil = await getBuffer(randKey.result)
-                client.sendMessage(from, hasil, MessageType.image, {quoted: mek, caption: '*Jutso discurso No jutsu!!!!*'})
-				break
-				case 'sasuke':
-
-					reply(mess.wait)
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=sasuke`, {method: 'get'})
-					sasu = JSON.parse(JSON.stringify(anu));
-					ke =  sasu[Math.floor(Math.random() * sasu.length)];
-					nye = await getBuffer(ke)
-					client.sendMessage(from, nye, image, { caption: 'sasuke!!', quoted: mek })
-					await limitAdd(sender) 
-					break
-			case 'sakura':
-
-					reply(mess.wait)
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=sakura`, {method: 'get'})
-					sak = JSON.parse(JSON.stringify(anu));
-					kura =  sak[Math.floor(Math.random() * sak.length)];
-					nye = await getBuffer(kura)
-					client.sendMessage(from, nye, image, { caption: 'sakura!!', quoted: mek })
-					await limitAdd(sender) 
-					break
 		case 'animecry':
 					cry = getRandom('.gif')
 					rano = getRandom('.webp')
@@ -1463,24 +1435,6 @@ async function starts() {
 					if (anu.error) return reply(anu.error)
 					buffer = await getBuffer(anu.result)
 					client.sendMessage(from, buffer, image, {quoted: mek})
-					break
-	case 'kurumi':
-					reply(mess.wait)
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+karumi`, {method: 'get'})
-					kur = JSON.parse(JSON.stringify(anu));
-					imi =  kur[Math.floor(Math.random() * kur.length)];
-					nye = await getBuffer(imi)
-					client.sendMessage(from, nye, image, { caption: 'kurumi chan!!', quoted: mek })
-					await limitAdd(sender) 
-					break 
-				case 'miku':
-					reply(mess.wait)
-					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+miku`, {method: 'get'})
-					mi = JSON.parse(JSON.stringify(anu));
-					ku =  mi[Math.floor(Math.random() * mi.length)];
-					nye = await getBuffer(ku)
-					client.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
-					await limitAdd(sender) 
 					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
