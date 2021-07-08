@@ -1432,6 +1432,56 @@ async function starts() {
 						reply('❌ *ERRO* ❌')
 					}
 					break
+	    case 'waifu':
+				    try {
+						res = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
+						buffer = await getBuffer(res.image)
+						client.sendMessage(from, buffer, image, {quoted: mek, caption: 'ksksksks hmm'})
+					} catch (e) {
+						console.log(`Error :`, color(e,'red'))
+						reply('❌ *ERROR* ❌')
+					}
+					break
+			    case 'waifu2':
+					reply(mess.wait)
+					anu = await fetchJson(`https://tobz-api.herokuapp.com/api/waifu`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					buffer = await getBuffer(anu.image)
+					waifu = `*${anu.desc}`
+					client.sendMessage(from, buffer, image, {quoted: mek, caption: waifu})
+					break
+				case 'text3d':
+              	    if (args.length < 1) return reply('Onde está o texto, irmão??')
+                    teks = `${body.slice(8)}`
+                    if (teks.length > 10) return client.sendMessage(from, 'Teksnya kepanjangan, Maksimal 10 kalimat', text, {quoted: mek})
+                    buff = await getBuffer(`https://docs-jojo.herokuapp.com/api/text3d?text=${teks}`, {method: 'get'})
+                    client.sendMessage(from, buff, image, {quoted: mek, caption: `${teks}`})
+			     	break
+	case 'imoji':
+					reply(mess.wait)
+					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/emoji2png?emoji=`, {method: 'get'})
+					if (anu.error) return reply(anu.error)
+					buffer = await getBuffer(anu.result)
+					client.sendMessage(from, buffer, image, {quoted: mek})
+					break
+	case 'kurumi':
+					reply(mess.wait)
+					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+karumi`, {method: 'get'})
+					kur = JSON.parse(JSON.stringify(anu));
+					imi =  kur[Math.floor(Math.random() * kur.length)];
+					nye = await getBuffer(imi)
+					client.sendMessage(from, nye, image, { caption: 'kurumi chan!!', quoted: mek })
+					await limitAdd(sender) 
+					break 
+				case 'miku':
+					reply(mess.wait)
+					anu = await fetchJson(`https://api.fdci.se/rep.php?gambar=anime+miku`, {method: 'get'})
+					mi = JSON.parse(JSON.stringify(anu));
+					ku =  mi[Math.floor(Math.random() * mi.length)];
+					nye = await getBuffer(ku)
+					client.sendMessage(from, nye, image, { caption: 'miku chan!!', quoted: mek })
+					await limitAdd(sender) 
+					break
                               default:
 					if (isGroup && isSimi && budy != undefined) {
 						console.log(budy)
