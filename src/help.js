@@ -69,7 +69,6 @@ const help = (prefix) => {
 ➛ *${prefix}yamete*
 ➛ *${prefix}hentaisom*
 ➛ *${prefix}onichan*
-➛ *${prefix}dado*
 
 ➢ ✪🅞🅦🅝🅔🅡✪
 
