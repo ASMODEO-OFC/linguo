@@ -93,6 +93,7 @@ const help = (prefix) => {
  
 ➛ *${prefix}cekvip* [Consultar estado de Membresía]
 ➛ *${prefix}play* [Nombre de la Canción]
+➛ *${prefix}play2* [Nombre de la Canción]
 ➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
 ➛ *${prefix}atacar* [@]
 ➛ *${prefix}chentai*
