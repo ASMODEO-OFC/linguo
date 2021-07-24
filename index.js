@@ -274,6 +274,7 @@ async function starts() {
 					mpa: 'Buscando y descargando canción*\n\nAguarda un momento sin hacer spam 🙏🏼',
 					mpv: 'Buscando y descargando video*\n\nAguarda un momento sin hacer spam 🙏🏼',
 					musica: 'Buscando y descargando canción*\n\nAguarda un momento sin hacer spam 🙏🏼\n\n*Recuerda colocar bien el nombre o el link del video de youtube❗',
+					musica2: 'Buscando y descargando canción*\n\nAguarda un momento sin hacer spam 🙏🏼\n\n*Recuerda colocar bien el nombre o el link del video de youtube❗',
 					daftarB: `No estas registrado, por favor regístrate \n\nComando : ${prefix}daftar Nombre\nEjemplo : ${prefix}daftar asm`,
 				}
 			}
@@ -874,6 +875,19 @@ async function starts() {
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
                 if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica)
+                play = body.slice(5)
+                anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=hamilton10`)
+                if  (anu.error) return reply(anu.error)
+                infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
+                buffer = await getBuffer(anu.result.thumbnail)
+                lagu = await getBuffer(anu.result.url_audio)
+                client.sendMessage(from, buffer, image, {quoted: mek, caption: infomp3})
+                client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', filename: `${anu.title}.mp3`, quoted: mek})
+                break
+          case 'play2':   
+	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
+                if (!isPremium) return reply(mess.only.premium)
+                reply(mess.only.musica2)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.xyz/api/ytplaymp3?q=${play}&apikey=shanduy10`)
                 if  (anu.error) return reply(anu.error)
