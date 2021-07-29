@@ -48,6 +48,7 @@ const help = (prefix) => {
 ➛ *${prefix}leave* [Sacar al bot del grupo]
 ➛ *${prefix}leveling* [1/0]
 ➛ *${prefix}level*
+➛ *${prefix}destraba* [Destaraba el grupo en caso de ataque]
 
 ➢ ✪🅓🅞🅦🅝🅛🅞🅐🅓✪
 
@@ -95,9 +96,7 @@ const help = (prefix) => {
 ➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}play2* [Nombre de la Canción]
 ➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
-➛ *${prefix}atacar* [@]
 ➛ *${prefix}chentai*
-➛ *${prefix}destrava* [destrabar grupo en caso de ataque]
 
 ➢ ✪🅔🅢🅟🅔🅒🅘́🅕🅘🅒🅞 🅓🅔🅛 🅑🅞🅣✪
 
