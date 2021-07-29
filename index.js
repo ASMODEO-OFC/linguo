@@ -1189,7 +1189,7 @@ async function starts() {
                 if (isGroup) return  reply( '❌NO PUEDES USAR ESTE COMANDO EN GRUPOS❌')
                 client.sendMessage(from, gbin(prefix), text, { quoted: mek })
                 break
-          case 'destrava':
+          case 'destraba':
                 if (!isPremium) return reply(mess.only.premium)
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
