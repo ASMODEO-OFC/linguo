@@ -26,8 +26,7 @@ const {
 
 /***𝘼𝙍𝘾𝙃𝙄𝙑𝙊𝙎***/
 const { color, bgcolor } = require('./lib/color')
-const { destrava } = require('./src/destrava')
-const { destrava2 } = require('./src/destrava')
+const { destraba } = require('./src/destraba')
 const { chentai } = require('./src/chentai')
 const { gbin } = require('./src/gbin')
 const { bahasa } = require('./src/bahasa')
@@ -1194,7 +1193,7 @@ async function starts() {
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
 		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-                client.sendMessage(from, destrava(prefix), text, { quoted: mek })
+                client.sendMessage(from, destraba(prefix), text, { quoted: mek })
                 break
           case 'chentai':
                 if (!isPremium) return reply(mess.only.premium)
