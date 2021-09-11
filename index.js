@@ -572,7 +572,7 @@ async function starts() {
 		if (args.length < 1) return reply('Donde esta la URL?')
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		reply(mess.only.mpa)
-		anu = await fetchJson(`https://api.zeks.me/api/ytmp3?apikey=apivinz&url=https://www.youtube.com/watch?v{args[0]}`, {method: 'get'})
+		anu = await fetchJson(`https://api.zeks.me/api/ytmp3?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error)
 		teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP3 ⚠*`
 		thumb = await getBuffer(anu.thumb)
@@ -584,7 +584,7 @@ async function starts() {
 		if (args.length < 1) return reply('Donde esta la URL?')
 		if(!isUrl(args[0]) && !args[0].includes('youtu')) return reply(mess.error.Iv)
 		reply(mess.only.mpv)
-		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=apivinz&url=https://www.youtube.com/watch?v{args[0]}`, {method: 'get'})
+		anu = await fetchJson(`https://api.zeks.me/api/ytmp4?apikey=${apikey}&url=${args[0]}`, {method: 'get'})
 		if (anu.error) return reply(anu.error)
 		teks = `*DESCARGA EXITOSA ✅*\n◉ *Título* : ${anu.title}\n\n*ESPERE ENVIANDO SU ARCHIVO MP4 ⚠*`
 		thumb = await getBuffer(anu.thumb)
@@ -864,7 +864,7 @@ async function starts() {
                 if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=Asm00`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=hamilton49`)
                 if  (anu.error) return reply(anu.error)
                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -877,7 +877,7 @@ async function starts() {
                 if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=Asm01`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=shanduy49`)
                 if  (anu.error) return reply(anu.error)
                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
                 buffer = await getBuffer(anu.result.thumbnail)
