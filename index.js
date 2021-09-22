@@ -861,7 +861,6 @@ async function starts() {
 		break
           case 'play':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
-                if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=hamilton50`)
@@ -874,7 +873,6 @@ async function starts() {
                 break
           case 'play2':   
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
-                if (!isPremium) return reply(mess.only.premium)
                 reply(mess.only.musica2)
                 play = body.slice(5)
                 anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=shanduy50`)
