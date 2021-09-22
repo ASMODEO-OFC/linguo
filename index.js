@@ -421,24 +421,6 @@ async function starts() {
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
-			if (messagesC.includes("juanita")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/juanita.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
-			if (messagesC.includes("mitz")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/mitz.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
-			if (messagesC.includes("brillith")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/brillith.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
 			if (messagesC.includes("anto")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./stickers/anto.webp');
@@ -448,24 +430,6 @@ async function starts() {
 			if (messagesC.includes("sami")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./stickers/sami.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
-			if (messagesC.includes("jane")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/jane.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
-			if (messagesC.includes("rusita")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/rusita.webp');
-            client.sendMessage(from, d, sticker, {quoted: mek})
-    }
-
-			if (messagesC.includes("shiro")){
-			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/shiro.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
