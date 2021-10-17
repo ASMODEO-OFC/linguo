@@ -341,22 +341,6 @@ async function starts() {
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
 			reply("1 BYE BYE 👋")
-		}, 4000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("2")
-		}, 3000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("3")
-		}, 2000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("4")
-		}, 1000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("5")
 		}, 0)
 	}
 
@@ -374,22 +358,6 @@ async function starts() {
 		setTimeout( () => {
 			client.updatePresence(from, Presence.composing)
 			reply("1 BYE BYE 👋")
-		}, 4000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("2")
-		}, 3000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("3")
-		}, 2000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("4")
-		}, 1000)
-		setTimeout( () => {
-			client.updatePresence(from, Presence.composing)
-			reply("5")
 		}, 0)
 	}
 
