@@ -54,6 +54,8 @@ const help = (prefix) => {
 
 ➛ *${prefix}ytmp3* [URL]
 ➛ *${prefix}ytmp4* [URL]
+➛ *${prefix}play* [Nombre de la Canción]
+➛ *${prefix}play2* [Nombre de la Canción]
 
 ➢ ✪🅘🅝🅣🅔🅡🅐🅒🅣🅤🅐🅡✪
 
@@ -80,9 +82,6 @@ const help = (prefix) => {
 
 ➢ ✪🅘🅜🅐́🅖🅔🅝🅔🅢✪
 
-➛ *${prefix}pinterest* [Usa palabras en ingles]
-➛ *${prefix}nsfw* [1/0] 🔞
-➛ *${prefix}nsfwmenu*
 ➛ *${prefix}text3d*
 
 ➢ ✪🅘🅝🅣🅔🅛🅘🅖🅔🅝🅒🅘🅐 🅘🅐✪
@@ -93,8 +92,6 @@ const help = (prefix) => {
 ➢ ✪🅟🅡🅔🅜🅘🅤🅜✪
  
 ➛ *${prefix}cekvip* [Consultar estado de Membresía]
-➛ *${prefix}play* [Nombre de la Canción]
-➛ *${prefix}play2* [Nombre de la Canción]
 ➛ *${prefix}gbin* [Generador de Tarjetas de Crédito]
 ➛ *${prefix}chentai*
 
