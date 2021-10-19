@@ -424,7 +424,7 @@ async function starts() {
 	  case 'idiomas':
 		client.sendMessage(from, bahasa(prefix, sender), text, {quoted: mek})
 		break
-	  case 'nsfwmenu':
+	  case 'nsfwmenu11':
 		client.sendMessage(from, nsfwmenu(prefix, sender), text, {quoted: mek})
 		break
 	  case 'version':
@@ -842,7 +842,7 @@ async function starts() {
 		reply('Escribe 1 para activarlo y 0 para desactivarlo')
 		}
 		break
-          case 'nsfw':
+          case 'nsfw11':
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
 		if (args.length < 1) return reply('Digita 1 para activar')
@@ -896,7 +896,7 @@ async function starts() {
                 reply(` *Digita el comando 1 para activar, 0 para desactivar *\n * Ejemplo: ${prefix}leveling 1*`)
                 }
                 break
-	  case 'nsfwboobs': 
+	  case 'nsfwboobs11': 
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 		res = await fetchJson(`https://meme-api.herokuapp.com/gimme/biganimetiddies`, {method: 'get'})
@@ -907,7 +907,7 @@ async function starts() {
 		reply('❌ *ERROR* ❌')
 		}
 		break
-	  case 'nsfwsideboobs':
+	  case 'nsfwsideboobs11':
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 		res = await fetchJson(`https://meme-api.herokuapp.com/gimme/sideoppai`, {method: 'get'})
@@ -918,7 +918,7 @@ async function starts() {
 		reply('❌ *ERROR* ❌')
 		}
 	        break
-	  case 'nsfwahegao':
+	  case 'nsfwahegao11':
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 		res = await fetchJson(`https://meme-api.herokuapp.com/gimme/ahegao`, {method: 'get'})
@@ -929,7 +929,7 @@ async function starts() {
 		reply('❌ *ERROR* ❌')
 		}
 		break
-	  case 'nsfwthighs':
+	  case 'nsfwthighs11':
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 		res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animethighss`, {method: 'get'})
@@ -940,7 +940,7 @@ async function starts() {
 		reply('❌ *ERROR* ❌')
 		}
 		break
-	  case 'nsfwfeets':
+	  case 'nsfwfeets11':
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 		res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animefeets`, {method: 'get'})
@@ -951,7 +951,7 @@ async function starts() {
 		reply('❌ *ERROR* ❌') 
 		}
 		break
-	  case 'nsfwarmpits':
+	  case 'nsfwarmpits11':
 		try {
 		if (!isNsfw) return reply('❌ *NSFW Desactivado* ❌')
 		res = await fetchJson(`https://meme-api.herokuapp.com/gimme/animearmpits`, {method: 'get'})
