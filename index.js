@@ -334,7 +334,7 @@ async function starts() {
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`link detectado ${sender.split("@")[0]} usted sera expulsado de este grupo en 5 segundos`)
+		reply(`Link detectado: ${sender.split("@")[0]} Serás expulsado por compartir un link ❌`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 5000)
@@ -351,7 +351,7 @@ async function starts() {
 		client.updatePresence(from, Presence.composing)
 		if (messagesC.includes("#izinadmin")) return reply("#izinadmin diterima")
 		var kic = `${sender.split("@")[0]}@s.whatsapp.net`
-		reply(`link detectado ${sender.split("@")[0]} usted sera expulsado de este grupo en 5 segundos`)
+		reply(`Link detectado: ${sender.split("@")[0]} Serás expulsado por compartir un link ❌`)
 		setTimeout( () => {
 			client.groupRemove(from, [kic]).catch((e)=>{reply(`*ERR:* ${e}`)})
 		}, 5000)
@@ -1085,7 +1085,7 @@ async function starts() {
 		antilink.push(from)
 		fs.writeFileSync('./src/antilink.json', JSON.stringify(antilink))
 		reply('Modo anti-link activado con éxito en este grupo ✔️')
-		client.sendMessage(from,`Atención todos los miembros de este grupo anti-link. ACTIVADO si envias un link de grupo, seras expulsado`, text)
+		client.sendMessage(from,`Atención todos los miembros de este grupo modo anti-link. *ACTIVADO* si compartes un link seras expulsado`, text)
          	} else if (Number(args[0]) === 0) {
 		if (isAntiLink) return reply('Modo anti-link desactivado con éxito en este grupo ✔')
 		var ini = anti.clientOf(from)
