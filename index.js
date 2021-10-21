@@ -389,15 +389,21 @@ async function starts() {
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
-			if (messagesC.includes("anto")){
+			if (messagesC.includes("rafa")){
 			client.updatePresence(from, Presence.composing) 
-	     	const d = fs.readFileSync('./stickers/anto.webp');
+	     	const d = fs.readFileSync('./stickers/rafa.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
 			if (messagesC.includes("sami")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./stickers/sami.webp');
+            client.sendMessage(from, d, sticker, {quoted: mek})
+    }
+
+			if (messagesC.includes("tony")){
+			client.updatePresence(from, Presence.composing) 
+	     	const d = fs.readFileSync('./stickers/tony.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
