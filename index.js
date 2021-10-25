@@ -1186,7 +1186,7 @@ async function starts() {
                 if (args.length < 0) return reply('Menciona a alguien')
                 var porcentagemcps = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7%`, `8%`, `9%`, `10%`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22%`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
                 const pcpt = porcentagemcps[Math.floor(Math.random() * porcentagemcps.length)]                
-                client.sendMessage(from, foto, MessageType.image, {quoted: mek, caption: `𝙎𝙪 𝙥𝙤𝙧𝙘𝙚𝙣𝙩𝙖𝙟𝙚 𝙙𝙚 𝙥𝙪𝙩𝙖 𝙚𝙨: ${pcpt}`})
+                client.sendMessage(from, MessageType.image, {quoted: mek, caption: `𝙎𝙪 𝙥𝙤𝙧𝙘𝙚𝙣𝙩𝙖𝙟𝙚 𝙙𝙚 𝙥𝙪𝙩𝙖 𝙚𝙨: ${pcpt}`})
                 break
           case 'ship':
 	        if (!isGroup) return reply(mess.only.group)
@@ -1211,6 +1211,27 @@ async function starts() {
                 membr.push(simp12.jid)
                 mentions(teks, membr, true)
                 break
+          case 'pns':
+	        if (!isGroup) return reply(mess.only.group)
+		membr = []
+		const pauz1 = groupMembers
+		const pauz2 = groupMembers
+		const pauz3 = groupMembers
+		const paus1 = pauz1[Math.floor(Math.random() * pauz1.length)]
+		const paus2 = pauz2[Math.floor(Math.random() * pauz2.length)]
+		const paus3 = pauz3[Math.floor(Math.random() * pauz3.length)]
+		var pcpau1 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
+		var pcpau2 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
+		var pcpau3 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
+		const pc1 = pcpau1[Math.floor(Math.random() * pcpau1.length)]
+		const pc2 = pcpau2[Math.floor(Math.random() * pcpau2.length)]
+		const pc3 = pcpau3[Math.floor(Math.random() * pcpau3.length)]
+		teks = `𝙀𝙨𝙩𝙤𝙨 𝙨𝙤𝙣 𝙡𝙤𝙨 𝙥𝙞𝙩𝙤𝙨 𝙘𝙤𝙧𝙩𝙤𝙨 𝙮 𝙙𝙤𝙩𝙖𝙙𝙤𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤::\n\n${groupName}\n\n@${paus1.jid.split('@')[0]} ➢${pc1}\n@${paus2.jid.split('@')[0]} ➢${pc2}\n@${paus3.jid.split('@')[0]} ➢${pc3}`
+		membr.push(paus1.jid)
+		membr.push(paus2.jid)
+		membr.push(paus3.jid)
+		mentions(teks, membr, true)
+		break
           case 'pinterest':
                 tels = body.slice(10)
 		client.updatePresence(from, Presence.composing) 
