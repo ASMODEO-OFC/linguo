@@ -31,7 +31,6 @@ const help = (prefix) => {
 ➛ *${prefix}admins* [Lista de Admins]
 ➛ *${prefix}promover* [Dar Admin]
 ➛ *${prefix}degradar* [Quitar Admin]
-➛ *${prefix}kick* [Eliminar miembro @]
 ➛ *${prefix}setname* [Cambiar Nombre]
 ➛ *${prefix}setdesc* [Cambiar Descripción]
 ➛ *${prefix}setfoto* [Cambiar Foto]
@@ -52,7 +51,6 @@ const help = (prefix) => {
 
 ➢ ✪🅓🅞🅦🅝🅛🅞🅐🅓✪
 
-➛ *${prefix}ytmp3* [URL]
 ➛ *${prefix}ytmp4* [URL]
 ➛ *${prefix}play* [Nombre de la Canción]
 ➛ *${prefix}play2* [Nombre de la Canción]
