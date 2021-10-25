@@ -1185,8 +1185,6 @@ async function starts() {
                 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                 if (args.length < 0) return reply('Menciona a alguien')
 client.on('group-participants-update', async (anu) => {
-		if (!welkom.includes(anu.jid)) return
-		try {
 const mdata = await client.groupMetadata(anu.jid)
 			console.log(anu)
 			if (anu.action == 'mentionedJid')
