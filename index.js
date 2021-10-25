@@ -631,8 +631,8 @@ async function starts() {
                 }
                 client.sendMessage(from, options, text, { quoted: mek } )
 		break
-          case 'kick':
-	  case 'ban':
+          case 'kickerr':
+	  case 'banerrr':
 		client.updatePresence(from, Presence.composing) 
 		if (!isGroup) return reply(mess.only.group)
 		if (!isGroupAdmins) return reply(mess.only.admin)
