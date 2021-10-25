@@ -1184,6 +1184,9 @@ async function starts() {
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
                 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                 if (args.length < 0) return reply('Menciona a alguien')
+const mdata = await client.groupMetadata(anu.jid)
+			console.log(anu)
+			if (anu.action == 'mentionedJid')
                 try {
 		ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
 		} catch {
