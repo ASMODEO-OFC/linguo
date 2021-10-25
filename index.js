@@ -1000,7 +1000,6 @@ async function starts() {
  	  case 'simih':
 		if (!isOwner) return reply(mess.only.ownerB)
 		if (!isGroup) return reply(mess.only.group)
-                if (!isGroupAdmins) return reply(mess.only.admin)
 		if (args.length < 1) return reply('Khaaaa?')
 		if (Number(args[0]) === 1) {
 		if (isSimi) return reply('El modo simih esta activado')
@@ -1050,6 +1049,8 @@ async function starts() {
         	mentions(teks, members_id, true)
 		break
                 case 'marcar2':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
 		members_id = []
 		teks = (args.length > 1) ? body.slice(8).trim() : ''
 		teks += '\n\n'
@@ -1060,6 +1061,8 @@ async function starts() {
 		reply(teks)
 		break
           case 'marcar3':
+		if (!isGroup) return reply(mess.only.group)
+		if (!isGroupAdmins) return reply(mess.only.admin)
 	        members_id = []
 		teks = (args.length > 1) ? body.slice(8).trim() : ''
 		teks += '\n\n'
@@ -1181,8 +1184,10 @@ async function starts() {
                 if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return
                 mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
                 if (args.length < 0) return reply('Menciona a alguien')
-                pisk = await client.getProfilePicture(mentioned[0])
-                foto = await getBuffer(pisk)
+		ppimg = await client.getProfilePicture(`${anu.participants[0].split('@')[0]}@c.us`)
+		} catch {
+		ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
+		}
                 var porcentagemcps = ["1%", `2%`, `3%`, `4%`, `5%`, `6%`, `7%`, `8%`, `9%`, `10%`, `11%`, `12%`,`13%`, `14%`, `15%`, `16%`, `17%`, `18%`, `19%`, `20%`, `21%`, `22%`, `23%`, `24%`, `25%`, `26%`, `27%`, `28%`, `27%`, `28%`, `29%`, `30%`, `31%`, `32%`, `33%`, `34%`, `35%`, `36%`, `37%`, `38%`, `39%`, `40%`, `41%`, `42%`, `43%`, `44%`, `45%`, `46%`, `47%`, `48%`, `49%`, `50%`, `51%`, `52%`, `53%`, `54%`, `55%`, `56%`, `57%`, `58%`, `59%`, `60%`, `61%`, `62%`, `63%`, `64%`, `65%`, `66%`, `67%`, `68%`, `69%`, `70%`, `71%`, `72%`, `73%`, `74%`, `75%`, `76%`, `77%`, `78%`, `79%`, `80%`, `81%`, `82%`, `85%`, `84%`, `85%`, `86%`, `87%`, `88%`, `89%`, `90%`, `91%`, `92%`, `93%`, `94%`, `95%`, `96%`, `97%`, `98%`, `99%`, `100%`]
                 const pcpt = porcentagemcps[Math.floor(Math.random() * porcentagemcps.length)]                
                 client.sendMessage(from, foto, MessageType.image, {quoted: mek, caption: `𝙎𝙪 𝙥𝙤𝙧𝙘𝙚𝙣𝙩𝙖𝙟𝙚 𝙙𝙚 𝙥𝙪𝙩𝙖 𝙚𝙨: ${pcpt}`})
