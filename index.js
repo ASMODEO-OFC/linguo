@@ -1209,7 +1209,7 @@ async function starts() {
                 membr = []
                 const simp12 = groupMembers
                 const simpb12 = simp12[Math.floor(Math.random() * simp12.length)]
-                reply(`*💖😏🅓🅔🅣🅔🅒🅣🅞🅡 🅓🅔 🅢🅘🅜🅟😏💖*\n\n*𝙏𝙐 𝙎𝙄𝙈𝙋 𝙀𝙎:\n\n@${simpb12.jid.split('@')[0]}*\n\n*🔥    🖤𝙀𝙉𝙑𝙄𝘼𝙇𝙀 𝙏𝙐 𝙋𝘼𝘾𝙆🖤    🔥*\n\n*`)
+                reply(`*💖😏🅓🅔🅣🅔🅒🅣🅞🅡 🅓🅔 🅢🅘🅜🅟😏💖*\n\n*𝙏𝙐 𝙎𝙄𝙈𝙋 𝙀𝙎:\n\n@${simpb12.jid.split('@')[0]}*\n\n*🔥    🖤𝙀𝙉𝙑𝙄𝘼𝙇𝙀 𝙏𝙐 𝙋𝘼𝘾𝙆🖤    🔥*`)
                 membr.push(simp12.jid)
                 mentions(teks, membr, true)
                 break
