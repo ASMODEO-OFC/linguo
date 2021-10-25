@@ -1216,29 +1216,19 @@ async function starts() {
 		const pauz1 = groupMembers
 		const pauz2 = groupMembers
 		const pauz3 = groupMembers
-		const pauz4 = groupMembers
-		const pauz5 = groupMembers
 		const paus1 = pauz1[Math.floor(Math.random() * pauz1.length)]
 		const paus2 = pauz2[Math.floor(Math.random() * pauz2.length)]
 		const paus3 = pauz3[Math.floor(Math.random() * pauz3.length)]
-		const paus4 = pauz4[Math.floor(Math.random() * pauz4.length)]
-		const paus5 = pauz5[Math.floor(Math.random() * pauz5.length)]
 		var pcpau1 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
 		var pcpau2 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
 		var pcpau3 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
-		var pcpau4 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
-		var pcpau5 = ["𝙈𝙞𝙣𝙪́𝙨𝙘𝙪𝙡𝙤 🤣🤏🏼", `𝙈𝙖𝙣𝙞́ 🤣`, `𝙋𝙚𝙦𝙪𝙚𝙣̃𝙤 😂`, `𝙈𝙚𝙙𝙞𝙖𝙣𝙤 👌🏼`, `𝙋𝙤𝙧 𝙚𝙣𝙘𝙞𝙢𝙖 𝙙𝙚 𝙡𝙖 𝙢𝙚𝙙𝙞𝙖 👍🏻`, `𝙂𝙧𝙖𝙣𝙙𝙚 😮👍🏻`, `𝙂𝙞𝙜𝙖𝙣𝙩𝙚 😎👍🏼🥒`]
 		const pc1 = pcpau1[Math.floor(Math.random() * pcpau1.length)]
 		const pc2 = pcpau2[Math.floor(Math.random() * pcpau2.length)]
 		const pc3 = pcpau3[Math.floor(Math.random() * pcpau3.length)]
-		const pc4 = pcpau4[Math.floor(Math.random() * pcpau4.length)]
-		const pc5 = pcpau5[Math.floor(Math.random() * pcpau5.length)]
-		teks = `𝙀𝙨𝙩𝙤𝙨 𝙨𝙤𝙣 𝙡𝙤𝙨 𝙥𝙞𝙩𝙤𝙨 𝙘𝙤𝙧𝙩𝙤𝙨 𝙮 𝙙𝙤𝙩𝙖𝙙𝙤𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤::\n\n${groupName}\n\n@${paus1.jid.split('@')[0]} ➢${pc1}\n@${paus2.jid.split('@')[0]} ➢${pc2}\n@${paus3.jid.split('@')[0]} ➢${pc3}\n@${paus4.jid.split('@')[0]} ➢${pc4}\n@${paus5.jid.split('@')[0]} ➢${pc5}`
+		teks = `𝙀𝙨𝙩𝙤𝙨 𝙨𝙤𝙣 𝙡𝙤𝙨 𝙥𝙞𝙩𝙤𝙨 𝙘𝙤𝙧𝙩𝙤𝙨 𝙮 𝙙𝙤𝙩𝙖𝙙𝙤𝙨 𝙙𝙚𝙡 𝙜𝙧𝙪𝙥𝙤::\n\n${groupName}\n\n@${paus1.jid.split('@')[0]} ➢${pc1}\n@${paus2.jid.split('@')[0]} ➢${pc2}\n@${paus3.jid.split('@')[0]} ➢${pc3}`
 		membr.push(paus1.jid)
 		membr.push(paus2.jid)
 		membr.push(paus3.jid)
-		membr.push(paus4.jid)
-		membr.push(paus5.jid)
 		mentions(teks, membr, true)
 		break
           case 'pinterest':
