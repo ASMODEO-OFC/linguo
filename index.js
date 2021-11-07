@@ -45,6 +45,7 @@ const speed = require('performance-now')
 /***𝙅𝙎𝙊𝙉***/
 const welkom = JSON.parse(fs.readFileSync('./database/json/welkom.json'))
 const nsfw = JSON.parse(fs.readFileSync('./database/json/nsfw.json'))
+const setting = JSON.parse(fs.readFileSync('./src/settings.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const apivhtear = 'apivhtear';
 const apibarbar = 'apibarbar';
