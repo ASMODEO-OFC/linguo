@@ -632,27 +632,27 @@ async function starts() {
                 }
                 client.sendMessage(from, options, text, { quoted: mek } )
 		break
-          case 'kickerr':
-	  case 'banerrr':
-		client.updatePresence(from, Presence.composing) 
-		if (!isGroup) return reply(mess.only.group)
-		if (!isGroupAdmins) return reply(mess.only.admin)
-		if (!isBotGroupAdmins) return reply(mess.only.Badmin)
-		if (mek.message.extendedTextMessage === undefined || mek.message.extendedTextMessage === null) return reply('Marca al que vamos a funar')
-		mentioned = mek.message.extendedTextMessage.contextInfo.mentionedJid
-		if (mentioned.length > 1) {
-		teks = 'Pedido recibido, se eliminó con éxito a :\n'
-		for (let _ of mentioned) {
-		teks += `@${_.split('@')[0]}\n`
-		}
-		mentions(teks, mentioned, true)
-		client.groupRemove(from, mentioned)
-		} else {
-		mentions(`Pedido recibido, se eliminó con éxito a : @${mentioned[0].split('@')[0]}`, mentioned, true)
-		client.groupRemove(from, mentioned)
-		client.sendMessage(mentioned, 'Chao gord@ 👋🏻', text)
-		}
-		break
+          case 'kick':
+                if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                if (!isGroupAdmins) return reply(mess.only.admin)
+                if (!isGroup) return reply(mess.only.group)
+                if (mek.message.extendedTextMessage === null || mek.message.extendedTextMessage === undefined) return reply('Menciona a quien quieres eliminar 😖')
+                if (mek.message.extendedTextMessage.contextInfo.participant === undefined) {
+                entah = mek.message.extendedTextMessage.contextInfo.mentionedJid
+                if (entah.length > 1) {
+                var mems_ids = []
+                for (let ids of entah) {
+                mems_ids.push(ids)
+                }
+                client.groupRemove(from, mems_ids)
+                } else {
+                client.groupRemove(from, [entah[0]])
+                }
+                } else {
+                entah = ridwan.message.extendedTextMessage.contextInfo.participant
+                client.groupRemove(from, [entah])
+                }
+                break
           case 'linkgp':
 	        client.updatePresence(from, Presence.composing) 
 		if (!isGroup) return reply(mess.only.group)
@@ -802,7 +802,7 @@ async function starts() {
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
                 reply(mess.only.musica)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=10hamilton`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=22hamilton`)
                 if  (anu.error) return reply(anu.error)
                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
                 buffer = await getBuffer(anu.result.thumbnail)
@@ -814,7 +814,7 @@ async function starts() {
 	        if (args.length < 1) return reply('Donde esta el nombre de la canción?')
                 reply(mess.only.musica2)
                 play = body.slice(5)
-                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=10shanduy`)
+                anu = await fetchJson(`https://api.zeks.me/api/ytplaymp3?q=${play}&apikey=22shanduy`)
                 if  (anu.error) return reply(anu.error)
                 infomp3 = `*Canción encontrada!!!*\nTítulo : ${anu.result.title}\nFuente : ${anu.result.source}\nTamaño : ${anu.result.size}\n\n*ESPERE ENVIANDO ARCHIVO, NO HAGAS SPAM GORD@ 🛐*`
                 buffer = await getBuffer(anu.result.thumbnail)
