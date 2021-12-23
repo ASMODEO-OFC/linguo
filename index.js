@@ -271,7 +271,7 @@ async function starts() {
 		        const kapankah = ['Otro día','Otra semana','Otro mes','Otro año']
 			const botNumber = client.user.jid
 			const ownerNumber = ["5491155607911@s.whatsapp.net"] // replace this with your number
-			const premium = ["5491155607911@s.whatsapp.net","5492323313621@s.whatsapp.net","593961618258@s.whatsapp.net","51967114272@s.whatsapp.net","50242391519@s.whatsapp.net","5491131390034@s.whatsapp.net","5492665039424@s.whatsapp.net","51987786320@s.whatsapp.net","5491162935210@s.whatsapp.net"]
+			const premium = ["5491155607911@s.whatsapp.net","5492323313621@s.whatsapp.net","593961618258@s.whatsapp.net","51967114272@s.whatsapp.net","50242391519@s.whatsapp.net","5491131390034@s.whatsapp.net","56941761620@s.whatsapp.net","51987786320@s.whatsapp.net","573046197053@s.whatsapp.net","573052230129@s.whatsapp.net","59892420277@s.whatsapp.net","573046197053@s.whatsapp.net","59895544424@s.whatsapp.net","595975375783@s.whatsapp.net","593993448221@s.whatsapp.net","16059878564@s.whatsapp.net"]
 			const nomorOwner = [ownerNumber]
 			const isGroup = from.endsWith('@g.us')
 			const totalchat = await client.chats.all()
