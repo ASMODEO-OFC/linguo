@@ -29,6 +29,7 @@ const help = (prefix) => {
 
 ➛ *${prefix}ownergp* [Dueñ@ del grupo]
 ➛ *${prefix}admins* [Lista de Admins]
+➛ *${prefix}kick* [Eliminar a un miembro del grupo]
 ➛ *${prefix}promover* [Dar Admin]
 ➛ *${prefix}degradar* [Quitar Admin]
 ➛ *${prefix}setname* [Cambiar Nombre]
@@ -47,7 +48,7 @@ const help = (prefix) => {
 ➛ *${prefix}leave* [Sacar al bot del grupo]
 ➛ *${prefix}leveling* [1/0]
 ➛ *${prefix}level*
-➛ *${prefix}destraba* [Destaraba el grupo en caso de ataque]
+➛ *${prefix}destraba* [Destraba el grupo en caso de ataque]
 
 ➢ ✪🅓🅞🅦🅝🅛🅞🅐🅓✪
 
