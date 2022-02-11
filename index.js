@@ -188,7 +188,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `𝙃𝙤𝙡𝙖 ◤◢ @${num.split('@')[0]} ◤◢◣\n𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙞𝙙@ 𝙖𝙡 𝙜𝙧𝙪𝙥𝙤:\n━━❰･ *${mdata.subject}* ･❱━━\n\n𝙋𝙤𝙧 𝙛𝙖𝙫𝙤𝙧 𝙢𝙞𝙧𝙖 𝙡𝙖𝙨 𝙧𝙚𝙜𝙡𝙖𝙨\n 𝙋𝙧𝙚𝙨𝙚́𝙣𝙩𝙖𝙩𝙚 🤗`
+				teks = `𝙃𝙤𝙡𝙖 ◤◢ @${num.split('@')[0]} ◤◢◣\n𝘽𝙞𝙚𝙣𝙫𝙚𝙣𝙞𝙙@ 𝙖𝙡 𝙜𝙧𝙪𝙥𝙤:\n━━❰･ *${mdata.subject}* ･❱━━\n\n𝙋𝙤𝙧 𝙛𝙖𝙫𝙤𝙧 𝙇𝙚𝙚 𝙡𝙖 𝙙𝙚𝙨𝙘𝙧𝙞𝙥𝙘𝙞𝙤́𝙣 𝙮 𝙧𝙚𝙨𝙥𝙚𝙩𝙖 𝙖 𝙩𝙤𝙙𝙤 𝙢𝙪𝙣𝙙𝙤\n𝙂𝙧𝙖𝙘𝙞𝙖𝙨 ✌🏼`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
@@ -1214,6 +1214,15 @@ async function starts() {
                 const simpb12 = simp12[Math.floor(Math.random() * simp12.length)]
                 reply(`*💖😏🅓🅔🅣🅔🅒🅣🅞🅡 🅓🅔 🅢🅘🅜🅟😏💖*\n\n*𝙏𝙐 𝙎𝙄𝙈𝙋 𝙀𝙎:\n\n@${simpb12.jid.split('@')[0]}*\n\n*🔥    🖤𝙀𝙉𝙑𝙄𝘼𝙇𝙀 𝙏𝙐 𝙋𝘼𝘾𝙆🖤    🔥*`)
                 membr.push(simp12.jid)
+                mentions(teks, membr, true)
+                break
+          case 'vibrador':
+                if (!isGroup) return reply(mess.only.group)
+                membr = []
+                const vibr12 = groupMembers
+                const vibrb12 = vibr12[Math.floor(Math.random() * vibr12.length)]
+                reply(`*⚡🍆🅥🅘🅑🅡🅐🅓🅞🅡 🅟🅔🅡🅓🅘🅓🅞🍆⚡*\n\n*𝙌𝙪𝙞𝙚𝙣 𝙡𝙤 𝙧𝙤𝙗𝙤́ 𝙛𝙪𝙚́:\n\n@${vibrb12.jid.split('@')[0]}*\n\n*😖𝙍𝙚𝙜𝙧𝙚𝙨𝙖𝙡𝙤 𝙖𝙣𝙩𝙚𝙨 𝙦𝙪𝙚 𝙡𝙡𝙤𝙧𝙚 𝙡𝙖 𝙁𝙊𝙓𝙔😖*`)
+                membr.push(vibr12.jid)
                 mentions(teks, membr, true)
                 break
           case 'pns':
