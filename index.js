@@ -402,7 +402,7 @@ async function starts() {
             client.sendMessage(from, d, sticker, {quoted: mek})
     }
 
-			if (messagesC.includes("tony")){
+			if (messagesC.includes("goro")){
 			client.updatePresence(from, Presence.composing) 
 	     	const d = fs.readFileSync('./stickers/tony.webp');
             client.sendMessage(from, d, sticker, {quoted: mek})
