@@ -20,7 +20,7 @@
   "author": "asm",
   "license": "ISC",
   "dependencies": {
-    "@adiwajshing/baileys": "^4.0.0",
+    "@adiwajshing/baileys": "^3.5.2",
     "@kagchi/kag-api": "^2.0.0",
     "async": "^3.2.1",
     "axios": "^0.21.1",
@@ -31,7 +31,7 @@
     "lolis.life": "^4.0.0",
     "moment-timezone": "^0.5.32",
     "multistream": "^4.0.1",
-    "node-fetch": "^3.2.0",
+    "node-fetch": "^2.5.1",
     "remove.bg": "^1.3.0",
     "request": "^2.81.0",
     "spinnies": "^0.5.1"
