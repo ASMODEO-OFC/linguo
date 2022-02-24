@@ -62,6 +62,7 @@ const { logomaker } = require('./database/menu/logomaker')
 const { nsfwmenu } = require('./src/nsfwmenu')
 const { version } = require('./src/version')
 const { life } = require('./src/life')
+const { items } = require('./src/items')
 
 /***𝙁𝙄𝙉 𝘿𝙀 𝙈𝙀𝙉𝙐́𝙎***/
 
@@ -428,6 +429,9 @@ async function starts() {
 		break
           case 'life':
 		client.sendMessage(from, life(prefix, sender), text, {quoted: mek})
+		break
+          case 'items':
+		client.sendMessage(from, items(prefix, sender), text, {quoted: mek})
 		break
 	  case 'code':
 		client.sendMessage(from, negara(prefix, sender), text, {quoted: mek})
