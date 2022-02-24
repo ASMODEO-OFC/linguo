@@ -19,6 +19,7 @@ const help = (prefix) => {
 
 ➢ ✪🅜🅔🅙🅞🅡🅔🅢✪
 
+➛ *${prefix}life* [Guía de LIFEAFTER (✧ɅЅႺɅɌƊ✧)]
 ➛ *${prefix}sticker* [Convertir en Sticker]
 ➛ *${prefix}toimg* [Convertir Sticker en Imagen]
 ➛ *${prefix}tts* [Idioma y su texto]
