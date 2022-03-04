@@ -15,7 +15,15 @@ const items = (prefix, pushname) => {
 ❂ Assiryan Grassfield (Hemp, Logging, Minning)
 ❂ Blade Hunter Base (Infected, Hemp, Minning)
 
-🅛🅥.3
+🅛🅥.3:
+
+❂ Utz Mine (Infected, Minning, Logging)
+❂ Mount Snow (Imperials, Hemp, Minning, Fishing)
+❂ Snow Highlands (Animals, Imperials, Logging, Minning, Fishing)
+❂ Polar Tjaele (Infected, Hemp, Logging)
+❂ Galaxy Valley (Hemp, Logging, Minning)
+
+🅛🅥.4:
 `
 
 }
