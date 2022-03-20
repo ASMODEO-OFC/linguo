@@ -40,7 +40,14 @@ const items = (prefix, pushname) => {
 
 🅛🅥.6:
 
-❂
+❂ Swamp Border (Infected, Minning, Fishing)
+❂ Mouth Swamp (Hemp, Minning, Fishing)
+❂ Mouth Town (Logging, Minning, Fishing)
+❂ Lawrence Bay (Hemp, Minning, Fishing)
+
+🅛🅥.7:
+
+❂ Desolate Desert (
 `
 
 }
