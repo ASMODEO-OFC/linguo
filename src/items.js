@@ -24,6 +24,23 @@ const items = (prefix, pushname) => {
 ❂ Galaxy Valley (Hemp, Logging, Minning)
 
 🅛🅥.4:
+
+❂ River Area (Hemp, Logging, Fishing)
+❂ Wolf Hunting Field (Hemp, Minning, Fishing)
+❂ Black Pearl Area (Infected, Hemp, Logging)
+❂ Miska Town (Infected, Hemp, Minning)
+
+🅛🅥.5:
+
+❂ Twin Ways City (Infected, Hemp, Logging)
+❂ Mount Apparition (Infected, Logging, Minning)
+❂ Lesins Port (Logging, Minning, Fishing)
+❂ Redwood Town (Bandits, Guardians, Minning, Fishing)
+❂ Santopany (Infected, Hemp, Fishing)
+
+🅛🅥.6:
+
+❂
 `
 
 }
