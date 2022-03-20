@@ -3,6 +3,10 @@ const items = (prefix, pushname) => {
 
 𝙄́𝙏𝙀𝙈𝙎 𝙀𝙎𝙋𝙀𝘾𝙄𝘼𝙇𝙀𝙎 
 
+𝗩𝗜𝗗𝗘𝗢 𝗗𝗘𝗟 𝗠𝗔𝗬𝗢𝗥 (𝗦𝗨𝗦𝗖𝗥𝗜𝗕𝗔𝗡𝗦𝗘 𝗔 𝗦𝗨 𝗖𝗔𝗡𝗔𝗟)
+
+https://youtu.be/Ay9HuVjPvw8
+
 🅛🅥.1:
 
 ❂ Clear Sky Wheat Field (Infected, Hemp, Fishing)
@@ -47,7 +51,10 @@ const items = (prefix, pushname) => {
 
 🅛🅥.7:
 
-❂ Desolate Desert (
+❂ Desolate Desert (Hemp, Logging, Fishing)
+❂ Barren Wilds (Infected, Logging, Minning)
+❂ Sand Castle (Mercenaries x2, Infected, Minning, Fishing)
+❂ Silent Plain (Infected, Hemp, Logging)
 `
 
 }
