@@ -7,4 +7,4 @@ https://mega.nz/folder/JoZDyZYY#M2SgnMGQaNpdOGlXpFpyKg
 
 }
 
-exports.version = recetas
+exports.recetas = recetas
