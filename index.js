@@ -63,6 +63,7 @@ const { nsfwmenu } = require('./src/nsfwmenu')
 const { version } = require('./src/version')
 const { life } = require('./src/life')
 const { items } = require('./src/items')
+const { recetas } = require('./src/recetas')
 
 /***𝙁𝙄𝙉 𝘿𝙀 𝙈𝙀𝙉𝙐́𝙎***/
 
@@ -432,6 +433,9 @@ async function starts() {
 		break
           case 'items':
 		client.sendMessage(from, items(prefix, sender), text, {quoted: mek})
+		break
+          case 'recetas':
+		client.sendMessage(from, recetas(prefix, sender), text, {quoted: mek})
 		break
 	  case 'code':
 		client.sendMessage(from, negara(prefix, sender), text, {quoted: mek})
