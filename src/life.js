@@ -9,7 +9,8 @@ const life = (prefix, pushname) => {
 
  𝗥𝗘𝗖𝗘𝗧𝗔𝗦:
 
- ├─ ❏ (en preparación)
+ ├─ ❏ ${prefix}recetas (vía MEGA)
+
 
  𝗕𝗨𝗚𝗦 𝗗𝗘 𝗔𝗥𝗘𝗔𝗦:
 
